@@ -1,0 +1,55 @@
+import { SettingsPage } from 'pages/settingsPage/settingsPage';
+import { ShoppingPage } from 'pages/shoppingPage/shoppingPage';
+import { TasksPage } from 'pages/tasksPage/tasksPage';
+import type { Section } from 'types/section';
+
+export const sections: Record<string, Section> = {
+  tasks: {
+    id: 'tasks',
+    icon: 'CheckBox',
+    name: 'Tasks',
+    component: TasksPage,
+  },
+  shopping: {
+    id: 'shopping',
+    icon: 'ShoppingBag',
+    name: 'Shopping',
+    component: ShoppingPage,
+  },
+  // habits: {
+  //   id: 'habits',
+  //   icon: 'autorenew',
+  //   name: 'Habit Tracker',
+  //   component: HabitsPage,
+  // },
+  // people: {
+  //   id: 'people',
+  //   icon: 'group',
+  //   name: 'People',
+  //   component: PeoplePage,
+  // },
+  // books: {
+  //   id: 'books',
+  //   icon: 'book_2',
+  //   name: 'Books',
+  //   component: BooksPage,
+  // },
+  // films: {
+  //   id: 'films',
+  //   icon: 'movie',
+  //   name: 'Films',
+  //   component: FilmsPage,
+  // },
+  // tvSeries: {
+  //   id: 'tvSeries',
+  //   icon: 'tv',
+  //   name: 'TV Series',
+  //   component: FilmsPage,
+  // },
+  settings: {
+    id: 'settings',
+    icon: 'Settings',
+    name: 'Settings,',
+    component: SettingsPage,
+  },
+} as const;

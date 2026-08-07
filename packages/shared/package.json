@@ -1,0 +1,13 @@
+{
+  "name": "@mono/shared",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "sideEffects": false,
+  "description": "Types, consts, and util functions which can be used across multiple apps.",
+  "exports": {
+    "./consts": "./src/consts/index.ts",
+    "./types": "./src/types/index.ts",
+    "./utils": "./src/utils/index.ts"
+  }
+}

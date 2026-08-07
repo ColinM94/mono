@@ -1,0 +1,49 @@
+.background {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+  z-index: 1;
+  background-color: vars.$color-background-translucent;
+}
+
+.backgroundShow {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.container {
+  position: fixed;
+  top: 50%;
+  bottom: 50%;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: fit-content;
+  height: fit-content;
+  padding: vars.$spacing-primary;
+  min-width: 400px;
+  opacity: 0;
+  z-index: 1;
+  background-color: vars.$color-surface;
+
+  .header {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: vars.$spacing-primary;
+
+    .headerLabel {
+      flex: 1;
+    }
+  }
+}
+
+.containerShow {
+  opacity: 1;
+}
