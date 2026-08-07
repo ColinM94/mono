@@ -7,11 +7,11 @@ import {
   orderBy,
   limit,
 } from 'firebase/firestore';
-import type { RequestResponse } from '@mono/shared/types';
+import type { Metadata, RequestResponse } from '@mono/shared/types';
 
 import { trackError } from '@mono/shared/utils';
 import type { FirestoreOrderByGeneric, FirestoreWhereGeneric } from '../types';
-import type { Metadata } from 'types/firebase';
+import { getDb } from '../config';
 
 interface Config<T> {
   collection: string;
@@ -46,9 +46,9 @@ export const getDocuments = async <T extends Metadata>(config: Config<T>): Reque
     let q;
 
     if (limitAmount) {
-      q = query(collection(db, collectionName), ...conditions, limit(limitAmount));
+      q = query(collection(getDb(), collectionName), ...conditions, limit(limitAmount));
     } else {
-      q = query(collection(db, collectionName), ...conditions);
+      q = query(collection(getDb(), collectionName), ...conditions);
     }
 
     const querySnapshot = await getDocs(q);

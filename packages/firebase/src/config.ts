@@ -21,33 +21,21 @@ export const configureFirebase = (
 };
 
 export const getApp = () => {
-  if (!app) {
-    throw new Error('Firebase has not been initialised.');
-  }
-
+  if (!app) throw new Error('Firebase has not been initialised.');
   return app;
 };
 
 export const getDb = () => {
-  if (!db) {
-    throw new Error('Firebase has not been initialised.');
-  }
-
+  if (!db) throw new Error('Firebase has not been initialised.');
   return db;
 };
 
 export const getAuth = () => {
-  if (!auth) {
-    throw new Error('Firebase has not been initialised.');
-  }
-
+  if (!auth) throw new Error('Firebase has not been initialised.');
   return auth;
 };
 
 export const getStorage = () => {
-  if (!storage) {
-    throw new Error('Firebase has not been initialised.');
-  }
-
+  if (!storage) throw new Error('Firebase has not been initialised.');
   return storage;
 };

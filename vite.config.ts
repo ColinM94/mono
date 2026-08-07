@@ -7,9 +7,6 @@ export const defineViteConfig = (overrides: UserConfig = {}) => {
   const appRoot = process.cwd();
 
   const config = defineConfig({
-    optimizeDeps: {
-      include: ['firebase/app', 'firebase/firestore', 'firebase/auth', 'firebase/storage'],
-    },
     build: {
       chunkSizeWarningLimit: 1000,
       rolldownOptions: {

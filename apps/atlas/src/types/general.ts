@@ -1,15 +1,4 @@
-import { icons } from 'constants/icons';
-
-export type RequestResponseSuccess<T> = {
-  data: T;
-  success: true;
-};
-
-export type RequestResponseFail = {
-  success: false;
-};
-
-export type RequestResponse<T> = Promise<RequestResponseSuccess<T> | RequestResponseFail>;
+import type { icons } from 'constants/icons';
 
 export type DatabaseCollection = 'notes';
 

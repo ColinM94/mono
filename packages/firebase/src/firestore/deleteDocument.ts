@@ -1,7 +1,6 @@
 import { deleteDoc, doc } from 'firebase/firestore';
 import { trackError } from '@mono/shared/utils';
-
-import type { RequestResponse } from 'types/general';
+import type { RequestResponse } from '@mono/shared/types';
 
 import { getDb } from '../config';
 

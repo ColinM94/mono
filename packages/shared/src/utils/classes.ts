@@ -4,6 +4,6 @@
  * @param items - List of class names to combine.
  * @returns {string} A string containing the combined class names, separated by spaces.
  */
-export const classes = (...items: (string | false | undefined)[]): string => {
+export const classes = (...items: (string | false | undefined | 0)[]): string => {
   return items.filter((item) => item).join(' ');
 };

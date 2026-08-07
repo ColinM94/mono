@@ -1,11 +1,10 @@
-import * as React from 'react';
 import { addDocument } from '@mono/firebase/firestore';
 
 import { Button } from 'components/button/button';
 import type { Task } from 'types/task';
 
 export const TasksPage = () => {
-  const [show, setShow] = React.useState(false);
+  // const [show, setShow] = React.useState(false);
 
   return (
     <>
