@@ -1,12 +1,11 @@
 import * as React from 'react';
+
 import { mergeReducer } from '@mono/shared/utils';
+import { addDocument, deleteDocument, updateDocument } from '@mono/firebase/firestore';
 
 import { InputText } from 'components/inputText/inputText';
 import { Modal } from 'components/modal/modal';
 import { Button } from 'components/button/button';
-import { addDocument } from 'services/database/addDocument';
-import { updateDocument } from 'services/database/updateDocument';
-import { deleteDocument } from 'services/database/deleteDocument';
 import { defaultPerson } from 'constants/defaults';
 import type { Person } from 'types/person';
 

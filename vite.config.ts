@@ -54,7 +54,6 @@ export const defineViteConfig = (overrides: UserConfig = {}) => {
         components: resolve(appRoot, 'src/components'),
         constants: resolve(appRoot, 'src/constants'),
         hooks: resolve(appRoot, 'src/hooks'),
-        inits: resolve(appRoot, 'src/inits'),
         layouts: resolve(appRoot, 'src/layouts'),
         pages: resolve(appRoot, 'src/pages'),
         services: resolve(appRoot, 'src/services'),

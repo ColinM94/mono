@@ -14,11 +14,11 @@
   },
   "dependencies": {
     "@material-symbols-svg/react": "catalog:",
-    "firebase": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
     "wouter": "catalog:",
-    "zustand": "catalog:"
+    "zustand": "catalog:",
+    "@mono/firebase": "workspace:*"
   },
   "devDependencies": {
     "@rolldown/plugin-babel": "catalog:",

@@ -1,19 +1,18 @@
+import { doc, updateDoc } from 'firebase/firestore';
 import { trackError } from '@mono/shared/utils';
 
-import type { Collection } from 'types/general';
-import { doc, updateDoc } from 'firebase/firestore';
-import { db } from 'inits/firebase';
+import { getDb } from '../config';
 
 interface Params<T> {
   id: string;
   data: Partial<Omit<T, 'id' | 'createdAt' | 'updatedAt'>>;
-  collection: Collection;
+  collection: string;
 }
 
 export const updateDocument = async <T>(params: Params<T>) => {
   const { id, collection: collectionName, data } = params;
   try {
-    await updateDoc(doc(db, collectionName, id), data);
+    await updateDoc(doc(getDb(), collectionName, id), data);
 
     return {
       data,

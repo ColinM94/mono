@@ -8,12 +8,12 @@ import {
   limit,
 } from 'firebase/firestore';
 import { trackError } from '@mono/shared/utils';
-import { db } from 'inits/firebase';
-import type { FirestoreOrderByGeneric, FirestoreWhereGeneric } from 'types/firebase';
-import type { Collection } from 'types/general';
+
+import type { FirestoreOrderByGeneric, FirestoreWhereGeneric } from '../types';
+import { getDb } from '../config';
 
 interface Config<T> {
-  collection: Collection;
+  collection: string;
   /** Array of where clauses e.g. ["userId", "==", "12345", "userId", "==", "54321"] */
   where?: FirestoreWhereGeneric<T>[] | undefined;
   orderBy?: FirestoreOrderByGeneric<T>[];
@@ -47,9 +47,9 @@ export const getDocumentsSnapshot = <T>(config: Config<T>) => {
     let q;
 
     if (limitAmount) {
-      q = query(collection(db, collectionName), ...conditions, limit(limitAmount));
+      q = query(collection(getDb(), collectionName), ...conditions, limit(limitAmount));
     } else {
-      q = query(collection(db, collectionName), ...conditions);
+      q = query(collection(getDb(), collectionName), ...conditions);
     }
 
     const unsubscribe = onSnapshot(q, (querySnapshot) => {

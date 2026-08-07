@@ -77,9 +77,9 @@ importers:
       '@material-symbols-svg/react':
         specifier: 'catalog:'
         version: 0.13.0(react@19.2.8)
-      firebase:
-        specifier: 'catalog:'
-        version: 12.17.1
+      '@mono/firebase':
+        specifier: workspace:*
+        version: link:../../packages/firebase
       react:
         specifier: 'catalog:'
         version: 19.2.8
@@ -141,6 +141,16 @@ importers:
       vite:
         specifier: ^8.1.5
         version: 8.2.1(@types/node@26.1.2)(sass-embedded@1.100.0)(sass@1.100.0)(terser@5.49.1)
+
+  packages/firebase:
+    dependencies:
+      firebase:
+        specifier: 'catalog:'
+        version: 12.17.1
+    devDependencies:
+      '@mono/shared':
+        specifier: workspace:*
+        version: link:../shared
 
   packages/shared: {}
 

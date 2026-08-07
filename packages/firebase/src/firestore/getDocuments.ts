@@ -7,14 +7,14 @@ import {
   orderBy,
   limit,
 } from 'firebase/firestore';
-import { trackError } from '@mono/shared/utils';
+import type { RequestResponse } from '@mono/shared/types';
 
-import { db } from 'inits/firebase';
-import type { FirestoreWhereGeneric, FirestoreOrderByGeneric, Metadata } from 'types/firebase';
-import type { Collection, RequestResponse } from 'types/general';
+import { trackError } from '@mono/shared/utils';
+import type { FirestoreOrderByGeneric, FirestoreWhereGeneric } from '../types';
+import type { Metadata } from 'types/firebase';
 
 interface Config<T> {
-  collection: Collection;
+  collection: string;
   /** Array of where clauses e.g. [["userId", "==", "12345"], ["userId", "==", "54321"]] */
   where?: FirestoreWhereGeneric<T>[];
   orderBy?: FirestoreOrderByGeneric<T>[];

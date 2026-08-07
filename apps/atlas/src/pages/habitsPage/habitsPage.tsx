@@ -1,6 +1,7 @@
 import * as React from 'react';
 
-import { getDocumentsSnapshot } from 'services/database/getDocumentsSnapshot';
+import { getDocumentsSnapshot } from '@mono/firebase/firestore';
+
 import type { Habit } from 'types/habit';
 import { MainLayout } from 'layouts/mainLayout/mainLayout';
 

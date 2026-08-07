@@ -1,11 +1,12 @@
 import { deleteDoc, doc } from 'firebase/firestore';
 import { trackError } from '@mono/shared/utils';
 
-import { db } from 'inits/firebase';
-import type { Collection, RequestResponse } from 'types/general';
+import type { RequestResponse } from 'types/general';
+
+import { getDb } from '../config';
 
 interface Params {
-  collection: Collection;
+  collection: string;
   id: string;
 }
 
@@ -13,7 +14,7 @@ export const deleteDocument = async (params: Params): RequestResponse<undefined>
   const { collection: collectionName, id } = params;
 
   try {
-    await deleteDoc(doc(db, collectionName, id));
+    await deleteDoc(doc(getDb(), collectionName, id));
 
     return {
       data: undefined,

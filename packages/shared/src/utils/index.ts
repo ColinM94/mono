@@ -6,3 +6,4 @@ export * from './mergeReducer';
 export * from './formatDate';
 export * from './daysInMonth';
 export * from './nameOfDay';
+export * from './trackError';

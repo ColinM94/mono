@@ -1,13 +1,9 @@
-/* eslint-disable @typescript-eslint/require-await */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
+import { addDocument, deleteDocument, updateDocument } from '@mono/firebase/firestore';
 
 import { classes, daysInMonth } from '@mono/shared/utils';
 import type { Habit, HabitData } from 'types/habit';
 import { Button } from 'components/button/button';
-import { updateDocument } from 'services/database/updateDocument';
-import { addDocument } from 'services/database/addDocument';
-import { deleteDocument } from 'services/database/deleteDocument';
 
 import { HabitsMonthHeader } from './components/habitsMonthHeader/habitsMonthHeader';
 import styles from './styles.module.scss';

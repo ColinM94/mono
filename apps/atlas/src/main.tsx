@@ -1,15 +1,18 @@
 import * as React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Route, Switch, useLocation } from 'wouter';
-import { onAuthStateChanged } from 'firebase/auth';
+import { onAuthStateChanged } from '@mono/firebase/auth';
+import { initialiseFirebase } from '@mono/firebase';
 
 import { NotFoundPage } from 'pages/notFoundPage/notFoundPage';
 import { HomePage } from 'pages/homePage/homePage';
 import { sections as sectionsObject } from 'constants/sections';
-import { auth } from 'inits/firebase';
 import { LoginPage } from 'pages/loginPage/loginPage';
+import { firebaseConfig } from 'constants/config';
 
 import './styles/global.scss';
+
+initialiseFirebase(firebaseConfig);
 
 export const App = () => {
   const [location, navigate] = useLocation();
@@ -19,7 +22,7 @@ export const App = () => {
   const firstSection = sections[0];
 
   React.useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
+    const unsubscribe = onAuthStateChanged((user) => {
       setIsLoggedIn(Boolean(user?.uid));
     });
 

@@ -1,0 +1,18 @@
+{
+  "name": "@mono/firebase",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/initialise.ts",
+    "./firestore": "./src/firestore/index.ts",
+    "./auth": "./src/auth/index.ts"
+  },
+  "dependencies": {
+    "firebase": "catalog:"
+  },
+  "devDependencies": {
+    "@mono/shared": "workspace:*"
+  }
+}

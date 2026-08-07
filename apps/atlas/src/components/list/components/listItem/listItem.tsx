@@ -1,14 +1,14 @@
 import * as React from 'react';
 import type { CSSProperties } from 'react';
 import { createPortal } from 'react-dom';
+
 import { classes, formatDate, mergeReducer } from '@mono/shared/utils';
+import { addDocument, updateDocument } from '@mono/firebase/firestore';
 
 import type { ListItemData } from 'components/list/types';
 import { InputText } from 'components/inputText/inputText';
 import type { Collection, DatabaseRecord } from 'types/general';
 import { Button } from 'components/button/button';
-import { updateDocument } from 'services/database/updateDocument';
-import { addDocument } from 'services/database/addDocument';
 
 import type { ListEditorProps } from '../listEditor/types';
 import { ListEditor } from '../listEditor/listEditor';

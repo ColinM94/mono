@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { signInWithEmailAndPassword } from 'firebase/auth';
+import { signInWithEmailAndPassword } from '@mono/firebase/auth';
 
-import { auth } from 'inits/firebase';
 import { InputText } from 'components/inputText/inputText';
 import { Button } from 'components/button/button';
 
@@ -13,7 +12,7 @@ export const LoginPage = () => {
 
   const handleLogin = async (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const result = await signInWithEmailAndPassword(auth, email, password);
+    const result = await signInWithEmailAndPassword(email, password);
     if (result.user) return;
     alert('Login Failed');
   };

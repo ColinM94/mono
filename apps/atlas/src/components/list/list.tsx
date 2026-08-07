@@ -1,7 +1,8 @@
 import * as React from 'react';
 
 import { classes } from '@mono/shared/utils';
-import { getDocumentsSnapshot } from 'services/database/getDocumentsSnapshot';
+import { getDocumentsSnapshot } from '@mono/firebase/firestore';
+
 import { MainLayout } from 'layouts/mainLayout/mainLayout';
 import type { DatabaseRecord } from 'types/general';
 
