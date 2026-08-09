@@ -1,6 +1,7 @@
 export * from './addDocument';
 export * from './countDocuments';
 export * from './deleteDocument';
+export * from './deleteDocumentField';
 export * from './getDocument';
 export * from './getDocuments';
 export * from './getDocumentSnapshot';
