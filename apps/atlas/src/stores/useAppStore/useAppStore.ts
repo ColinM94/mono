@@ -11,7 +11,7 @@ type AppStoreState = {
 };
 
 export const useAppStore = createStore<AppStoreState>(
-  {
+  () => ({
     user: { name: '' },
     isAuthLoading: true,
     darkMode: false,
@@ -19,7 +19,7 @@ export const useAppStore = createStore<AppStoreState>(
     filmsLayout: 'compact',
     booksLayout: 'compact',
     peopleLayout: 'compact',
-  },
+  }),
   {
     name: 'app',
     partialize: ({ darkMode }) => ({ darkMode }),

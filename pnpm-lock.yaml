@@ -92,9 +92,6 @@ importers:
       wouter:
         specifier: 'catalog:'
         version: 3.10.0(react@19.2.8)
-      zustand:
-        specifier: 'catalog:'
-        version: 5.0.14(@types/react@19.2.18)(immer@11.1.15)(react@19.2.8)(use-sync-external-store@1.6.0(react@19.2.8))
     devDependencies:
       '@mono/shared':
         specifier: workspace:*
@@ -147,6 +144,9 @@ importers:
       '@mono/firebase':
         specifier: workspace:*
         version: link:../../packages/firebase
+      '@mono/zustand':
+        specifier: workspace:*
+        version: link:../../packages/zustand
       '@yudiel/react-qr-scanner':
         specifier: ^2.5.1
         version: 2.6.0(@types/emscripten@1.41.5)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)

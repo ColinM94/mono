@@ -1,11 +1,9 @@
-import * as React from 'react';
-
-import { Modal } from 'components/modal/modal';
+// import { Modal } from 'components/modal/modal';
 import { List } from 'components/list/list';
 import { defaultTask } from 'constants/defaults';
 
 export const TasksPage = () => {
-  const [show, setShow] = React.useState(false);
+  // const [show, setShow] = React.useState(false);
 
   return (
     <>
