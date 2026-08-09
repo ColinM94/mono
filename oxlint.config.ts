@@ -3,6 +3,7 @@ import { defineConfig } from 'oxlint';
 export default defineConfig({
   rules: {
     'react/only-export-components': 'warn',
+    'react/exhaustive-deps': 'off',
   },
   categories: {
     correctness: 'warn',
@@ -11,7 +12,14 @@ export default defineConfig({
   jsPlugins: [],
   overrides: [],
   extends: [],
-  ignorePatterns: ['**/dist/**', '**/build/**', '**/*.mjs', '**/*.js', '**/*.cjs'],
+  ignorePatterns: [
+    '**/dist/**',
+    '**/build/**',
+    '**/*.mjs',
+    '**/*.js',
+    '**/*.cjs',
+    '**/node_modules/**',
+  ],
   env: {},
   globals: {},
   settings: {},
