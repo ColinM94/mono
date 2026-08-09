@@ -1,19 +1,20 @@
 import {
-  getDocs,
-  query,
-  where,
   collection,
-  QueryConstraint,
-  orderBy,
+  getDocs,
   limit,
+  orderBy,
+  query,
+  QueryConstraint,
+  where,
 } from 'firebase/firestore';
-import type { Metadata, RequestResponse } from '@mono/shared/types';
 
-import { trackError } from '@mono/shared/utils';
+import { handleApiResponseError } from '@mono/shared/utils';
+import type { ApiResponse } from '@mono/shared/types';
+
 import type { FirestoreOrderByGeneric, FirestoreWhereGeneric } from '../types';
 import { getDb } from '../config';
 
-interface Config<T> {
+interface Params<T> {
   collection: string;
   /** Array of where clauses e.g. [["userId", "==", "12345"], ["userId", "==", "54321"]] */
   where?: FirestoreWhereGeneric<T>[];
@@ -21,25 +22,30 @@ interface Config<T> {
   limit?: number;
 }
 
-export const getDocuments = async <T extends Metadata>(config: Config<T>): RequestResponse<T[]> => {
+type Response<T> = Promise<ApiResponse<{ documents: T[] }>>;
+
+export const getDocuments = async <T>(params: Params<T>): Response<T> => {
   const {
     collection: collectionName,
     where: whereClauses,
     orderBy: orderByClauses,
     limit: limitAmount,
-  } = config;
+  } = params;
 
   try {
     const conditions: QueryConstraint[] = [];
 
     whereClauses?.forEach((whereClause) => {
       if (!whereClause) return;
+
       const newWhere = where(whereClause[0], whereClause[1], whereClause[2]);
+
       conditions.push(newWhere);
     });
 
     orderByClauses?.forEach((orderByClause) => {
       const newOrderBy = orderBy(orderByClause[0], orderByClause[1]);
+
       conditions.push(newOrderBy);
     });
 
@@ -56,22 +62,22 @@ export const getDocuments = async <T extends Metadata>(config: Config<T>): Reque
     const items: T[] = [];
 
     querySnapshot.forEach((doc) => {
-      items.push({ ...doc.data(), id: doc.id } as T);
+      items.push({
+        ...doc.data(),
+        id: doc.id,
+      } as T);
     });
 
     return {
-      success: true,
-      data: items,
+      ok: true,
+      data: {
+        documents: items,
+      },
     };
   } catch (error) {
-    trackError({
-      error: error as Error,
+    return handleApiResponseError({
+      error,
       description: `Failed to getDocuments from ${collectionName}`,
-      source: 'getDocuments',
     });
-
-    return {
-      success: false,
-    };
   }
 };

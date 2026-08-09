@@ -1,15 +1,16 @@
-export type Test = '';
-
-export type RequestResponseSuccess<T> = {
+export type ApiResponseOk<T> = {
+  ok: true;
   data: T;
-  success: true;
 };
 
-export type RequestResponseFail = {
-  success: false;
+export type ApiResponseError = {
+  ok: false;
+  error: {
+    message: string;
+  };
 };
 
-export type RequestResponse<T> = Promise<RequestResponseSuccess<T> | RequestResponseFail>;
+export type ApiResponse<T> = ApiResponseOk<T> | ApiResponseError;
 
 export type Metadata = {
   id: string;

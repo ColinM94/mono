@@ -1,5 +1,7 @@
 import { addDoc, collection } from 'firebase/firestore';
-import { trackError } from '@mono/shared/utils';
+
+import { handleApiResponseError } from '@mono/shared/utils';
+import type { ApiResponse } from '@mono/shared/types';
 
 import { getDb } from '../config';
 
@@ -8,24 +10,24 @@ interface Params<T> {
   collection: string;
 }
 
-export const addDocument = async <T>(params: Params<T>) => {
-  try {
-    const { collection: collectionName, data } = params;
+type Response = Promise<ApiResponse<{ docId: string }>>;
 
+export const addDocument = async <T>(params: Params<T>): Response => {
+  const { collection: collectionName, data } = params;
+
+  try {
     const result = await addDoc(collection(getDb(), collectionName), data);
 
     return {
-      data: result,
-      success: true,
+      ok: true,
+      data: {
+        docId: result.id,
+      },
     };
   } catch (error) {
-    trackError({
-      error: error as Error,
-      source: 'addDocument',
+    return handleApiResponseError({
+      error,
+      description: `Failed to add document to collection: ${params.collection}`,
     });
-
-    return {
-      success: false,
-    };
   }
 };

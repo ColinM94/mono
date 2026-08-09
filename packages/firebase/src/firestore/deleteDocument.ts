@@ -1,6 +1,7 @@
 import { deleteDoc, doc } from 'firebase/firestore';
-import { trackError } from '@mono/shared/utils';
-import type { RequestResponse } from '@mono/shared/types';
+
+import { handleApiResponseError } from '@mono/shared/utils';
+import type { ApiResponse } from '@mono/shared/types';
 
 import { getDb } from '../config';
 
@@ -9,24 +10,22 @@ interface Params {
   id: string;
 }
 
-export const deleteDocument = async (params: Params): RequestResponse<undefined> => {
+type Response = Promise<ApiResponse<undefined>>;
+
+export const deleteDocument = async (params: Params): Response => {
   const { collection: collectionName, id } = params;
 
   try {
     await deleteDoc(doc(getDb(), collectionName, id));
 
     return {
+      ok: true,
       data: undefined,
-      success: true,
     };
   } catch (error) {
-    trackError({
-      error: error as Error,
+    return handleApiResponseError({
+      error,
       description: `Failed to delete record in collection: ${collectionName} with id ${id}`,
-      source: 'deleteRecord',
     });
-    return {
-      success: false,
-    };
   }
 };

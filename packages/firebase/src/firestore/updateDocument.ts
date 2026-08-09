@@ -1,5 +1,7 @@
 import { doc, updateDoc } from 'firebase/firestore';
-import { trackError } from '@mono/shared/utils';
+
+import { handleApiResponseError } from '@mono/shared/utils';
+import type { ApiResponse } from '@mono/shared/types';
 
 import { getDb } from '../config';
 
@@ -9,24 +11,22 @@ interface Params<T> {
   collection: string;
 }
 
-export const updateDocument = async <T>(params: Params<T>) => {
+type Response = Promise<ApiResponse<undefined>>;
+
+export const updateDocument = async <T>(params: Params<T>): Response => {
   const { id, collection: collectionName, data } = params;
+
   try {
     await updateDoc(doc(getDb(), collectionName, id), data);
 
     return {
-      data,
-      success: true,
+      ok: true,
+      data: undefined,
     };
   } catch (error) {
-    trackError({
-      error: error as Error,
-      source: 'updateDocument',
+    return handleApiResponseError({
+      error,
       description: `Failed to update document ${id} in collection ${collectionName}`,
     });
-
-    return {
-      success: false,
-    };
   }
 };
