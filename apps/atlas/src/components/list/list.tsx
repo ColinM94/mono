@@ -35,19 +35,19 @@ export const List = <T,>(props: Props<T & DatabaseRecord>) => {
 
   return (
     <MainLayout
-      footer={
-        <div className={styles.footer}>
-          {/* <Divider layer={1} /> */}
+      // footer={
+      //   <div className={styles.footer}>
+      //     {/* <Divider layer={1} /> */}
 
-          <ListItem<T & DatabaseRecord>
-            size="full"
-            collection={collection}
-            defaultData={defaultData}
-            mainPropertyKey={mainPropertyKey}
-            inputs={[{ inputType: 'text', propertyKey: mainPropertyKey }]}
-          />
-        </div>
-      }
+      //     <ListItem<T & DatabaseRecord>
+      //       size="full"
+      //       collection={collection}
+      //       defaultData={defaultData}
+      //       mainPropertyKey={mainPropertyKey}
+      //       inputs={[{ inputType: 'text', propertyKey: mainPropertyKey }]}
+      //     />
+      //   </div>
+      // }
       className={classes(
         styles.container,
         layout === 'full' && styles.containerFull,

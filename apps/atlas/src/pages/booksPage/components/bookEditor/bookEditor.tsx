@@ -36,7 +36,7 @@ export const BookEditor = (props: Props) => {
       id: book.id,
     });
 
-    if (!response.success) {
+    if (!response.ok) {
       alert('Failed to delete record');
     }
   };

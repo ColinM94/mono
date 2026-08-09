@@ -1,5 +1,5 @@
 {
-  "name": "atlas",
+  "name": "personalWebsite",
   "private": true,
   "version": "0.0.1",
   "type": "module",
@@ -18,8 +18,7 @@
     "react-dom": "catalog:",
     "wouter": "catalog:",
     "zustand": "catalog:",
-    "@mono/firebase": "workspace:*",
-    "@mono/zustand": "workspace:*"
+    "@mono/firebase": "workspace:*"
   },
   "devDependencies": {
     "@rolldown/plugin-babel": "catalog:",

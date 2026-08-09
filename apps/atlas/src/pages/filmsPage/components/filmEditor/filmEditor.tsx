@@ -39,7 +39,7 @@ export const FilmEditor = (props: Props) => {
       id: film.id,
     });
 
-    if (!response.success) {
+    if (!response.ok) {
       alert('Failed to delete record');
     }
 

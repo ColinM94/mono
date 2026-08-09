@@ -35,7 +35,7 @@ export const PersonEditor = (props: Props) => {
       id: person.id,
     });
 
-    if (!response.success) {
+    if (!response.ok) {
       alert('Failed to delete record');
     }
 

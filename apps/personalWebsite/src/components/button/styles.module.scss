@@ -1,0 +1,79 @@
+.container {
+  cursor: pointer;
+  color: vars.$color-text-primary;
+  align-items: center;
+  user-select: none;
+  flex-direction: row;
+  border-radius: vars.$roundness;
+  gap: vars.$spacing-secondary;
+  height: vars.$input-height;
+  background-color: red !important;
+
+  &:hover {
+    background-color: blue !important;
+  }
+
+  .icon {
+    font-size: vars.$icon-size-large;
+  }
+
+  .primaryIcon {
+    color: vars.$color-primary;
+  }
+
+  .secondaryIcon {
+    color: vars.$color-text-primary;
+  }
+
+  .dangerIcon {
+    color: vars.$color-danger;
+  }
+
+  .label {
+    font-size: vars.$font-size-body;
+    flex: 1;
+  }
+
+  .centerLabel {
+    text-align: center;
+  }
+
+  .invisible {
+    visibility: hidden;
+  }
+}
+
+.primary {
+  background-color: vars.$color-primary;
+
+  &:hover {
+    background-color: vars.$color-primary-hover;
+  }
+}
+
+.secondary {
+}
+
+.danger {
+  background-color: vars.$color-danger;
+
+  &:hover {
+    background-color: vars.$color-danger-hover;
+  }
+}
+
+.transparent {
+  background-color: transparent;
+}
+
+.containerIconOnly {
+  padding: calc(vars.$spacing-primary / 1.2);
+  justify-content: center;
+  height: vars.$input-height;
+  width: vars.$input-height;
+}
+
+.containerNotIconOnly {
+  padding-inline: vars.$spacing-primary;
+  padding-block: vars.$spacing-secondary;
+}

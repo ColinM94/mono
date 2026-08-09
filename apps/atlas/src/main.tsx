@@ -5,7 +5,6 @@ import { onAuthStateChanged } from '@mono/firebase/auth';
 import { initialiseFirebase } from '@mono/firebase';
 
 import { NotFoundPage } from 'pages/notFoundPage/notFoundPage';
-import { HomePage } from 'pages/homePage/homePage';
 import { sections as sectionsObject } from 'constants/sections';
 import { LoginPage } from 'pages/loginPage/loginPage';
 import { firebaseConfig } from 'constants/config';
@@ -48,10 +47,6 @@ export const App = () => {
             </Route>
           );
         })}
-
-        <Route path="/">
-          <HomePage />
-        </Route>
 
         <Route path="/login">
           <LoginPage />

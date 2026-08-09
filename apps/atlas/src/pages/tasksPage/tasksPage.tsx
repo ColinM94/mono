@@ -1,37 +1,17 @@
-import { addDocument } from '@mono/firebase/firestore';
+import * as React from 'react';
 
-import { Button } from 'components/button/button';
-import type { Task } from 'types/task';
+import { Modal } from 'components/modal/modal';
+import { List } from 'components/list/list';
+import { defaultTask } from 'constants/defaults';
 
 export const TasksPage = () => {
-  // const [show, setShow] = React.useState(false);
+  const [show, setShow] = React.useState(false);
 
   return (
     <>
-      <Button
-        type="primary"
-        label="Test"
-        onClick={async () => {
-          const response = await addDocument<Task>({
-            collection: 'tasks',
-            data: {
-              dueDate: 0,
-              name: 'Helllooo Collliinnn',
-              checked: false,
-            },
-          });
-
-          if (response.success) {
-            console.log('success');
-          } else console.log('failed');
-        }}
-      />
-
-      {/* <ProgressBar progress={tasks.filter((task) => task.done).length} maxProgress={tasks.length} /> */}
-      {/* <Button label="Click" onClick={() => setShow(true)} type="secondary" /> */}
       {/* <Modal show={show} setShow={setShow}>
         {show}
-      </Modal>
+      </Modal> */}
 
       <List
         items={(item) => ({
@@ -54,7 +34,7 @@ export const TasksPage = () => {
             propertyKey: 'dueDate',
           },
         ]}
-      /> */}
+      />
     </>
   );
 };

@@ -9,6 +9,7 @@
     "lint:fix": "oxlint --fix",
     "atlas:dev": "pnpm --filter atlas dev",
     "atlas:build": "pnpm --filter atlas build",
+    "atlas:visualise": "pnpm --filter atlas visualise",
     "avalon:dev": "pnpm --filter avalon dev",
     "visualise": "pnpm dlx vite-bundle-visualizer -c vite.config.ts"
   },

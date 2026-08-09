@@ -47,10 +47,17 @@ export const ListItem = <T,>(props: Props<T & DatabaseRecord>) => {
         data: state,
       });
     } else {
-      await addDocument({
+      const response = await addDocument({
         collection,
         data: state,
       });
+
+      if (response.ok) {
+        console.log(response.data.docId);
+        return;
+      }
+
+      console.log(response.error.message);
     }
 
     updateState(defaultData());

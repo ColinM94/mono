@@ -1,0 +1,37 @@
+import type { icons } from 'constants/icons';
+
+export type DatabaseCollection = 'notes';
+
+export type DocumentMetadata = {
+  id: string;
+};
+
+// React
+export type Children = React.ReactNode | React.ReactNode[];
+
+export type Collection =
+  | 'notes'
+  | 'users'
+  | 'tasks'
+  | 'habits'
+  | 'habitsData'
+  | 'books'
+  | 'films'
+  | 'people'
+  | 'shopping';
+
+export type FormSubmitEvent = React.FormEvent<HTMLFormElement>;
+
+export type DatabaseRecord = {
+  id: string;
+};
+
+export type Layer = 0 | 1 | 2 | 3;
+
+export type Layout = 'compact' | 'full';
+
+export type KeyOf<T> = {
+  [K in keyof T & (string | number)]: T[K] extends object ? `${K}` | `${K}.${KeyOf<T[K]>}` : `${K}`;
+}[keyof T & (string | number)];
+
+export type IconName = keyof typeof icons;

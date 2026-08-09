@@ -24,7 +24,7 @@ export const ListEditor = <T,>(props: ListEditorProps<T & DatabaseRecord>) => {
       id: state.id,
     });
 
-    if (!response.success) {
+    if (!response.ok) {
       alert('Failed to delete record');
     }
   };

@@ -1,4 +1,3 @@
-import { Button } from 'components/button/button';
 import linkedinIcon from 'assets/images/linkedin.png';
 import githubIcon from 'assets/images/github.png';
 import reactIcon from 'assets/images/react.svg';
@@ -15,15 +14,7 @@ import styles from './styles.module.scss';
 export const HomePage = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.header}>
-        <Button
-          type="secondary"
-          label="Login"
-          to="login"
-          layer={2}
-          className={styles.loginButton}
-        />
-      </div>
+      <div className={styles.header}></div>
 
       <div className={styles.content}>
         <div className={styles.labelContainer}>
