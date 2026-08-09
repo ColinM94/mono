@@ -1,0 +1,37 @@
+.container {
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: vars.$spacing-primary;
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  background-color: vars.$color-background;
+  z-index: 99;
+  animation: fadeOut 4s forwards;
+
+  .headingSmall {
+    font-size: vars.$font-size-h1;
+    animation: fadeOut 3s forwards;
+  }
+
+  .heading {
+    font-size: 5rem;
+    text-align: center;
+    animation: fadeOut 3s forwards;
+  }
+
+  @keyframes fadeOut {
+    25% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+      display: none;
+      pointer-events: none;
+      opacity: 0;
+    }
+  }
+}

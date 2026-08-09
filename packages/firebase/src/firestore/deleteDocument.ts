@@ -10,7 +10,7 @@ interface Params {
   id: string;
 }
 
-type Response = Promise<ApiResponse<undefined>>;
+type Response = Promise<ApiResponse<null>>;
 
 export const deleteDocument = async (params: Params): Response => {
   const { collection: collectionName, id } = params;
@@ -20,7 +20,7 @@ export const deleteDocument = async (params: Params): Response => {
 
     return {
       ok: true,
-      data: undefined,
+      data: null,
     };
   } catch (error) {
     return handleApiResponseError({

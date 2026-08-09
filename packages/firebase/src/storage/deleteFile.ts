@@ -11,7 +11,7 @@ import { getStorage } from '../config';
  * @param path The path of the file in Storage. e.g. images/games/bubble-woods/logo.png
  * @returns Boolean indicating if successful or not.
  */
-type Response = Promise<ApiResponse<undefined>>;
+type Response = Promise<ApiResponse<null>>;
 
 export const deleteFile = async (path: string): Response => {
   try {
@@ -21,7 +21,7 @@ export const deleteFile = async (path: string): Response => {
 
     return {
       ok: true,
-      data: undefined,
+      data: null,
     };
   } catch (error) {
     return handleApiResponseError({

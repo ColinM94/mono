@@ -1,0 +1,118 @@
+.vote {
+  aspect-ratio: 0.7;
+  border-radius: 2px;
+  height: 20px;
+  outline: 2px solid vars.$color-surface3;
+}
+
+.voteSuccess {
+  @extend .vote;
+  background-color: vars.$color-success;
+  filter: brightness(0.8);
+}
+
+.voteFailed {
+  @extend .vote;
+  background-color: vars.$color-danger;
+  filter: brightness(0.8);
+}
+
+.container {
+  flex-direction: row;
+  gap: vars.$spacing-secondary;
+  cursor: pointer;
+
+  .quest {
+    border-radius: 50%;
+    background-color: vars.$color-surface;
+    padding: vars.$spacing-secondary;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: vars.$font-size-body2;
+    aspect-ratio: 1;
+    flex: 1;
+
+    .questHeading {
+      // position: absolute;
+      // top: 0;
+      font-size: vars.$font-size-body2;
+      color: vars.$color-text-secondary;
+      padding-block: vars.$spacing-secondary;
+      width: 100%;
+    }
+
+    .questLabel {
+      flex-direction: row;
+      gap: vars.$spacing-tertiary;
+      // margin-top: vars.$spacing-tertiary;
+
+      .questLabelValue {
+      }
+
+      .questLabelSubValue {
+        color: vars.$color-text-secondary;
+        font-size: vars.$font-size-body2;
+        justify-content: center;
+      }
+    }
+  }
+
+  .questActive {
+    outline: 2px solid vars.$color-primary !important;
+  }
+
+  .questFailed {
+    outline: 1px solid vars.$color-danger;
+  }
+
+  .questSucceeded {
+    outline: 1px solid vars.$color-success;
+  }
+}
+
+.questVotes {
+  border-radius: 2px;
+  width: 100%;
+  flex: 1;
+  flex-direction: row;
+  gap: vars.$spacing-tertiary;
+  justify-content: center;
+  padding-top: vars.$spacing-secondary;
+}
+
+.modal {
+  background-color: vars.$color-surface;
+  padding: vars.$spacing-primary;
+  align-items: center;
+  gap: vars.$spacing-secondary;
+
+  .modalHeading {
+    text-align: center;
+  }
+
+  .memberVote {
+    @extend .vote;
+
+    height: 75px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .votesRow {
+    flex-direction: row;
+    gap: vars.$spacing-secondary;
+    align-items: center;
+
+    .votesRowLabel {
+      text-align: center;
+      font-size: vars.$font-size-h1;
+      width: calc(vars.$font-size-h1 + vars.$spacing-primary);
+    }
+  }
+
+  .votes {
+    flex-direction: row;
+  }
+}

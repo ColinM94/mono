@@ -1,0 +1,67 @@
+.container {
+  justify-content: center;
+  align-items: center;
+  gap: vars.$spacing-secondary;
+  flex-direction: row;
+  height: vars.$layout-input-height;
+
+  .avatar {
+    min-width: vars.$layout-input-height;
+    min-height: vars.$layout-input-height;
+    background-color: vars.$color-surface;
+    border-radius: vars.$roundness;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+
+    .avatarImage {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .avatarIcon {
+      font-size: vars.$icon-size-medium;
+    }
+
+    .editIcon {
+      font-size: vars.$icon-size-small;
+      position: absolute;
+    }
+
+    .imageInput {
+      display: none;
+    }
+  }
+
+  .name {
+    justify-content: center;
+  }
+
+  .nameInput {
+    min-width: 0;
+    font-size: vars.$font-size-body;
+    text-align: center;
+    background-color: vars.$color-surface;
+  }
+
+  .saveNameButton {
+    position: absolute;
+    right: vars.$spacing-secondary;
+    height: calc(vars.$layout-input-height - vars.$spacing-secondary);
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: 0;
+    background-color: vars.$color-success;
+
+    svg {
+      font-size: vars.$icon-size-medium !important;
+    }
+  }
+}
+
+.saveButton {
+  background-color: vars.$color-surface;
+}

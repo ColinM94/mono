@@ -18,6 +18,15 @@ export type Metadata = {
   createdAt: number;
 };
 
-export type KeyOf<T> = {
-  [K in keyof T & (string | number)]: T[K] extends object ? `${K}` | `${K}.${KeyOf<T[K]>}` : `${K}`;
-}[keyof T & (string | number)];
+/** Generates all valid dot-notation paths for an object's nested properties. */
+export type Paths<T> = T extends readonly unknown[]
+  ? never
+  : T extends object
+    ? {
+        [K in keyof T & string]: T[K] extends readonly unknown[]
+          ? `${K}`
+          : T[K] extends object
+            ? `${K}` | `${K}.${Paths<T[K]>}`
+            : `${K}`;
+      }[keyof T & string]
+    : never;

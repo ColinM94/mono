@@ -1,0 +1,10 @@
+.container {
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .character {
+    flex: 1;
+    min-width: 80%;
+    aspect-ratio: 2;
+  }
+}

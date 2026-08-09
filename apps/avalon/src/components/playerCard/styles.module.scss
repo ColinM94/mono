@@ -1,0 +1,116 @@
+.container {
+  border-radius: vars.$roundness;
+  background-color: vars.$color-surface;
+  aspect-ratio: 1;
+  justify-content: center;
+  align-items: center;
+  font-size: vars.$font-size-body2;
+  text-align: center;
+  cursor: pointer;
+  outline: 2px solid vars.$color-surface2;
+
+  .image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: vars.$roundness;
+  }
+
+  .editIcon {
+    position: absolute;
+    left: vars.$spacing-secondary;
+    top: vars.$spacing-secondary;
+    font-size: vars.$icon-size-small;
+    // margin-bottom: vars.$font-size-body2;
+  }
+
+  .kickIcon {
+    font-size: vars.$icon-size-small;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    padding: 2px;
+    background-color: vars.$color-background-translucent-light;
+    border-radius: vars.$roundness;
+    aspect-ratio: 1;
+  }
+
+  .waitingIcon {
+    font-size: vars.$icon-size-medium;
+    color: vars.$color-text-tertiary;
+  }
+
+  .playerIcon {
+    font-size: vars.$icon-size-medium;
+    color: vars.$color-text-secondary;
+  }
+
+  .hostIcon {
+    position: absolute;
+    top: -8px;
+    left: -4px;
+    color: gold;
+    font-size: vars.$icon-size-small;
+    rotate: -30deg;
+  }
+
+  .readyIcon {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    color: vars.$color-success;
+    font-size: vars.$icon-size-small;
+    background-color: vars.$color-background-translucent-light;
+    border-radius: vars.$roundness;
+    padding: 2px;
+    aspect-ratio: 1;
+  }
+
+  .name {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    font-size: vars.$font-size-body2;
+    width: 100%;
+    background-color: vars.$color-background-translucent-light;
+    border-bottom-left-radius: vars.$roundness;
+    border-bottom-right-radius: vars.$roundness;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
+
+.width1 {
+  min-width: calc(100% / 5 - vars.$spacing-secondary / 1.25);
+  max-width: calc(100% / 5 - vars.$spacing-secondary / 1.25);
+}
+
+.width2 {
+  min-width: calc(100% / 3 - vars.$spacing-secondary / 1.5);
+  max-width: calc(100% / 3 - vars.$spacing-secondary / 1.5);
+}
+
+.width3 {
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.connected {
+  // border: 1px solid vars.$color-primary;
+
+  background-color: vars.$color-surface2;
+}
+
+.host {
+  // border: 5px solid gold !important;
+}
+
+.user {
+  border: 1px solid vars.$color-primary;
+}

@@ -1,0 +1,39 @@
+.container {
+  flex-direction: row;
+  gap: vars.$spacing-primary;
+  width: 100%;
+  height: vars.$layout-input-height;
+  align-items: center;
+
+  .input {
+    background-color: vars.$color-surface;
+    border-radius: vars.$roundness;
+    border-color: vars.$color-primary;
+    color: vars.$color-text-primary;
+    font-size: vars.$font-size-h3;
+    padding: vars.$spacing-primary;
+    min-width: 0;
+    flex: 1;
+
+    &:focus {
+      outline: 2px solid vars.$color-primary !important;
+    }
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.disabled {
+  filter: brightness(vars.$disabled-brightness-filter);
+}
+
+.rightLabel {
+  position: absolute;
+  right: vars.$spacing-primary;
+  color: vars.$color-text-secondary;
+  font-size: vars.$font-size-body2;
+}

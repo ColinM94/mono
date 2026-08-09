@@ -11,7 +11,7 @@ interface Params<T> {
   collection: string;
 }
 
-type Response = Promise<ApiResponse<undefined>>;
+type Response = Promise<ApiResponse<null>>;
 
 export const updateDocument = async <T>(params: Params<T>): Response => {
   const { id, collection: collectionName, data } = params;
@@ -21,7 +21,7 @@ export const updateDocument = async <T>(params: Params<T>): Response => {
 
     return {
       ok: true,
-      data: undefined,
+      data: null,
     };
   } catch (error) {
     return handleApiResponseError({

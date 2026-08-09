@@ -1,0 +1,56 @@
+.container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  .quests {
+  }
+
+  .info {
+    flex-direction: row;
+    gap: vars.$spacing-primary;
+
+    .infoItem {
+      flex: 1;
+      background-color: vars.$color-surface;
+      padding: vars.$spacing-primary;
+      padding-top: vars.$spacing-secondary;
+      padding-bottom: vars.$spacing-secondary;
+      border-radius: vars.$roundness;
+      justify-content: center;
+      align-items: center;
+
+      .infoItemHeading {
+        color: vars.$color-text-secondary;
+        font-size: vars.$font-size-body2;
+
+        white-space: nowrap;
+      }
+
+      .infoItemValue {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+
+  .quests {
+    flex-direction: row;
+    gap: vars.$spacing-primary;
+
+    .quest {
+      flex: 1;
+      background-color: vars.$color-success;
+      justify-content: center;
+      align-items: center;
+      padding: vars.$spacing-primary;
+      border-radius: vars.$roundness;
+      font-size: vars.$font-size-h3;
+    }
+  }
+
+  .content {
+    flex: 1;
+  }
+}

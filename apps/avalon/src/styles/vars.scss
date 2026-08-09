@@ -1,0 +1,63 @@
+//Fonts
+$font-size-display: 3rem;
+$font-size-h1: 1.8rem;
+$font-size-h2: 1.5rem;
+$font-size-h3: 1.25rem;
+$font-size-body: 1.2rem;
+$font-size-body2: 0.8rem;
+$font-size-button: 2rem;
+
+// Icons
+$icon-size-large: 1.6rem;
+$icon-size-medium: 1.3rem;
+$icon-size-small: 1rem;
+
+// Colors.
+$color-background: #131314;
+$color-background-translucent: rgba(0, 0, 0, 0.8);
+$color-background-translucent-light: rgba(0, 0, 0, 0.5);
+$color-surface: #1a2028;
+$color-surface2: #222a35;
+$color-surface3: #28323f;
+$color-surface3-highlight: #404f63;
+
+$color-good: rgba(53, 128, 187, 1);
+$color-evil: rgba(255, 129, 0, 1);
+$gradient-good: radial-gradient(circle, rgba(55, 80, 89, 1) 0%, rgba(67, 98, 154, 1) 45%, rgba(53, 128, 187, 1) 81%);
+$gradient-evil: radial-gradient(circle, rgba(176, 125, 74, 1) 0%, rgba(213, 126, 38, 1) 45%, rgba(255, 129, 0, 1) 81%);
+
+$color-primary: #a1701f;
+$color-outline: #2b3542;
+$color-text-primary: #ffffff;
+$color-text-secondary: rgb(255 255 255 / 70%);
+$color-text-tertiary: rgb(255 255 255 / 40%);
+$color-text-shadow: rgb(8 8 8 / 80%);
+$color-danger: #d60a0a;
+$color-warning: #e6c108;
+$color-red: #a72608;
+$color-success: #259e2d;
+$color-grey: #888888;
+$color-white: #ffffff;
+$color-link: #9393ff;
+
+// Layout
+$roundness: 12px;
+$spacing-primary: 1rem;
+$spacing-secondary: 0.75rem;
+$spacing-tertiary: 0.5rem;
+$layout-header-height: $spacing-primary * 4.5;
+$layout-tabbar-height: $spacing-primary * 2.25;
+$layout-navbar-width: 250px;
+$layout-input-height: 52px;
+
+// Breakpoints
+$breakpoint-small: 600px;
+$breakpoint-medium: 768px;
+$breakpoint-large: 992px;
+$breakpoint-extra: 1100px;
+
+// Misc
+$active-brightness-filter: 1.1;
+$disabled-brightness-filter: 0.5;
+$shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+$shadow-light: 0px 4px 6px rgba(0, 0, 0, 0.2);

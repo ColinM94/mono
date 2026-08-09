@@ -1,0 +1,89 @@
+.container {
+  perspective: 1000px;
+  flex: 1;
+
+  .card {
+    position: relative;
+    flex: 1;
+    cursor: pointer;
+    background: transparent;
+    transition: transform 0.7s ease;
+    transform-style: preserve-3d;
+    border-radius: 4px;
+  }
+
+  .cardFlipped {
+    transform: rotateY(180deg);
+  }
+
+  .cardFace {
+    position: absolute;
+    inset: 0;
+    padding: vars.$spacing-primary;
+    border: 1px solid vars.$color-surface2;
+    border-radius: 4px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    background: linear-gradient(190deg, rgba(26, 32, 40, 0.38) 0%, rgba(34, 42, 53, 1) 100%);
+  }
+
+  .cardFront {
+    @extend .cardFace;
+
+    .frame {
+      .nameContainer {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .imageContainer {
+        height: 50px;
+        aspect-ratio: 1;
+
+        .image {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          max-height: 100%;
+          max-width: 100%;
+          object-fit: contain;
+        }
+      }
+      .frontName {
+        font-size: vars.$font-size-display;
+        font-weight: bold;
+      }
+
+      .frontDescription {
+        color: vars.$color-text-secondary;
+      }
+    }
+  }
+
+  .cardBack {
+    @extend .cardFace;
+    transform: rotateY(180deg);
+
+    .centerIcon {
+      font-size: 125px;
+      //   color: vars.$color-primary;
+      color: vars.$color-text-tertiary;
+    }
+  }
+
+  //   .frontContent {
+  //     display: flex;
+  //     flex-direction: column;
+  //     gap: vars.$spacing-primary;
+  //     height: 100%;
+  //   }
+
+  //   .cardBackInnerFrame {
+  //     display: grid;
+  //     place-items: center;
+  //     width: 100%;
+  //     height: 100%;
+  //     border: 2px solid vars.$color-primary;
+  //     border-radius: 4px;
+  //   }
+}

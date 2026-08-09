@@ -6,7 +6,7 @@ import { getDocumentsSnapshot } from '@mono/firebase/firestore';
 import { MainLayout } from 'layouts/mainLayout/mainLayout';
 import type { DatabaseRecord } from 'types/general';
 
-import type { ListItemData, Props } from './types';
+import type { Props } from './types';
 import { ListItem } from './components/listItem/listItem';
 import styles from './styles.module.scss';
 
@@ -26,12 +26,10 @@ export const List = <T,>(props: Props<T & DatabaseRecord>) => {
     };
   }, [collection]);
 
-  const renderItems = () => {
-    return data.map((dataItem) => {
-      const item: ListItemData<T & DatabaseRecord> = { ...items(dataItem), data: dataItem };
-      return item;
-    });
-  };
+  const renderItems = React.useCallback(() => {
+    console.log('hellloooo');
+    return data.map((dataItem) => ({ ...items(dataItem), data: dataItem }));
+  }, []);
 
   return (
     <MainLayout

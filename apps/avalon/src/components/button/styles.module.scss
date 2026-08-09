@@ -1,0 +1,50 @@
+$evilColor: #f07e0a;
+$goodColor: #43839a;
+
+.container {
+  height: vars.$layout-input-height;
+  box-shadow: vars.$shadow;
+  background-color: vars.$color-surface;
+  border-radius: vars.$roundness;
+  padding: vars.$spacing-primary;
+  cursor: pointer;
+  background-color: vars.$color-primary;
+  justify-content: center;
+  align-items: center;
+  transition: scale 0.2s;
+  // background-color: vars.$color-surface !important;
+
+  .icon {
+    font-size: vars.$icon-size-large;
+    aspect-ratio: 1;
+  }
+
+  &:hover {
+    scale: 1.01;
+
+    .image {
+      transform: scale(1.01);
+    }
+  }
+
+  &:active {
+    scale: 0.99;
+  }
+}
+
+.disabled {
+  // filter: brightness(1);
+  filter: brightness(vars.$disabled-brightness-filter);
+
+  &:hover {
+    scale: unset !important;
+  }
+}
+
+.iconContainer {
+  aspect-ratio: 1;
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: unset;
+  text-shadow: vars.$color-text-shadow;
+  padding: 0 !important;
+}

@@ -1,0 +1,47 @@
+.container {
+  transition: opacity 0.2s;
+  flex: 1;
+  justify-content: center;
+  gap: vars.$spacing-secondary;
+
+  .characterName {
+    font-size: vars.$font-size-h1;
+    text-align: center;
+  }
+
+  .character {
+    width: calc(100% - vars.$spacing-primary * 2);
+    align-self: center;
+    margin-bottom: calc(vars.$spacing-primary);
+    flex: 1;
+    max-width: 300px;
+    max-height: 400px;
+    justify-content: center;
+  }
+
+  .howToPlay {
+  }
+
+  .playerCards {
+    flex-direction: row;
+    gap: vars.$spacing-primary;
+    margin-top: vars.$spacing-primary;
+  }
+
+  .section {
+    .sectionHeading {
+      font-size: vars.$font-size-body;
+    }
+  }
+}
+
+.revealButton {
+  align-self: center;
+  max-width: 200px;
+  margin-top: auto;
+  background-color: vars.$color-surface2;
+}
+
+.hidden {
+  opacity: 0;
+}

@@ -1,0 +1,40 @@
+.container {
+  align-items: center;
+  justify-content: center;
+
+  .label {
+    position: absolute;
+    background-color: vars.$color-background;
+    padding: vars.$spacing-primary;
+    font-size: vars.$font-size-h2;
+  }
+}
+
+.divider {
+  background-color: vars.$color-surface2;
+}
+
+.vertical {
+  @extend .divider;
+
+  margin-left: vars.$spacing-primary;
+  margin-right: vars.$spacing-primary;
+  width: 1px;
+  height: 100%;
+  max-width: 90vh;
+}
+
+.horizontal {
+  @extend .divider;
+
+  margin-bottom: vars.$spacing-primary;
+  height: 1px;
+  width: 100%;
+  max-width: 90vw;
+}
+
+.description {
+  font-size: vars.$font-size-h3;
+  margin-bottom: vars.$spacing-primary;
+  text-align: center;
+}

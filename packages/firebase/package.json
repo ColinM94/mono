@@ -7,7 +7,8 @@
   "exports": {
     ".": "./src/initialise.ts",
     "./firestore": "./src/firestore/index.ts",
-    "./auth": "./src/auth/index.ts"
+    "./auth": "./src/auth/index.ts",
+    "./storage": "./src/storage/index.ts"
   },
   "dependencies": {
     "firebase": "catalog:"

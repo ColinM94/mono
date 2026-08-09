@@ -1,0 +1,38 @@
+.container {
+  flex: 1;
+  border: 2px solid vars.$color-primary;
+  border-radius: 4px;
+  padding: 40px;
+  flex: 1;
+  align-items: center;
+
+  .glyph {
+    position: absolute;
+    //   rotate: 45deg;
+    color: vars.$color-primary;
+  }
+
+  .glyphTopLeft {
+    @extend .glyph;
+    left: 15px;
+    top: 15px;
+  }
+
+  .glyphTopRight {
+    @extend .glyph;
+    right: 15px;
+    top: 15px;
+  }
+
+  .glyphBottomLeft {
+    @extend .glyph;
+    left: 15px;
+    bottom: 15px;
+  }
+
+  .glyphBottomRight {
+    @extend .glyph;
+    bottom: 15px;
+    right: 15px;
+  }
+}

@@ -2,6 +2,7 @@ import react, { reactCompilerPreset } from '@vitejs/plugin-react';
 import babel from '@rolldown/plugin-babel';
 import { defineConfig, mergeConfig, type UserConfig } from 'vite';
 import { resolve } from 'node:path';
+import { analyzer } from 'vite-bundle-analyzer';
 
 export const defineViteConfig = (overrides: UserConfig = {}) => {
   const appRoot = process.cwd();
@@ -66,6 +67,7 @@ export const defineViteConfig = (overrides: UserConfig = {}) => {
       babel({
         presets: [reactCompilerPreset()],
       }),
+      analyzer(),
     ],
     css: {
       preprocessorOptions: {

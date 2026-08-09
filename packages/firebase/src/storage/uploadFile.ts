@@ -1,4 +1,4 @@
-import { ref, uploadBytes, UploadMetadata } from 'firebase/storage';
+import { ref, uploadBytes, type UploadMetadata } from 'firebase/storage';
 
 import { handleApiResponseError } from '@mono/shared/utils';
 import type { ApiResponse } from '@mono/shared/types';
@@ -18,7 +18,7 @@ interface Params {
  * @param path The path of the file in Storage. e.g. images/games/bubble-woods/logo.png
  * @returns Boolean indicating if successful or not.
  */
-type Response = Promise<ApiResponse<undefined>>;
+type Response = Promise<ApiResponse<null>>;
 
 export const uploadFile = async (params: Params): Response => {
   const { file, path, metadata } = params;
@@ -30,7 +30,7 @@ export const uploadFile = async (params: Params): Response => {
 
     return {
       ok: true,
-      data: undefined,
+      data: null,
     };
   } catch (error) {
     return handleApiResponseError({

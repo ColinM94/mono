@@ -1,0 +1,26 @@
+.container {
+  align-items: center;
+  flex: 1;
+  gap: vars.$spacing-primary;
+  margin-top: 40%;
+
+  .headingEvil {
+    font-size: 50px;
+    color: vars.$color-danger;
+  }
+
+  .headingGood {
+    font-size: 50px;
+    color: vars.$color-success;
+  }
+
+  .description {
+    font-size: vars.$font-size-h1;
+    color: vars.$color-text-secondary;
+    text-align: justify;
+  }
+
+  .leaveButton {
+    margin-top: auto;
+  }
+}

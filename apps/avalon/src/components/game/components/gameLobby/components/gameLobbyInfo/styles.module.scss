@@ -1,0 +1,39 @@
+.container {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: vars.$spacing-primary;
+  gap: vars.$spacing-primary;
+
+  .qrCodeContainer {
+    border: 2px solid vars.$color-primary;
+    border-radius: vars.$roundness;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    .copyButton {
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      padding: vars.$spacing-secondary !important;
+      aspect-ratio: 1;
+      background-color: rgba(26, 32, 40, 0.95);
+      border: 2px solid vars.$color-primary;
+
+      &:hover {
+        background-color: vars.$color-surface2;
+      }
+    }
+
+    .copyButtonIcon {
+      font-size: vars.$icon-size-medium;
+      color: vars.$color-text-secondary;
+    }
+  }
+
+  .code {
+    font-size: vars.$font-size-display;
+  }
+}
