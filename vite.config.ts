@@ -67,7 +67,9 @@ export const defineViteConfig = (overrides: UserConfig = {}) => {
       babel({
         presets: [reactCompilerPreset()],
       }),
-      analyzer(),
+      analyzer({
+        enabled: false,
+      }),
     ],
     css: {
       preprocessorOptions: {
