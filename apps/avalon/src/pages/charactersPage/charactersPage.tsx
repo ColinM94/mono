@@ -1,6 +1,6 @@
 import { MainLayout } from 'layouts/mainLayout/mainLayout';
 import { CharacterCard } from 'components/characterCard/characterCard';
-import { characters as charactersRecord } from 'consts/characters';
+import { characters as charactersRecord } from 'constants/characters';
 
 import styles from './styles.module.scss';
 

@@ -1,7 +1,7 @@
 import { classes } from "utils/classes"
 import { Button } from "components/button/button"
 
-import { Props } from "./types"
+import type { Props } from "./types"
 import styles from "./styles.module.scss"
 
 export const Modal = (props: Props) => {

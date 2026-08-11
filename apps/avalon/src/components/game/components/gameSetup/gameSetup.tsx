@@ -1,8 +1,8 @@
 import { MenuBar } from 'components/menuBar/menuBar';
-import { maxSpecialCharacters, characters } from 'consts/characters';
+import { maxSpecialCharacters, characters } from 'constants/characters';
 import { useSessionStore } from 'stores/useSessionStore/useSessionStore';
 import { setupCanContinue, setupContinue } from 'services/session/logic';
-import { CharacterId } from 'types/general';
+import type { CharacterId } from 'types/general';
 import { useAppStore } from 'stores/useAppStore/useAppStore';
 import { updateSession } from 'services/session/updateSession';
 

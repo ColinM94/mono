@@ -6,7 +6,7 @@ import { classes } from 'utils/classes';
 import { Divider } from 'components/divider/divider';
 import { memberSelectResultContinue } from 'services/session/logic';
 
-import { Props } from './types';
+import type { Props } from './types';
 import styles from './styles.module.scss';
 
 export const GameMemberSelectResult = (props: Props) => {

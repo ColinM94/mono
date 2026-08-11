@@ -1,9 +1,9 @@
 import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
 
-import { playerDefault } from 'consts/defaults';
+import { playerDefault } from 'constants/defaults';
 
-import { Actions, State } from './types';
+import type { Actions, State } from './types';
 
 const initialState: State = {
   sessionId: '',

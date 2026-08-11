@@ -1,7 +1,9 @@
+import type { ClassName } from '@mono/shared/types';
+
 export interface Props {
   value: string;
   setValue: (value: string) => void;
-  type?: "text" | "number";
+  type?: 'text' | 'number';
   onEnterClick?: () => void;
   placeholder?: string;
   disabled?: boolean;
@@ -9,5 +11,5 @@ export interface Props {
   children?: React.ReactNode;
   rightLabel?: string;
   inputClassName?: string;
-  className?: string;
+  className?: ClassName;
 }

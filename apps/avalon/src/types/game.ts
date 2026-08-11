@@ -1,4 +1,4 @@
-import { GameSession, Player } from "./gameSession";
+import type { GameSession, Player } from "./gameSession";
 
 export type GameState = {
   session: GameSession;

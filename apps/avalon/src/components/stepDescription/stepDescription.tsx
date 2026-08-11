@@ -1,5 +1,5 @@
 import styles from "./styles.module.scss";
-import { Props } from "./types";
+import type { Props } from "./types";
 
 export const StepDescription = ({ heading, description }: Props) => {
   return (

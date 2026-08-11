@@ -1,12 +1,12 @@
-import { classes } from "utils/classes";
-import { Debug } from "components/debug/debug";
-import { isDev } from "consts/general";
+import { classes } from 'utils/classes';
+import { Debug } from 'components/debug/debug';
+import { isDev } from 'constants/general';
 
-import { MenuBarMenuButton } from "./components/menuBarMenuButton/menuBarMenuButton";
-import { MenuBarReadyButton } from "./components/menuBarReadyButton/menuBarReadyButton";
+import { MenuBarMenuButton } from './components/menuBarMenuButton/menuBarMenuButton';
+import { MenuBarReadyButton } from './components/menuBarReadyButton/menuBarReadyButton';
 
-import styles from "./styles.module.scss";
-import { Props } from "./types";
+import styles from './styles.module.scss';
+import type { Props } from './types';
 
 export const MenuBar = (props: Props) => {
   const { showContinue, showReady, canContinue, canReady, onContinue, onReady, className } = props;

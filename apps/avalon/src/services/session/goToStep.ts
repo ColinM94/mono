@@ -1,6 +1,6 @@
 import { updateSession } from "./updateSession"
 import { updatePlayer } from "./updatePlayer"
-import { GameSession, Player } from "types/gameSession"
+import type { GameSession, Player } from "types/gameSession"
 import { useSessionStore } from "stores/useSessionStore/useSessionStore"
 
 interface Props {

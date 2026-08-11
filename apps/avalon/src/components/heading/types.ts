@@ -1,6 +1,8 @@
+import type { ClassName } from '@mono/shared/types';
+
 export interface Props {
-  headingTitle: string;
-  headingSubtitle?: string;
+  headingTitle: string | undefined;
+  headingSubtitle?: string | undefined;
   rightText?: string;
-  className?: string;
+  className?: ClassName;
 }

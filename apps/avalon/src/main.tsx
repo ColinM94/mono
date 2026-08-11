@@ -4,7 +4,7 @@ import { Route, Switch } from 'wouter';
 import { initialiseFirebase } from '@mono/firebase';
 import { getDocumentSnapshot, setDocument } from '@mono/firebase/firestore';
 
-import { User } from 'types/user';
+import type { User } from 'types/user';
 import { useAppStore } from 'stores/useAppStore/useAppStore';
 import { Splash } from 'components/splash/splash';
 import { Toast } from 'components/toast/toast';
@@ -14,8 +14,8 @@ import { JoinPage } from 'pages/joinPage/joinPage';
 import { MainMenuPage } from 'pages/mainMenu/mainMenuPage';
 import { PlayPage } from 'pages/playPage/playPage';
 import { RulesPage } from 'pages/rulesPage/rulesPage';
-import { initIcons } from 'inits/initIcons';
-import { firebaseConfig } from 'consts/config';
+import { firebaseConfig } from 'constants/config';
+import { initIcons } from 'constants/icons';
 
 import 'styles/global.scss';
 

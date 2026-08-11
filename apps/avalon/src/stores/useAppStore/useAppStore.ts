@@ -1,9 +1,9 @@
-import { userDefault } from 'consts/defaults';
+import { userDefault } from 'constants/defaults';
 
 import { createStore } from '@mono/zustand';
 
-import { Toast } from 'types/toast';
-import { User } from 'types/user';
+import type { Toast } from 'types/toast';
+import type { User } from 'types/user';
 
 export type State = {
   user: User;

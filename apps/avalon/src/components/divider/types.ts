@@ -1,6 +1,8 @@
+import type { ClassName } from '@mono/shared/types';
+
 export interface Props {
-  direction?: "horizontal" | "vertical";
+  direction?: 'horizontal' | 'vertical';
   label?: string;
   description?: string;
-  className?: string;
+  className?: ClassName;
 }

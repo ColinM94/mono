@@ -1,4 +1,4 @@
-import { Characters } from "types/characters";
+import type { Characters } from "types/characters";
 
 export const maxCharacters: Record<number, { good: number; evil: number }> = {
   5: {

@@ -10,7 +10,7 @@ import {
   memberSelectVoteContinue,
 } from 'services/session/logic';
 
-import { Props } from './types';
+import type { Props } from './types';
 import styles from './styles.module.scss';
 
 export const GameMemberSelectVote = (props: Props) => {

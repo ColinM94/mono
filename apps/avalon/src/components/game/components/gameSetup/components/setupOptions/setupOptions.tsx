@@ -2,7 +2,7 @@ import { Heading } from "components/heading/heading"
 import { classes } from "utils/classes"
 
 import styles from "./styles.module.scss"
-import { Props } from "./types"
+import type { Props } from "./types"
 
 export const SetupOptions = (props: Props) => {
   const { session, updateSession } = props

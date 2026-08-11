@@ -1,5 +1,5 @@
-import { GameSession, Player } from 'types/gameSession';
-import { User } from 'types/user';
+import type { GameSession, Player } from 'types/gameSession';
+import type { User } from 'types/user';
 import { generateUniqueId } from 'utils/generateUniqueId';
 
 const memberSelectVotesDefault = { 0: {}, 1: {}, 2: {}, 3: {}, 4: {} };

@@ -1,3 +1,5 @@
+import type { ClassName } from '@mono/shared/types';
+
 export interface Props {
   showReady: boolean;
   showContinue: boolean;
@@ -6,5 +8,5 @@ export interface Props {
   canReady?: () => string | true;
   onContinue?: () => Promise<void>;
   onReady?: () => Promise<void>;
-  className?: string;
+  className?: ClassName;
 }

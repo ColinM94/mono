@@ -1,10 +1,12 @@
+import type { ClassName } from '@mono/shared/types';
+
 import type { Children, IconName } from 'types/general';
 import type { FormFieldProps } from '../formField/types';
 
 export interface InputTextProps extends FormFieldProps {
   value?: string;
   setValue?: (value: string, e: React.ChangeEvent<HTMLInputElement>) => void;
-  inputClassName?: string | undefined;
+  inputClassName?: ClassName;
   placeholder?: string;
   type?: 'password' | 'text' | 'email' | 'url';
   disabled?: boolean;

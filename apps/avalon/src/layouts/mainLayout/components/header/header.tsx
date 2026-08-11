@@ -4,7 +4,7 @@ import { useSessionStore } from "stores/useSessionStore/useSessionStore";
 import { Button } from "components/button/button";
 import { leaveSession } from "services/session/leaveSession";
 
-import { Props } from "./types";
+import type { Props } from "./types";
 import styles from "./styles.module.scss";
 
 export const Header = (props: Props) => {

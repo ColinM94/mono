@@ -1,13 +1,13 @@
-import { QRCode } from "react-qrcode-logo";
+import { QRCode } from 'react-qrcode-logo';
 
-import { useSessionStore } from "stores/useSessionStore/useSessionStore";
-import { useAppStore } from "stores/useAppStore/useAppStore";
-import { baseUrl } from "consts/general";
-import { classes } from "utils/classes";
+import { useSessionStore } from 'stores/useSessionStore/useSessionStore';
+import { useAppStore } from 'stores/useAppStore/useAppStore';
+import { baseUrl } from 'constants/general';
+import { classes } from 'utils/classes';
 
-import styles from "./styles.module.scss";
-import { Props } from "./types";
-import { Button } from "components/button/button";
+import styles from './styles.module.scss';
+import type { Props } from './types';
+import { Button } from 'components/button/button';
 
 export const GameLobbyInfo = ({ className }: Props) => {
   const { showToast } = useAppStore();
@@ -17,7 +17,7 @@ export const GameLobbyInfo = ({ className }: Props) => {
 
   const handleCopy = () => {
     void navigator.clipboard.writeText(url);
-    showToast("URL Copied!");
+    showToast('URL Copied!');
   };
 
   return (
@@ -25,7 +25,12 @@ export const GameLobbyInfo = ({ className }: Props) => {
       <div onClick={handleCopy} className={styles.qrCodeContainer}>
         <QRCode size={200} value={url} eyeColor="#a1701f" fgColor="#404f63" bgColor="#1a2028" />
 
-        <Button icon="copy" onClick={handleCopy} iconClassName={styles.copyButtonIcon} className={styles.copyButton} />
+        <Button
+          icon="copy"
+          onClick={handleCopy}
+          iconClassName={styles.copyButtonIcon}
+          className={styles.copyButton}
+        />
       </div>
 
       <div onClick={handleCopy} className={styles.code}>

@@ -1,0 +1,16 @@
+{
+  "name": "@mono/ui",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/initialise.ts"
+  },
+  "dependencies": {
+    "firebase": "catalog:"
+  },
+  "devDependencies": {
+    "@mono/shared": "workspace:*"
+  }
+}

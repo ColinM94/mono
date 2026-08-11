@@ -1,4 +1,4 @@
-import { Props } from "./types"
+import type { Props } from "./types"
 import styles from "./styles.module.scss"
 
 import { classes } from "utils/classes"

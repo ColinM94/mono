@@ -1,11 +1,11 @@
 import { classes } from 'utils/classes';
 import { Heading } from 'components/heading/heading';
 import { CharacterCard } from 'components/characterCard/characterCard';
-import { CharacterId } from 'types/general';
-import { characters } from 'consts/characters';
+import type { CharacterId } from 'types/general';
+import { characters } from 'constants/characters';
 
 import styles from './styles.module.scss';
-import { Props } from './types';
+import type { Props } from './types';
 
 export const SetupCharacters = (props: Props) => {
   const {

@@ -1,7 +1,7 @@
 import { classes } from "utils/classes"
 
 import styles from "./styles.module.scss"
-import { Props } from "./types"
+import type { Props } from "./types"
 
 export const Divider = (props: Props) => {
   const { direction = "horizontal", label, description, className } = props

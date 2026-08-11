@@ -1,7 +1,7 @@
 import { updateDocument } from '@mono/firebase/firestore';
 import { useAppStore } from 'stores/useAppStore/useAppStore';
 import { useSessionStore } from 'stores/useSessionStore/useSessionStore';
-import { GameSession } from 'types/gameSession';
+import type { GameSession } from 'types/gameSession';
 
 export const updateSession = async (update: Partial<GameSession>, idOverride?: string) => {
   const { sessionId } = useSessionStore.getState();

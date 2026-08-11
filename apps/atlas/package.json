@@ -27,7 +27,6 @@
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
     "@vitejs/plugin-react": "catalog:",
-    "add": "^2.0.9",
     "babel-plugin-react-compiler": "catalog:",
     "globals": "catalog:",
     "pnpm": "^11.20.0",

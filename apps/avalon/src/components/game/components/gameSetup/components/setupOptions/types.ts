@@ -1,4 +1,4 @@
-import { GameSession } from "types/gameSession"
+import type { GameSession } from "types/gameSession"
 
 export interface Props {
   session: GameSession

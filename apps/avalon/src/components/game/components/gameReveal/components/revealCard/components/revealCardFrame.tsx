@@ -1,13 +1,13 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { classes } from "utils/classes";
+import { classes } from 'utils/classes';
 
-import styles from "./styles.module.scss";
-import React from "react";
+import styles from './styles.module.scss';
+import React from 'react';
 
 interface Props {
   children: React.ReactElement | React.ReactElement[];
-  className: string;
+  className: string | undefined;
 }
 
 export const RevealCardFrame = (props: Props) => {

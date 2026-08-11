@@ -1,4 +1,4 @@
-import { CharacterId } from './general';
+import type { CharacterId } from './general';
 
 export type Player = {
   id: string;

@@ -1,4 +1,4 @@
-import { CharacterId } from "types/general";
+import type { CharacterId } from "types/general";
 
 export interface Props {
   characterId: CharacterId;

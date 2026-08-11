@@ -4,7 +4,7 @@ import { classes } from "utils/classes"
 import { Heading } from "components/heading/heading"
 
 import styles from "./styles.module.scss"
-import { Props } from "./types"
+import type { Props } from "./types"
 
 export const InputCheckbox = (props: Props) => {
   const { value, setValue, heading, headingSubtitle, className } = props

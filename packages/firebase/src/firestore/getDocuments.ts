@@ -1,10 +1,11 @@
+import type {
+  QueryConstraint} from 'firebase/firestore';
 import {
   collection,
   getDocs,
   limit,
   orderBy,
   query,
-  QueryConstraint,
   where,
 } from 'firebase/firestore';
 

@@ -1,8 +1,9 @@
+import type {
+  QueryConstraint} from 'firebase/firestore';
 import {
   query,
   where,
   collection,
-  QueryConstraint,
   orderBy,
   onSnapshot,
   limit,

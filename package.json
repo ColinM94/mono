@@ -3,15 +3,10 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "atlas:b": "pnpm --filter atlas ",
+    "atlas": "pnpm --filter atlas",
+    "avalon": "pnpm --filter avalon",
     "build": "pnpm -r build",
-    "lint": "oxlint",
-    "lint:fix": "oxlint --fix",
-    "atlas:dev": "pnpm --filter atlas dev",
-    "atlas:build": "pnpm --filter atlas build",
-    "atlas:visualise": "pnpm --filter atlas visualise",
-    "avalon:dev": "pnpm --filter avalon dev",
-    "visualise": "pnpm dlx vite-bundle-visualizer -c vite.config.ts"
+    "lint": "oxlint --fix"
   },
   "devDependencies": {
     "@rolldown/plugin-babel": "^0.2.3",

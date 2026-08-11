@@ -8,7 +8,7 @@ import { LoadingOverlay } from "components/loadingOverlay/loadingOverlay";
 import { useAppStore } from "stores/useAppStore/useAppStore";
 
 import styles from "./styles.module.scss";
-import { Props } from "./types";
+import type { Props } from "./types";
 
 export const MenuBarReadyButton = (props: Props) => {
   const { canReady, onReady, canContinue, onContinue, showContinue, showReady } = props;

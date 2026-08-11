@@ -1,5 +1,6 @@
 import { Divider } from 'components/divider/divider';
 import { MenuBar } from 'components/menuBar/menuBar';
+import { PlayerCard } from 'components/playerCard/playerCard';
 import { useSessionStore } from 'stores/useSessionStore/useSessionStore';
 import { classes } from 'utils/classes';
 import { questSucceedVote } from 'services/session/questSucceedVote';
@@ -9,7 +10,6 @@ import {
   questVoteContinue,
   questVoteReady,
 } from 'services/session/logic';
-import { PlayerCard } from 'components/playerCard/playerCard';
 
 import styles from './styles.module.scss';
 
@@ -40,8 +40,8 @@ export const GameQuestVote = () => {
 
       {!activeQuest.players.includes(myPlayer.id) && (
         <div className={styles.players}>
-          {playersToShow.map((player) => (
-            <PlayerCard player={players[player]} showName showLeaderIcon />
+          {playersToShow.map((playerId) => (
+            <PlayerCard key={playerId} player={players[playerId]} showName showLeaderIcon />
           ))}
         </div>
       )}

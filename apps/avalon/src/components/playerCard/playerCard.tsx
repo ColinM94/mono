@@ -3,9 +3,9 @@ import { deleteDocumentField } from '@mono/firebase/firestore';
 
 import { useSessionStore } from 'stores/useSessionStore/useSessionStore';
 import { classes } from 'utils/classes';
-import { GameSession } from 'types/gameSession';
+import type { GameSession } from 'types/gameSession';
 
-import { Props } from './types';
+import type { Props } from './types';
 import styles from './styles.module.scss';
 
 export const PlayerCard = (props: Props) => {

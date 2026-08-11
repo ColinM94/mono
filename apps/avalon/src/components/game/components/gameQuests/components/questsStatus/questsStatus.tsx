@@ -4,7 +4,7 @@ import { classes } from 'utils/classes';
 import { useSessionStore } from 'stores/useSessionStore/useSessionStore';
 import { Modal } from 'components/modal/modal';
 
-import { Props } from './types';
+import type { Props } from './types';
 import styles from './styles.module.scss';
 
 export const QuestsStatus = ({ className }: Props) => {

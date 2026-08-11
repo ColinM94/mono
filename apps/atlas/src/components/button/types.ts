@@ -1,4 +1,5 @@
 import type { CSSProperties } from 'react';
+import type { ClassName } from '@mono/shared/types';
 import type { IconName, Layer } from 'types/general';
 
 interface ButtonPropsBase {
@@ -10,12 +11,12 @@ interface ButtonPropsBase {
   isFormSubmit?: boolean;
   onClick?: ((e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void) | undefined;
   centerLabel?: boolean;
-  labelClassName?: string | undefined;
+  labelClassName?: ClassName;
   title?: string;
   // onMouseEnter: HTMLButtonElement["onmouseenter"];
   style?: CSSProperties;
   className?: string | undefined | undefined;
-  iconClassName?: string | undefined;
+  iconClassName?: ClassName;
 }
 
 interface ButtonPropsGeneral extends ButtonPropsBase {

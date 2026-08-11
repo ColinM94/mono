@@ -1,17 +1,17 @@
 import { updateDocument } from '@mono/firebase/firestore';
+import type { ApiResponse } from '@mono/shared/types';
 
+import type { GameSession, Player } from 'types/gameSession';
 import { useSessionStore } from 'stores/useSessionStore/useSessionStore';
-import { GameSession, Player } from 'types/gameSession';
 import { shuffleArray } from 'utils/shuffleArray';
-import { characters, maxCharacters, maxSpecialCharacters } from 'consts/characters';
-import { numPlayersByQuest } from 'consts/general';
-import { CharacterId } from 'types/general';
+import { characters, maxCharacters, maxSpecialCharacters } from 'constants/characters';
+import { numPlayersByQuest } from 'constants/general';
+import type { CharacterId } from 'types/general';
 
 import { updateActiveQuest } from './updateActiveQuest';
 import { updatePlayer } from './updatePlayer';
 import { updateSession } from './updateSession';
 import { goToStep } from './goToStep';
-import { ApiResponse } from '@mono/shared/types';
 
 // -------------
 // 1. Lobby

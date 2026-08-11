@@ -1,3 +1,5 @@
+import type { ClassName } from '@mono/shared/types';
+
 export interface Props {
   showDivider?: boolean;
   showMyPlayer?: boolean;
@@ -6,5 +8,5 @@ export interface Props {
   showIsReady?: boolean;
   playerIds?: string[];
   width?: 1 | 2 | 3;
-  className?: string;
+  className?: ClassName;
 }

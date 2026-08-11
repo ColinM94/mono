@@ -4,11 +4,18 @@ export default defineConfig({
   rules: {
     'react/only-export-components': 'warn',
     'react/exhaustive-deps': 'off',
+    'typescript/no-unsafe-member-access': 'off',
+    'typescript/consistent-type-imports': [
+      'warn',
+      {
+        fixStyle: 'inline-type-imports',
+      },
+    ],
   },
   categories: {
     correctness: 'warn',
   },
-  plugins: ['node', 'react', 'react-perf', 'import', 'promise'],
+  plugins: ['typescript', 'node', 'react', 'react-perf', 'import', 'promise'],
   jsPlugins: [],
   overrides: [],
   extends: [],

@@ -2,11 +2,11 @@ import * as React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRotate } from '@fortawesome/free-solid-svg-icons';
 
-import { characters } from 'consts/characters';
+import { characters } from 'constants/characters';
 import { useSessionStore } from 'stores/useSessionStore/useSessionStore';
+import { classes } from 'utils/classes';
 
 import styles from './styles.module.scss';
-import { classes } from 'utils/classes';
 import { RevealCardFrame } from './components/revealCardFrame';
 
 export const RevealCard = () => {
@@ -22,6 +22,8 @@ export const RevealCard = () => {
   const [image, setImage] = React.useState<string | null>(null);
 
   React.useEffect(() => {
+    if (!character) return;
+
     const loadImage = async () => {
       const tempImage = await import(`assets/images/characters/${character.id}.webp`);
 
@@ -29,7 +31,9 @@ export const RevealCard = () => {
     };
 
     void loadImage();
-  }, [character.id]);
+  }, [character?.id]);
+
+  if (!character) return;
 
   return (
     <div onClick={handleClick} className={styles.container}>

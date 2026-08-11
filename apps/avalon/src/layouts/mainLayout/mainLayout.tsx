@@ -3,7 +3,7 @@ import { classes } from "utils/classes"
 import { Header } from "./components/header/header"
 
 import styles from "./styles.module.scss"
-import { Props } from "./types"
+import type { Props } from "./types"
 
 export const MainLayout = (props: Props) => {
   const { showHeader, showBackButton, heading, children, className } = props

@@ -5,14 +5,14 @@ import { uploadFile, getFileUrl } from '@mono/firebase/storage';
 
 import { InputText } from 'components/inputText/inputText';
 import { useSessionStore } from 'stores/useSessionStore/useSessionStore';
-import { User } from 'types/user';
+import type { User } from 'types/user';
 import { classes } from 'utils/classes';
 import { Button } from 'components/button/button';
 import { updateMyPlayer } from 'services/session/updateMyPlayer';
 import { useAppStore } from 'stores/useAppStore/useAppStore';
 
 import styles from './styles.module.scss';
-import { Props } from './types';
+import type { Props } from './types';
 
 export const GameLobbyProfile = ({ className }: Props) => {
   const { showToast } = useAppStore();

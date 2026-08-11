@@ -1,5 +1,5 @@
-import { GameSession, Player, Quest } from 'types/gameSession';
-import { CharacterId } from 'types/general';
+import type { GameSession, Player, Quest } from 'types/gameSession';
+import type { CharacterId } from 'types/general';
 
 export type State = {
   // session: GameSession;

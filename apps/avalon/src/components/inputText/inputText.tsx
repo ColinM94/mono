@@ -1,6 +1,6 @@
 import { classes } from "utils/classes";
 
-import { Props } from "./types";
+import type { Props } from "./types";
 import styles from "./styles.module.scss";
 
 export const InputText = (props: Props) => {

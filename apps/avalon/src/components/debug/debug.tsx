@@ -1,26 +1,34 @@
-import * as React from "react";
+import * as React from 'react';
 
-import { Button } from "components/button/button";
-import { Modal } from "components/modal/modal";
-import { useSessionStore } from "stores/useSessionStore/useSessionStore";
-import { updateSession } from "services/session/updateSession";
-import { Player } from "types/gameSession";
-import { updatePlayer } from "services/session/updatePlayer";
-import { CharacterCard } from "components/characterCard/characterCard";
-import { selectQuestMember } from "services/session/selectQuestMember";
-import { goToStep } from "services/session/goToStep";
-import { voteToApproveMember } from "services/session/voteToApproveMember";
-import { classes } from "utils/classes";
-import { questSucceedVote } from "services/session/questSucceedVote";
-import { characters } from "consts/characters";
-import { useAppStore } from "stores/useAppStore/useAppStore";
+import { Button } from 'components/button/button';
+import { Modal } from 'components/modal/modal';
+import { useSessionStore } from 'stores/useSessionStore/useSessionStore';
+import { updateSession } from 'services/session/updateSession';
+import type { Player } from 'types/gameSession';
+import { updatePlayer } from 'services/session/updatePlayer';
+import { CharacterCard } from 'components/characterCard/characterCard';
+import { selectQuestMember } from 'services/session/selectQuestMember';
+import { goToStep } from 'services/session/goToStep';
+import { voteToApproveMember } from 'services/session/voteToApproveMember';
+import { classes } from 'utils/classes';
+import { questSucceedVote } from 'services/session/questSucceedVote';
+import { characters } from 'constants/characters';
+import { useAppStore } from 'stores/useAppStore/useAppStore';
 
-import styles from "./styles.module.scss";
-import { memberSelectCanContinue } from "services/session/logic";
+import styles from './styles.module.scss';
+import { memberSelectCanContinue } from 'services/session/logic';
 
 export const Debug = () => {
-  const { activeQuest, isAllReady, players, playersArray, sessionId, step, activeMemberSelectVotes, numPlayers } =
-    useSessionStore();
+  const {
+    activeQuest,
+    isAllReady,
+    players,
+    playersArray,
+    sessionId,
+    step,
+    activeMemberSelectVotes,
+    numPlayers,
+  } = useSessionStore();
 
   const { showToast } = useAppStore();
   const [showMenu, setShowMenu] = React.useState(false);
@@ -38,7 +46,7 @@ export const Debug = () => {
           isMyPlayerHost: false,
           isReady: false,
           joinedAt: Date.now(),
-          characterId: "servant1",
+          characterId: 'servant1',
         };
 
         break;
@@ -51,7 +59,7 @@ export const Debug = () => {
       {
         [`players.${fakePlayer.id}`]: fakePlayer,
       },
-      sessionId,
+      sessionId
     );
   };
 
@@ -72,13 +80,16 @@ export const Debug = () => {
 
                   <div className={styles.playerContent}>
                     {player.characterId && (
-                      <CharacterCard character={characters[player.characterId]} className={styles.characterCard} />
+                      <CharacterCard
+                        character={characters[player.characterId]}
+                        className={styles.characterCard}
+                      />
                     )}
 
                     <div className={styles.playerControls}>
-                      {step === "memberSelect" && (
+                      {step === 'memberSelect' && (
                         <Button
-                          label={isSelectedForQuest ? "Remove" : "Add"}
+                          label={isSelectedForQuest ? 'Remove' : 'Add'}
                           disabled={isSelectedForQuest}
                           onClick={() => selectQuestMember(player.id)}
                           onClickDisabled={() => selectQuestMember(player.id)}
@@ -86,7 +97,7 @@ export const Debug = () => {
                         />
                       )}
 
-                      {step === "memberSelectVote" && (
+                      {step === 'memberSelectVote' && (
                         <>
                           <Button
                             label="Yes"
@@ -98,7 +109,7 @@ export const Debug = () => {
                             }
                             className={classes(
                               styles.yesButton,
-                              activeMemberSelectVotes[player.id] === true && styles.yesButtonActive,
+                              activeMemberSelectVotes[player.id] === true && styles.yesButtonActive
                             )}
                           />
 
@@ -112,13 +123,13 @@ export const Debug = () => {
                             }
                             className={classes(
                               styles.noButton,
-                              activeMemberSelectVotes[player.id] === false && styles.noButtonActive,
+                              activeMemberSelectVotes[player.id] === false && styles.noButtonActive
                             )}
                           />
                         </>
                       )}
 
-                      {step === "questVote" && activeQuest.players.includes(player.id) && (
+                      {step === 'questVote' && activeQuest.players.includes(player.id) && (
                         <div className={styles.votes}>
                           <Button
                             label="Pass"
@@ -130,7 +141,8 @@ export const Debug = () => {
                             }
                             className={classes(
                               styles.yesButton,
-                              activeQuest.votesToSucceed[player.id] === true && styles.yesButtonActive,
+                              activeQuest.votesToSucceed[player.id] === true &&
+                                styles.yesButtonActive
                             )}
                           />
 
@@ -144,14 +156,15 @@ export const Debug = () => {
                             }
                             className={classes(
                               styles.noButton,
-                              activeQuest.votesToSucceed[player.id] === false && styles.noButtonActive,
+                              activeQuest.votesToSucceed[player.id] === false &&
+                                styles.noButtonActive
                             )}
                           />
                         </div>
                       )}
 
                       <Button
-                        label={player.isReady ? "Unready" : "Ready"}
+                        label={player.isReady ? 'Unready' : 'Ready'}
                         disabled={player.isReady}
                         onClick={() => {
                           void updatePlayer(player.id, {
@@ -173,18 +186,18 @@ export const Debug = () => {
         </div>
 
         <div className={styles.controls}>
-          {step === "lobby" && (
+          {step === 'lobby' && (
             <Button
               label="Add Fake Player"
               onClick={addFakePlayer}
-              onClickDisabled={() => showToast("Already at max players", "error")}
+              onClickDisabled={() => showToast('Already at max players', 'error')}
               disabled={numPlayers >= 10}
               className={styles.button}
             />
           )}
 
           <Button
-            label={isAllReady ? "All Unready" : "All Ready"}
+            label={isAllReady ? 'All Unready' : 'All Ready'}
             onClick={() =>
               playersArray.forEach((player) => {
                 void updatePlayer(player.id, {
@@ -203,7 +216,7 @@ export const Debug = () => {
             className={styles.button}
           />
 
-          {step === "memberSelectVote" && (
+          {step === 'memberSelectVote' && (
             <>
               <Button
                 label="All Yes"
@@ -233,7 +246,7 @@ export const Debug = () => {
             </>
           )}
 
-          {step === "questVote" && (
+          {step === 'questVote' && (
             <>
               <Button
                 label="All Pass"
@@ -263,17 +276,17 @@ export const Debug = () => {
             </>
           )}
 
-          {step === "memberSelect" && (
+          {step === 'memberSelect' && (
             <Button
               label="Continue"
               onClick={() => {
                 void goToStep({
-                  step: "memberSelectVote",
+                  step: 'memberSelectVote',
                 });
               }}
               disabled={Boolean(memberSelectCanContinue() !== true)}
               onClickDisabled={() => {
-                showToast(String(memberSelectCanContinue()), "error");
+                showToast(String(memberSelectCanContinue()), 'error');
               }}
               className={styles.button}
             />

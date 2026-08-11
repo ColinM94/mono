@@ -1,12 +1,12 @@
 import { getDocument, updateDocument } from '@mono/firebase/firestore';
-import { ApiResponse } from '@mono/shared/types';
+import type { ApiResponse } from '@mono/shared/types';
+import { handleApiResponseError } from '@mono/shared/utils';
 
-import { GameSession } from 'types/gameSession';
-import { User } from 'types/user';
-import { playerDefault } from 'consts/defaults';
+import type { GameSession } from 'types/gameSession';
+import type { User } from 'types/user';
+import { playerDefault } from 'constants/defaults';
 
 import { updateSession } from './updateSession';
-import { handleApiResponseError } from '@mono/shared/utils';
 
 interface Props {
   sessionId: string;

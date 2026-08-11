@@ -3,9 +3,9 @@ import { setDocument } from '@mono/firebase/firestore';
 
 import { MainLayout } from 'layouts/mainLayout/mainLayout';
 import { useAppStore } from 'stores/useAppStore/useAppStore';
-import { GameSession } from 'types/gameSession';
+import type { GameSession } from 'types/gameSession';
 import { generateLobbyCode } from 'utils/generateLobbyCode';
-import { sessionDefault } from 'consts/defaults';
+import { sessionDefault } from 'constants/defaults';
 
 import { MainMenuButton } from './components/mainMenuButton/mainMenuButton';
 import styles from './styles.module.scss';

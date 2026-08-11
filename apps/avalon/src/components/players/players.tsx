@@ -3,7 +3,7 @@ import { PlayerCard } from "components/playerCard/playerCard";
 import { useSessionStore } from "stores/useSessionStore/useSessionStore";
 import { classes } from "utils/classes";
 
-import { Props } from "./types";
+import type { Props } from "./types";
 import styles from "./styles.module.scss";
 
 export const Players = (props: Props) => {

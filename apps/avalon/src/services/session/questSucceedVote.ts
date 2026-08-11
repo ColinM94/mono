@@ -1,7 +1,7 @@
 import { updateDocument } from '@mono/firebase/firestore';
 
 import { useSessionStore } from 'stores/useSessionStore/useSessionStore';
-import { GameSession } from 'types/gameSession';
+import type { GameSession } from 'types/gameSession';
 
 interface Props {
   playerId: string;

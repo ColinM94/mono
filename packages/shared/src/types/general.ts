@@ -30,3 +30,5 @@ export type Paths<T> = T extends readonly unknown[]
             : `${K}`;
       }[keyof T & string]
     : never;
+
+export type ClassName = string | undefined;

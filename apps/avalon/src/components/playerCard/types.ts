@@ -1,4 +1,4 @@
-import { Player } from "types/gameSession"
+import type { Player } from "types/gameSession"
 
 export interface Props {
   player?: Player

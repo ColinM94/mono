@@ -6,7 +6,7 @@ import { MenuBar } from 'components/menuBar/menuBar';
 import { classes } from 'utils/classes';
 import { questResultCanReady, questResultContinue, questResultReady } from 'services/session/logic';
 
-import { Props } from './types';
+import type { Props } from './types';
 import styles from './styles.module.scss';
 
 export const GameQuestResult = (props: Props) => {

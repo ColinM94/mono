@@ -1,4 +1,5 @@
-import { CharacterId } from 'types/general';
+import type { ClassName } from '@mono/shared/types';
+import type { CharacterId } from 'types/general';
 
 export interface Props {
   heading: string;
@@ -8,5 +9,5 @@ export interface Props {
   numActiveCharacters: number;
   allegiance: 'evil' | 'good';
   setCharacters: React.Dispatch<React.SetStateAction<CharacterId[]>>;
-  className?: string;
+  className?: ClassName;
 }

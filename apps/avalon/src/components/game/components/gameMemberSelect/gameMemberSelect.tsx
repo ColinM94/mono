@@ -7,7 +7,7 @@ import { classes } from 'utils/classes';
 import { selectQuestMember } from 'services/session/selectQuestMember';
 import { memberSelectCanContinue, memberSelectContinue } from 'services/session/logic';
 
-import { Props } from './types';
+import type { Props } from './types';
 import styles from './styles.module.scss';
 
 export const GameMemberSelect = (props: Props) => {

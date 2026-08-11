@@ -2,8 +2,8 @@ import { navigate } from 'wouter/use-browser-location';
 
 import { deleteDocument, deleteDocumentField, updateDocument } from '@mono/firebase/firestore';
 
-import { User } from 'types/user';
-import { GameSession } from 'types/gameSession';
+import type { User } from 'types/user';
+import type { GameSession } from 'types/gameSession';
 import { useSessionStore } from 'stores/useSessionStore/useSessionStore';
 import { useAppStore } from 'stores/useAppStore/useAppStore';
 
