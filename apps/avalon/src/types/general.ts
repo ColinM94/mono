@@ -1,4 +1,4 @@
-import type { characterNames } from 'constants/characters';
+import type { characterNames } from 'constants/characters.ts';
 
 /** Includes keys of all nested objects. */
 export type KeyOf<T> = {

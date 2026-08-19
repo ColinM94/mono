@@ -1,4 +1,4 @@
-import { Button } from 'components/button/button';
+import { Button } from 'components/button/button.tsx';
 import type { ButtonProps } from 'components/button/types';
 import type { Layout } from 'types/general';
 

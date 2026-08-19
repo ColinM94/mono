@@ -1,9 +1,9 @@
-import { useLocation } from "wouter";
+import { useLocation } from 'wouter';
 
-import { useSessionStore } from "stores/useSessionStore/useSessionStore";
-import { Button } from "components/button/button";
+import { useSessionStore } from 'stores/useSessionStore/useSessionStore.ts';
+import { Button } from 'components/button/button.tsx';
 
-import styles from "./styles.module.scss";
+import styles from './styles.module.scss';
 
 export const GameOver = () => {
   const [, navigate] = useLocation();
@@ -12,17 +12,17 @@ export const GameOver = () => {
   const result = () => {
     const value = {
       evilHasWon: true,
-      description: "",
+      description: '',
     };
 
     if (numFailMemberSelectVotes >= 5) {
       value.description =
-        "With the fifth failed vote, the court’s final hope collapses into silence. The nobles have argued, doubted, and delayed until the kingdom can no longer bear its own indecision, and evil takes the throne unchallenged as Camelot falls into ruin.";
+        'With the fifth failed vote, the court’s final hope collapses into silence. The nobles have argued, doubted, and delayed until the kingdom can no longer bear its own indecision, and evil takes the throne unchallenged as Camelot falls into ruin.';
     }
 
     if (numFailQuests >= 3) {
       value.description =
-        "Three quests have failed, and the truth now lies buried beneath ash and betrayal. The kingdom’s champions are shattered by their own uncertainty, and as hope drains from Camelot, evil steps forward to seize its victory without mercy.";
+        'Three quests have failed, and the truth now lies buried beneath ash and betrayal. The kingdom’s champions are shattered by their own uncertainty, and as hope drains from Camelot, evil steps forward to seize its victory without mercy.';
     }
 
     // Merlin is assasinated
@@ -33,7 +33,7 @@ export const GameOver = () => {
 
     if (numFailQuests < 3 && numFailMemberSelectVotes < 5) {
       value.description =
-        "Camelot stands at last in the light, its defenders victorious and its enemies exposed. The lies have been stripped away, the faithful have held the line, and with the forces of evil driven back, peace returns to the kingdom.";
+        'Camelot stands at last in the light, its defenders victorious and its enemies exposed. The lies have been stripped away, the faithful have held the line, and with the forces of evil driven back, peace returns to the kingdom.';
 
       value.evilHasWon = false;
     }
@@ -48,7 +48,7 @@ export const GameOver = () => {
 
       <div className={styles.description}>{result().description}</div>
 
-      <Button label="Leave Game" onClick={() => navigate("/")} className={styles.leaveButton} />
+      <Button label="Leave Game" onClick={() => navigate('/')} className={styles.leaveButton} />
     </div>
   );
 };

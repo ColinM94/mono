@@ -1,8 +1,8 @@
 import * as React from 'react';
+import { classes } from '@mono/shared/utils.ts';
 
-import { classes } from 'utils/classes';
-import { CharacterModal } from 'components/characterModal/characterModal';
-import { characterNames } from 'constants/characters';
+import { characterNames } from 'constants/characters.ts';
+import { CharacterModal } from 'components/characterModal/characterModal.tsx';
 
 import styles from './styles.module.scss';
 import type { Props } from './types';

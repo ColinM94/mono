@@ -1,14 +1,14 @@
-import * as React from "react";
+import * as React from 'react';
+import { classes } from '@mono/shared/utils.ts';
 
-import { useSessionStore } from "stores/useSessionStore/useSessionStore";
-import { updateMyPlayer } from "services/session/updateMyPlayer";
-import { Button } from "components/button/button";
-import { classes } from "utils/classes";
-import { LoadingOverlay } from "components/loadingOverlay/loadingOverlay";
-import { useAppStore } from "stores/useAppStore/useAppStore";
+import { Button } from 'components/button/button.tsx';
+import { LoadingOverlay } from 'components/loadingOverlay/loadingOverlay.tsx';
+import { useSessionStore } from 'stores/useSessionStore/useSessionStore.ts';
+import { useAppStore } from 'stores/useAppStore/useAppStore.ts';
+import { updateMyPlayer } from 'services/session/updateMyPlayer.ts';
 
-import styles from "./styles.module.scss";
-import type { Props } from "./types";
+import styles from './styles.module.scss';
+import type { Props } from './types';
 
 export const MenuBarReadyButton = (props: Props) => {
   const { canReady, onReady, canContinue, onContinue, showContinue, showReady } = props;
@@ -28,7 +28,7 @@ export const MenuBarReadyButton = (props: Props) => {
 
     if (result === true) return result;
 
-    if (alertUser) showToast(result, "error");
+    if (alertUser) showToast(result, 'error');
   };
 
   const handleReady = async () => {
@@ -37,7 +37,7 @@ export const MenuBarReadyButton = (props: Props) => {
 
       const result = canReady?.();
 
-      if (result !== true && typeof result === "string") throw new Error(result);
+      if (result !== true && typeof result === 'string') throw new Error(result);
 
       await onReady?.();
 
@@ -46,7 +46,7 @@ export const MenuBarReadyButton = (props: Props) => {
       });
     } catch (error) {
       const err = error as Error;
-      showToast(err.message, "error");
+      showToast(err.message, 'error');
     } finally {
       setIsLoading(false);
     }
@@ -65,7 +65,7 @@ export const MenuBarReadyButton = (props: Props) => {
       await onContinue?.();
     } catch (error) {
       const err = error as Error;
-      showToast(err.message, "error");
+      showToast(err.message, 'error');
     } finally {
       setIsLoading(false);
     }

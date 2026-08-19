@@ -1,7 +1,7 @@
 import { deleteDoc, doc } from 'firebase/firestore';
 
-import { handleApiResponseError } from '@mono/shared/utils';
-import type { ApiResponse } from '@mono/shared/types';
+import { handleApiResponseError } from '@mono/shared/utils.ts';
+import type { ApiResponse } from '@mono/shared/types.ts';
 
 import { getDb } from '../config';
 

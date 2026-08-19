@@ -1,5 +1,5 @@
-import { icons } from 'constants/icons';
-import { classes } from '@mono/shared/utils';
+import { icons } from 'constants/icons.ts';
+import { classes } from '@mono/shared/utils.ts';
 import type { IconName } from 'types/general';
 
 import styles from './styles.module.scss';

@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { classes } from '@mono/shared/utils';
+import { classes } from '@mono/shared/utils.ts';
 
-import { Icon } from 'components/icon/icon';
-import { FormField } from 'components/formField/formField';
+import { Icon } from 'components/icon/icon.tsx';
+import { FormField } from 'components/formField/formField.tsx';
 
 import type { InputTextProps } from './types';
 import styles from './styles.module.scss';

@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { classes } from 'utils/classes';
+import { classes } from '@mono/shared/utils.ts';
 
 import styles from './styles.module.scss';
 import React from 'react';

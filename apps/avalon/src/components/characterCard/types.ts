@@ -1,4 +1,4 @@
-import type { ClassName } from '@mono/shared/types';
+import type { ClassName } from '@mono/shared/types.ts';
 import type { Character } from 'types/characters';
 import type { CharacterId } from 'types/general';
 

@@ -1,6 +1,6 @@
-import { Button } from 'components/button/button';
+import { Button } from 'components/button/button.tsx';
 import type { ButtonProps } from 'components/button/types';
-import { Modal } from 'components/modal/modal';
+import { Modal } from 'components/modal/modal.tsx';
 
 interface Props {
   show: boolean;

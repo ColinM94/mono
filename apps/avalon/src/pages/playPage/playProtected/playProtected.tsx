@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { useLocation } from 'wouter';
-import { getDocumentSnapshot } from '@mono/firebase/firestore';
+import { getDocumentSnapshot } from '@mono/firebase/firestore.ts';
 
-import { Game } from 'components/game/game';
-import { useAppStore } from 'stores/useAppStore/useAppStore';
-import { useSessionStore } from 'stores/useSessionStore/useSessionStore';
+import { Game } from 'components/game/game.ts';
+import { useAppStore } from 'stores/useAppStore/useAppStore.tsx';
+import { useSessionStore } from 'stores/useSessionStore/useSessionStore.tsx';
 import type { GameSession } from 'types/gameSession';
 
 export const PlayProtected = () => {

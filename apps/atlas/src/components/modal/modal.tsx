@@ -1,6 +1,7 @@
-import { Button } from 'components/button/button';
+import { classes } from '@mono/shared/utils.ts';
+
+import { Button } from 'components/button/button.tsx';
 import type { Children } from 'types/general';
-import { classes } from '@mono/shared/utils';
 
 import styles from './styles.module.scss';
 

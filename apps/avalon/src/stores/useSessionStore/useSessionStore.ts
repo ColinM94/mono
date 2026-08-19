@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
 
-import { playerDefault } from 'constants/defaults';
+import { playerDefault } from 'constants/defaults.ts';
 
 import type { Actions, State } from './types';
 

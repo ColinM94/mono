@@ -1,16 +1,8 @@
-import type {
-  QueryConstraint} from 'firebase/firestore';
-import {
-  collection,
-  getDocs,
-  limit,
-  orderBy,
-  query,
-  where,
-} from 'firebase/firestore';
+import type { QueryConstraint } from 'firebase/firestore';
+import { collection, getDocs, limit, orderBy, query, where } from 'firebase/firestore';
 
-import { handleApiResponseError } from '@mono/shared/utils';
-import type { ApiResponse } from '@mono/shared/types';
+import { handleApiResponseError } from '@mono/shared/utils.ts';
+import type { ApiResponse } from '@mono/shared/types.ts';
 
 import type { FirestoreOrderByGeneric, FirestoreWhereGeneric } from '../types';
 import { getDb } from '../config';

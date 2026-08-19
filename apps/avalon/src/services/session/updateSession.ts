@@ -1,6 +1,6 @@
-import { updateDocument } from '@mono/firebase/firestore';
-import { useAppStore } from 'stores/useAppStore/useAppStore';
-import { useSessionStore } from 'stores/useSessionStore/useSessionStore';
+import { updateDocument } from '@mono/firebase/firestore.ts';
+import { useAppStore } from 'stores/useAppStore/useAppStore.tsx';
+import { useSessionStore } from 'stores/useSessionStore/useSessionStore.tsx';
 import type { GameSession } from 'types/gameSession';
 
 export const updateSession = async (update: Partial<GameSession>, idOverride?: string) => {

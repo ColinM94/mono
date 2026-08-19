@@ -1,11 +1,11 @@
-import { useLocation } from "wouter";
+import { useLocation } from 'wouter';
 
-import { useSessionStore } from "stores/useSessionStore/useSessionStore";
-import { Button } from "components/button/button";
-import { leaveSession } from "services/session/leaveSession";
+import { useSessionStore } from 'stores/useSessionStore/useSessionStore.ts';
+import { Button } from 'components/button/button.tsx';
+import { leaveSession } from 'services/session/leaveSession.ts';
 
-import type { Props } from "./types";
-import styles from "./styles.module.scss";
+import type { Props } from './types';
+import styles from './styles.module.scss';
 
 export const Header = (props: Props) => {
   const { headingTitle, showBackButton } = props;
@@ -19,7 +19,7 @@ export const Header = (props: Props) => {
       {showBackButton && (
         <Button
           icon="arrow-left"
-          onClick={() => navigate("/")}
+          onClick={() => navigate('/')}
           className={styles.backButton}
           iconClassName={styles.buttonIcon}
         />
@@ -30,7 +30,12 @@ export const Header = (props: Props) => {
       </div>
 
       {sessionId && (
-        <Button icon="x" onClick={leaveSession} className={styles.closeButton} iconClassName={styles.buttonIcon} />
+        <Button
+          icon="x"
+          onClick={leaveSession}
+          className={styles.closeButton}
+          iconClassName={styles.buttonIcon}
+        />
       )}
     </div>
   );

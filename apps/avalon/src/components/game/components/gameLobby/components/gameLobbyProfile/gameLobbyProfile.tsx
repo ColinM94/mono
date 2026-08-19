@@ -1,15 +1,15 @@
 import * as React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { updateDocument } from '@mono/firebase/firestore';
-import { uploadFile, getFileUrl } from '@mono/firebase/storage';
+import { updateDocument } from '@mono/firebase/firestore.ts';
+import { uploadFile, getFileUrl } from '@mono/firebase/storage.ts';
+import { classes } from '@mono/shared/utils.ts';
 
-import { InputText } from 'components/inputText/inputText';
-import { useSessionStore } from 'stores/useSessionStore/useSessionStore';
+import { InputText } from 'components/inputText/inputText.tsx';
+import { useSessionStore } from 'stores/useSessionStore/useSessionStore.tsx';
 import type { User } from 'types/user';
-import { classes } from 'utils/classes';
-import { Button } from 'components/button/button';
-import { updateMyPlayer } from 'services/session/updateMyPlayer';
-import { useAppStore } from 'stores/useAppStore/useAppStore';
+import { Button } from 'components/button/button.tsx';
+import { useAppStore } from 'stores/useAppStore/useAppStore.tsx';
+import { updateMyPlayer } from 'services/session/updateMyPlayer.ts';
 
 import styles from './styles.module.scss';
 import type { Props } from './types';

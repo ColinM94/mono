@@ -1,21 +1,21 @@
 import * as React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Route, Switch } from 'wouter';
-import { initialiseFirebase } from '@mono/firebase';
-import { getDocumentSnapshot, setDocument } from '@mono/firebase/firestore';
+import { initialiseFirebase } from '@mono/firebase/initialise.ts';
+import { getDocumentSnapshot, setDocument } from '@mono/firebase/firestore.ts';
 
 import type { User } from 'types/user';
-import { useAppStore } from 'stores/useAppStore/useAppStore';
-import { Splash } from 'components/splash/splash';
-import { Toast } from 'components/toast/toast';
-import { InvalidPage } from 'pages/invalidPage/invalidPage';
-import { CharactersPage } from 'pages/charactersPage/charactersPage';
-import { JoinPage } from 'pages/joinPage/joinPage';
-import { MainMenuPage } from 'pages/mainMenu/mainMenuPage';
-import { PlayPage } from 'pages/playPage/playPage';
-import { RulesPage } from 'pages/rulesPage/rulesPage';
-import { firebaseConfig } from 'constants/config';
-import { initIcons } from 'constants/icons';
+import { useAppStore } from 'stores/useAppStore/useAppStore.ts';
+import { Splash } from 'components/splash/splash.ts';
+import { Toast } from 'components/toast/toast.ts';
+import { InvalidPage } from 'pages/invalidPage/invalidPage.ts';
+import { CharactersPage } from 'pages/charactersPage/charactersPage.ts';
+import { JoinPage } from 'pages/joinPage/joinPage.ts';
+import { MainMenuPage } from 'pages/mainMenu/mainMenuPage.ts';
+import { PlayPage } from 'pages/playPage/playPage.ts';
+import { RulesPage } from 'pages/rulesPage/rulesPage.ts';
+import { firebaseConfig } from 'constants/config.ts';
+import { initIcons } from 'constants/icons.ts';
 
 import 'styles/global.scss';
 

@@ -1,14 +1,14 @@
 import * as React from 'react';
+import { capitaliseFirstLetter, classes } from '@mono/shared/utils.ts';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { Button } from 'components/button/button';
-import { Modal } from 'components/modal/modal';
-import { capitaliseFirstLetter } from 'utils/capitaliseFirstLetter';
-import { classes } from 'utils/classes';
-import { characters } from 'constants/characters';
-import { useSessionStore } from 'stores/useSessionStore/useSessionStore';
+import { Button } from 'components/button/button.tsx';
+import { Modal } from 'components/modal/modal.tsx';
+import { characters } from 'constants/characters.ts';
+import { useSessionStore } from 'stores/useSessionStore/useSessionStore.tsx';
+import { leaveSession } from 'services/session/leaveSession.ts';
 
 import styles from './styles.module.scss';
-import { leaveSession } from 'services/session/leaveSession';
 
 export const MenuBarMenuButton = () => {
   const { myPlayer, step } = useSessionStore();

@@ -1,9 +1,9 @@
-import { classes } from 'utils/classes';
-import { Debug } from 'components/debug/debug';
-import { isDev } from 'constants/general';
+import { classes } from '@mono/shared/utils.ts';
 
-import { MenuBarMenuButton } from './components/menuBarMenuButton/menuBarMenuButton';
-import { MenuBarReadyButton } from './components/menuBarReadyButton/menuBarReadyButton';
+import { Debug } from 'components/debug/debug.tsx';
+import { MenuBarReadyButton } from 'components/menuBar/components/menuBarReadyButton/menuBarReadyButton.tsx';
+import { MenuBarMenuButton } from 'components/menuBar/components/menuBarMenuButton/menuBarMenuButton.tsx';
+import { isDev } from 'constants/general.ts';
 
 import styles from './styles.module.scss';
 import type { Props } from './types';

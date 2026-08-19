@@ -1,7 +1,7 @@
-import { MainLayout } from 'layouts/mainLayout/mainLayout';
+import { MainLayout } from 'layouts/mainLayout/mainLayout.tsx';
 
+import { PDFViewer } from 'components/pdfViewer/pdfViewer.tsx';
 import rules from 'assets/rules.pdf';
-import { PDFViewer } from 'components/pdfViewer/pdfViewer';
 
 import styles from './styles.module.scss';
 

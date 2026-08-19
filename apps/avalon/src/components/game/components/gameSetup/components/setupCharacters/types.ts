@@ -1,4 +1,4 @@
-import type { ClassName } from '@mono/shared/types';
+import type { ClassName } from '@mono/shared/types.ts';
 import type { CharacterId } from 'types/general';
 
 export interface Props {

@@ -1,33 +1,37 @@
-import { Scanner } from "@yudiel/react-qr-scanner"
+import { Scanner } from '@yudiel/react-qr-scanner';
+import { classes } from '@mono/shared/utils.ts';
 
-import { Modal } from "components/modal/modal"
-import { classes } from "utils/classes"
-import { useAppStore } from "stores/useAppStore/useAppStore"
+import { Modal } from 'components/modal/modal.tsx';
+import { useAppStore } from 'stores/useAppStore/useAppStore.ts';
 
-import type { Props } from "./types"
-import styles from "./styles.module.scss"
+import type { Props } from './types';
+import styles from './styles.module.scss';
 
 export const JoinScanner = (props: Props) => {
-  const { showScanner, setShowScanner, onScanSuccess, className } = props
+  const { showScanner, setShowScanner, onScanSuccess, className } = props;
 
-  const { showToast } = useAppStore()
+  const { showToast } = useAppStore();
 
   const handleScan = (value: string) => {
-    const sessionId = value.substring(value.length - 4)
+    const sessionId = value.substring(value.length - 4);
 
     if (!/^\d{4}$/.test(sessionId)) {
-      showToast("Error scanning QR Code", "error")
-      return
+      showToast('Error scanning QR Code', 'error');
+      return;
     }
 
-    onScanSuccess(value)
-  }
+    onScanSuccess(value);
+  };
 
-  if (!showScanner) return null
+  if (!showScanner) return null;
 
   return (
-    <Modal show={showScanner} setShow={setShowScanner} className={classes(styles.container, className)}>
+    <Modal
+      show={showScanner}
+      setShow={setShowScanner}
+      className={classes(styles.container, className)}
+    >
       {showScanner && <Scanner onScan={(result) => handleScan(result[0].rawValue)} allowMultiple />}
     </Modal>
-  )
-}
+  );
+};

@@ -1,9 +1,9 @@
 import { ref, uploadBytes, type UploadMetadata } from 'firebase/storage';
 
-import { handleApiResponseError } from '@mono/shared/utils';
-import type { ApiResponse } from '@mono/shared/types';
+import { handleApiResponseError } from '@mono/shared/utils.ts';
+import type { ApiResponse } from '@mono/shared/types.ts';
 
-import { getStorage } from '../config';
+import { getStorage } from '../config.ts';
 
 interface Params {
   file: File;

@@ -1,13 +1,13 @@
 import * as React from 'react';
 
-import { classes } from '@mono/shared/utils';
-import { getDocumentsSnapshot } from '@mono/firebase/firestore';
+import { classes } from '@mono/shared/utils.ts';
+import { getDocumentsSnapshot } from '@mono/firebase/firestore.ts';
 
-import { MainLayout } from 'layouts/mainLayout/mainLayout';
+import { MainLayout } from 'layouts/mainLayout/mainLayout.tsx';
 import type { DatabaseRecord } from 'types/general';
 
+import { ListItem } from './components/listItem/listItem.tsx';
 import type { Props } from './types';
-import { ListItem } from './components/listItem/listItem';
 import styles from './styles.module.scss';
 
 export const List = <T,>(props: Props<T & DatabaseRecord>) => {

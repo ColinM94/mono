@@ -3,3 +3,7 @@ export const delay = (time: number) => {
     setTimeout(resolve, time);
   });
 };
+
+export const getCurrentRouteName = (pathname: string) => {
+  return pathname.split('/').pop();
+};

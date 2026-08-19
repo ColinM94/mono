@@ -1,13 +1,13 @@
 import * as React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Route, Switch, useLocation } from 'wouter';
-import { onAuthStateChanged } from '@mono/firebase/auth';
-import { initialiseFirebase } from '@mono/firebase';
+import { onAuthStateChanged } from '@mono/firebase/auth.ts';
+import { initialiseFirebase } from '@mono/firebase/initialise.ts';
 
-import { NotFoundPage } from 'pages/notFoundPage/notFoundPage';
-import { sections as sectionsObject } from 'constants/sections';
-import { LoginPage } from 'pages/loginPage/loginPage';
-import { firebaseConfig } from 'constants/config';
+import { NotFoundPage } from 'pages/notFoundPage/notFoundPage.tsx';
+import { sections as sectionsObject } from 'constants/sections.tsx';
+import { LoginPage } from 'pages/loginPage/loginPage.tsx';
+import { firebaseConfig } from 'constants/config.ts';
 
 import './styles/global.scss';
 

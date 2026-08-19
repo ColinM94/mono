@@ -1,7 +1,7 @@
-import { updateDocument } from '@mono/firebase/firestore';
+import { updateDocument } from '@mono/firebase/firestore.ts';
 
-import { useAppStore } from 'stores/useAppStore/useAppStore';
-import { useSessionStore } from 'stores/useSessionStore/useSessionStore';
+import { useAppStore } from 'stores/useAppStore/useAppStore.tsx';
+import { useSessionStore } from 'stores/useSessionStore/useSessionStore.tsx';
 import type { Player, GameSession } from 'types/gameSession';
 import type { User } from 'types/user';
 

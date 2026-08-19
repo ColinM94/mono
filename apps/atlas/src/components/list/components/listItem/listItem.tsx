@@ -2,16 +2,16 @@ import * as React from 'react';
 import type { CSSProperties } from 'react';
 import { createPortal } from 'react-dom';
 
-import { classes, formatDate, mergeReducer } from '@mono/shared/utils';
-import { addDocument, updateDocument } from '@mono/firebase/firestore';
+import { classes, formatDate, mergeReducer } from '@mono/shared/utils.ts';
+import { addDocument, updateDocument } from '@mono/firebase/firestore.ts';
 
 import type { ListItemData } from 'components/list/types';
-import { InputText } from 'components/inputText/inputText';
+import { InputText } from 'components/inputText/inputText.tsx';
 import type { Collection, DatabaseRecord } from 'types/general';
-import { Button } from 'components/button/button';
+import { Button } from 'components/button/button.tsx';
 
 import type { ListEditorProps } from '../listEditor/types';
-import { ListEditor } from '../listEditor/listEditor';
+import { ListEditor } from '../listEditor/listEditor.tsx';
 import styles from './styles.module.scss';
 
 interface Props<T> {

@@ -1,6 +1,6 @@
-import { MainLayout } from 'layouts/mainLayout/mainLayout';
-import { CharacterCard } from 'components/characterCard/characterCard';
-import { characters as charactersRecord } from 'constants/characters';
+import { MainLayout } from 'layouts/mainLayout/mainLayout.tsx';
+import { CharacterCard } from 'components/characterCard/characterCard.tsx';
+import { characters as charactersRecord } from 'constants/characters.tsx';
 
 import styles from './styles.module.scss';
 

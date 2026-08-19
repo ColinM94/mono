@@ -1,6 +1,6 @@
-import { classes, nameOfDay } from '@mono/shared/utils';
+import { classes, nameOfDay } from '@mono/shared/utils.ts';
 
-import { months } from 'constants/general';
+import { months } from 'constants/general.ts';
 
 import styles from './styles.module.scss';
 

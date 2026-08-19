@@ -1,5 +1,5 @@
-import { List } from 'components/list/list';
-import { defaultBook } from 'constants/defaults';
+import { List } from 'components/list/list.tsx';
+import { defaultBook } from 'constants/defaults.ts';
 import type { Book } from 'types/entertainment';
 
 export const BooksPage = () => {

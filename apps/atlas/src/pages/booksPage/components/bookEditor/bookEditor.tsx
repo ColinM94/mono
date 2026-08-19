@@ -1,12 +1,12 @@
 import * as React from 'react';
-import { mergeReducer } from '@mono/shared/utils';
-import { addDocument, deleteDocument, updateDocument } from '@mono/firebase/firestore';
+import { mergeReducer } from '@mono/shared/utils.ts';
+import { addDocument, deleteDocument, updateDocument } from '@mono/firebase/firestore.ts';
 
-import { InputText } from 'components/inputText/inputText';
-import { Modal } from 'components/modal/modal';
-import { Button } from 'components/button/button';
-import { Divider } from 'components/divider/divider';
-import { defaultBook } from 'constants/defaults';
+import { InputText } from 'components/inputText/inputText.tsx';
+import { Modal } from 'components/modal/modal.tsx';
+import { Button } from 'components/button/button.tsx';
+import { Divider } from 'components/divider/divider.tsx';
+import { defaultBook } from 'constants/defaults.ts';
 import type { Book } from 'types/entertainment';
 
 import styles from './styles.module.scss';

@@ -1,6 +1,6 @@
-import { classes } from '@mono/shared/utils';
+import { classes } from '@mono/shared/utils.ts';
 
-import { FormFieldLabel } from './components/formFieldLabel/formFieldLabel';
+import { FormFieldLabel } from './components/formFieldLabel/formFieldLabel.tsx';
 import styles from './styles.module.scss';
 import type { Props } from './types';
 

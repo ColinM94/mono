@@ -1,7 +1,7 @@
-import { CharacterCard } from 'components/characterCard/characterCard';
-import { Heading } from 'components/heading/heading';
-import { Modal } from 'components/modal/modal';
-import { characters } from 'constants/characters';
+import { Modal } from 'components/modal/modal.tsx';
+import { Heading } from 'components/heading/heading.tsx';
+import { CharacterCard } from 'components/characterCard/characterCard.tsx';
+import { characters } from 'constants/characters.ts';
 
 import type { Props } from './types';
 import styles from './styles.module.scss';

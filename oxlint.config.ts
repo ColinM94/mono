@@ -11,6 +11,14 @@ export default defineConfig({
         fixStyle: 'inline-type-imports',
       },
     ],
+    'import/extensions': [
+      'error',
+      {
+        ts: 'always',
+        tsx: 'always',
+        checkTypeImports: false,
+      },
+    ],
   },
   categories: {
     correctness: 'warn',

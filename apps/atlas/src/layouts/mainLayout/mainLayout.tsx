@@ -1,11 +1,11 @@
 import { useLocation } from 'wouter';
-import { classes } from '@mono/shared/utils';
+import { classes } from '@mono/shared/utils.ts';
 
 import type { Children, Layout } from 'types/general';
 import type { ButtonProps } from 'components/button/types';
-import { Navbar } from 'components/navbar/navbar';
+import { Navbar } from 'components/navbar/navbar.tsx';
+import { Header } from './components/header/header.tsx';
 
-import { Header } from './components/header/header';
 import styles from './styles.module.scss';
 
 interface Props {

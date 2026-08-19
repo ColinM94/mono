@@ -1,7 +1,7 @@
 import { signOut } from '@mono/firebase/auth';
 
-import { Button } from 'components/button/button';
-import { MainLayout } from 'layouts/mainLayout/mainLayout';
+import { Button } from 'components/button/button.tsx';
+import { MainLayout } from 'layouts/mainLayout/mainLayout.tsx';
 
 import styles from './styles.module.scss';
 

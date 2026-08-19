@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import { FormField } from 'components/formField/formField';
-import { classes } from '@mono/shared/utils';
+import { FormField } from 'components/formField/formField.tsx';
+import { classes } from '@mono/shared/utils.ts';
 
 import styles from './styles.module.scss';
 import type { InputDateProps } from './types';

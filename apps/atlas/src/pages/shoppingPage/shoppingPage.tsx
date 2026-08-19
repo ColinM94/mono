@@ -1,5 +1,5 @@
-import { List } from 'components/list/list';
-import { defaultShoppingItem } from 'constants/defaults';
+import { List } from 'components/list/list.tsx';
+import { defaultShoppingItem } from 'constants/defaults.ts';
 
 export const ShoppingPage = () => {
   return (

@@ -1,23 +1,24 @@
-import { LoadingOverlay } from "components/loadingOverlay/loadingOverlay"
-import { useSessionStore } from "stores/useSessionStore/useSessionStore"
-import { classes } from "utils/classes"
+import { classes } from '@mono/shared/utils.ts';
 
-import { QuestsStatus } from "./components/questsStatus/questsStatus"
-import styles from "./styles.module.scss"
+import { LoadingOverlay } from 'components/loadingOverlay/loadingOverlay.tsx';
+import { useSessionStore } from 'stores/useSessionStore/useSessionStore.tsx';
+
+import { QuestsStatus } from './components/questsStatus/questsStatus.tsx';
+import styles from './styles.module.scss';
 
 interface Props {
-  className?: string
+  className?: string;
 }
 
 export const GameQuests = (props: Props) => {
-  const { className } = props
-  const { activeQuest } = useSessionStore()
+  const { className } = props;
+  const { activeQuest } = useSessionStore();
 
-  if (!activeQuest) return <LoadingOverlay />
+  if (!activeQuest) return <LoadingOverlay />;
 
   return (
     <div className={classes(styles.container, className)}>
       <QuestsStatus className={styles.questsStatus} />
     </div>
-  )
-}
+  );
+};

@@ -1,6 +1,6 @@
-import { useAppStoreSlice } from 'stores/useAppStore/useAppStore';
-import { List } from 'components/list/list';
-import { defaultfilm } from 'constants/defaults';
+import { List } from 'components/list/list.tsx';
+import { defaultfilm } from 'constants/defaults.ts';
+import { useAppStoreSlice } from 'stores/useAppStore/useAppStore.tsx';
 
 export const FilmsPage = () => {
   const { filmsLayout } = useAppStoreSlice('filmsLayout');

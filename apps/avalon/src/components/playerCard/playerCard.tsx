@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { deleteDocumentField } from '@mono/firebase/firestore';
+import { deleteDocumentField } from '@mono/firebase/firestore.ts';
 
-import { useSessionStore } from 'stores/useSessionStore/useSessionStore';
-import { classes } from 'utils/classes';
+import { useSessionStore } from 'stores/useSessionStore/useSessionStore.tsx';
+import { classes } from '@mono/shared/utils.ts';
 import type { GameSession } from 'types/gameSession';
 
 import type { Props } from './types';

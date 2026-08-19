@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import { classes } from 'utils/classes';
-import { useSessionStore } from 'stores/useSessionStore/useSessionStore';
-import { Modal } from 'components/modal/modal';
+import { classes } from '@mono/shared/utils.ts';
+import { useSessionStore } from 'stores/useSessionStore/useSessionStore.tsx';
+import { Modal } from 'components/modal/modal.tsx';
 
 import type { Props } from './types';
 import styles from './styles.module.scss';

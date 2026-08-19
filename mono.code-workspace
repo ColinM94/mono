@@ -21,6 +21,7 @@
     "material-icon-theme.files.associations": {
       "tsconfig.tool.json": "tsconfig",
     },
+    "js/ts.preferences.importModuleSpecifierEnding": "js",
   },
   "extensions": {
     "recommendations": [

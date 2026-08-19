@@ -1,11 +1,11 @@
 import * as React from 'react';
 
-import { deleteDocument } from '@mono/firebase/firestore';
+import { deleteDocument } from '@mono/firebase/firestore.ts';
 
-import { Button } from 'components/button/button';
-import { Modal } from 'components/modal/modal';
-import { InputText } from 'components/inputText/inputText';
-import { InputDate } from 'components/inputDate/inputDate';
+import { Button } from 'components/button/button.tsx';
+import { Modal } from 'components/modal/modal.tsx';
+import { InputText } from 'components/inputText/inputText.tsx';
+import { InputDate } from 'components/inputDate/inputDate.tsx';
 import type { DatabaseRecord } from 'types/general';
 
 import type { ListEditorProps } from './types';

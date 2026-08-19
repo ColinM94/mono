@@ -1,13 +1,13 @@
 import { useLocation } from 'wouter';
-import { setDocument } from '@mono/firebase/firestore';
+import { setDocument } from '@mono/firebase/firestore.ts';
 
-import { MainLayout } from 'layouts/mainLayout/mainLayout';
-import { useAppStore } from 'stores/useAppStore/useAppStore';
+import { MainLayout } from 'layouts/mainLayout/mainLayout.tsx';
+import { useAppStore } from 'stores/useAppStore/useAppStore.ts';
 import type { GameSession } from 'types/gameSession';
-import { generateLobbyCode } from 'utils/generateLobbyCode';
-import { sessionDefault } from 'constants/defaults';
+import { generateLobbyCode } from 'utils/generateLobbyCode.ts';
+import { sessionDefault } from 'constants/defaults.ts';
 
-import { MainMenuButton } from './components/mainMenuButton/mainMenuButton';
+import { MainMenuButton } from './components/mainMenuButton/mainMenuButton.tsx';
 import styles from './styles.module.scss';
 
 export const MainMenuPage = () => {

@@ -1,13 +1,22 @@
-import { Divider } from "components/divider/divider";
-import { PlayerCard } from "components/playerCard/playerCard";
-import { useSessionStore } from "stores/useSessionStore/useSessionStore";
-import { classes } from "utils/classes";
+import { classes } from '@mono/shared/utils.ts';
 
-import type { Props } from "./types";
-import styles from "./styles.module.scss";
+import { PlayerCard } from 'components/playerCard/playerCard.tsx';
+import { useSessionStore } from 'stores/useSessionStore/useSessionStore.ts';
+import { Divider } from 'components/divider/divider.tsx';
+
+import type { Props } from './types';
+import styles from './styles.module.scss';
 
 export const Players = (props: Props) => {
-  const { showDivider, showEmptySlots, showOnlyPlayersOnActiveQuest, showIsReady, width, playerIds, className } = props;
+  const {
+    showDivider,
+    showEmptySlots,
+    showOnlyPlayersOnActiveQuest,
+    showIsReady,
+    width,
+    playerIds,
+    className,
+  } = props;
 
   const { playersArray, players, activeQuest } = useSessionStore();
 
@@ -24,7 +33,7 @@ export const Players = (props: Props) => {
             width={width}
             showIsReady={showIsReady}
             className={styles.player}
-          />,
+          />
         );
       });
 
@@ -43,7 +52,7 @@ export const Players = (props: Props) => {
             width={width}
             showIsReady={showIsReady}
             className={styles.player}
-          />,
+          />
         );
       });
 
@@ -55,7 +64,13 @@ export const Players = (props: Props) => {
 
       if (showEmptySlots && !tempPlayer) {
         items.push(
-          <PlayerCard key={i} connected={false} width={width} showIsReady={showIsReady} className={styles.player} />,
+          <PlayerCard
+            key={i}
+            connected={false}
+            width={width}
+            showIsReady={showIsReady}
+            className={styles.player}
+          />
         );
 
         continue;
@@ -72,7 +87,7 @@ export const Players = (props: Props) => {
           width={width}
           showIsReady={showIsReady}
           className={styles.player}
-        />,
+        />
       );
     }
 

@@ -1,11 +1,11 @@
 import { navigate } from 'wouter/use-browser-location';
 
-import { deleteDocument, deleteDocumentField, updateDocument } from '@mono/firebase/firestore';
+import { deleteDocument, deleteDocumentField, updateDocument } from '@mono/firebase/firestore.ts';
 
 import type { User } from 'types/user';
 import type { GameSession } from 'types/gameSession';
-import { useSessionStore } from 'stores/useSessionStore/useSessionStore';
-import { useAppStore } from 'stores/useAppStore/useAppStore';
+import { useSessionStore } from 'stores/useSessionStore/useSessionStore.tsx';
+import { useAppStore } from 'stores/useAppStore/useAppStore.tsx';
 
 export const leaveSession = async () => {
   const { showToast } = useAppStore.getState();

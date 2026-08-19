@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { classes } from '@mono/shared/utils.ts';
 import { faRotate } from '@fortawesome/free-solid-svg-icons';
 
-import { characters } from 'constants/characters';
-import { useSessionStore } from 'stores/useSessionStore/useSessionStore';
-import { classes } from 'utils/classes';
+import { useSessionStore } from 'stores/useSessionStore/useSessionStore.tsx';
+import { RevealCardFrame } from 'components/game/components/gameReveal/components/revealCard/components/revealCardFrame.tsx';
+import { characters } from 'constants/characters.ts';
 
 import styles from './styles.module.scss';
-import { RevealCardFrame } from './components/revealCardFrame';
 
 export const RevealCard = () => {
   const { myPlayer } = useSessionStore();

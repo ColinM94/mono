@@ -1,22 +1,22 @@
 import * as React from 'react';
+import { classes } from '@mono/shared/utils.ts';
 
-import { Button } from 'components/button/button';
-import { Modal } from 'components/modal/modal';
-import { useSessionStore } from 'stores/useSessionStore/useSessionStore';
-import { updateSession } from 'services/session/updateSession';
+import { Button } from 'components/button/button.tsx';
+import { Modal } from 'components/modal/modal.tsx';
+import { useSessionStore } from 'stores/useSessionStore/useSessionStore.tsx';
+import { updateSession } from 'services/session/updateSession.ts';
 import type { Player } from 'types/gameSession';
-import { updatePlayer } from 'services/session/updatePlayer';
-import { CharacterCard } from 'components/characterCard/characterCard';
-import { selectQuestMember } from 'services/session/selectQuestMember';
-import { goToStep } from 'services/session/goToStep';
-import { voteToApproveMember } from 'services/session/voteToApproveMember';
-import { classes } from 'utils/classes';
-import { questSucceedVote } from 'services/session/questSucceedVote';
-import { characters } from 'constants/characters';
-import { useAppStore } from 'stores/useAppStore/useAppStore';
+import { updatePlayer } from 'services/session/updatePlayer.tsx';
+import { CharacterCard } from 'components/characterCard/characterCard.tsx';
+import { selectQuestMember } from 'services/session/selectQuestMember.tsx';
+import { goToStep } from 'services/session/goToStep.ts';
+import { voteToApproveMember } from 'services/session/voteToApproveMember.tsx';
+import { questSucceedVote } from 'services/session/questSucceedVote.ts';
+import { characters } from 'constants/characters.ts';
+import { useAppStore } from 'stores/useAppStore/useAppStore.tsx';
+import { memberSelectCanContinue } from 'services/session/logic.ts';
 
 import styles from './styles.module.scss';
-import { memberSelectCanContinue } from 'services/session/logic';
 
 export const Debug = () => {
   const {

@@ -1,12 +1,12 @@
-import { classes } from "utils/classes"
+import { classes } from 'utils/classes';
 
-import { Header } from "./components/header/header"
+import { Header } from './components/header/header.tsx';
 
-import styles from "./styles.module.scss"
-import type { Props } from "./types"
+import styles from './styles.module.scss';
+import type { Props } from './types';
 
 export const MainLayout = (props: Props) => {
-  const { showHeader, showBackButton, heading, children, className } = props
+  const { showHeader, showBackButton, heading, children, className } = props;
 
   return (
     <div className={styles.container}>
@@ -14,5 +14,5 @@ export const MainLayout = (props: Props) => {
 
       <div className={classes(styles.content, className)}>{children}</div>
     </div>
-  )
-}
+  );
+};

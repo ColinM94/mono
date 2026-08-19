@@ -1,13 +1,13 @@
 import { QRCode } from 'react-qrcode-logo';
 
-import { useSessionStore } from 'stores/useSessionStore/useSessionStore';
-import { useAppStore } from 'stores/useAppStore/useAppStore';
-import { baseUrl } from 'constants/general';
-import { classes } from 'utils/classes';
+import { useSessionStore } from 'stores/useSessionStore/useSessionStore.tsx';
+import { useAppStore } from 'stores/useAppStore/useAppStore.tsx';
+import { baseUrl } from 'constants/general.ts';
+import { classes } from '@mono/shared/utils.ts';
 
 import styles from './styles.module.scss';
 import type { Props } from './types';
-import { Button } from 'components/button/button';
+import { Button } from 'components/button/button.tsx';
 
 export const GameLobbyInfo = ({ className }: Props) => {
   const { showToast } = useAppStore();

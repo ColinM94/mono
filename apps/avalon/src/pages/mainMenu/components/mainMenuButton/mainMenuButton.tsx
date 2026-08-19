@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { classes } from 'utils/classes';
+import { classes } from '@mono/shared/utils.ts';
 import type { CharacterId } from 'types/general';
 import backgroundImage1 from 'assets/images/mainMenu/buttonBackground1.webp';
 import backgroundImage2 from 'assets/images/mainMenu/buttonBackground2.webp';

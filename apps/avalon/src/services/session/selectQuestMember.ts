@@ -1,5 +1,5 @@
-import { useSessionStore } from "stores/useSessionStore/useSessionStore";
-import { updateSession } from "./updateSession";
+import { useSessionStore } from 'stores/useSessionStore/useSessionStore.tsx';
+import { updateSession } from './updateSession.ts';
 
 export const selectQuestMember = (playerId: string) => {
   const { activeQuest, quests } = useSessionStore.getState();

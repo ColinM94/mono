@@ -1,5 +1,5 @@
 import type { CSSProperties } from 'react';
-import type { ClassName } from '@mono/shared/types';
+import type { ClassName } from '@mono/shared/types.ts';
 import type { IconName, Layer } from 'types/general';
 
 interface ButtonPropsBase {

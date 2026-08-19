@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { classes } from '@mono/shared/utils';
+import { classes } from '@mono/shared/utils.ts';
 
-import { Button } from 'components/button/button';
+import { Button } from 'components/button/button.tsx';
 import type { IconName } from 'types/general';
 
 import styles from './styles.module.scss';

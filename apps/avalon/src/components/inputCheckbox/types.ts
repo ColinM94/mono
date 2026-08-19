@@ -1,4 +1,4 @@
-import type { ClassName } from '@mono/shared/types';
+import type { ClassName } from '@mono/shared/types.ts';
 
 export interface Props {
   heading?: string;

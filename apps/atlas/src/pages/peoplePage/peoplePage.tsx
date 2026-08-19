@@ -1,7 +1,6 @@
-import { useAppStoreSlice } from 'stores/useAppStore/useAppStore';
-import { List } from 'components/list/list';
-
-import { defaultPerson } from 'constants/defaults';
+import { useAppStoreSlice } from 'stores/useAppStore/useAppStore.tsx';
+import { List } from 'components/list/list.tsx';
+import { defaultPerson } from 'constants/defaults.ts';
 
 export const PeoplePage = () => {
   const { peopleLayout } = useAppStoreSlice('peopleLayout');

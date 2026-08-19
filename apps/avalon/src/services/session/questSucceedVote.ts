@@ -1,6 +1,6 @@
-import { updateDocument } from '@mono/firebase/firestore';
+import { updateDocument } from '@mono/firebase/firestore.ts';
 
-import { useSessionStore } from 'stores/useSessionStore/useSessionStore';
+import { useSessionStore } from 'stores/useSessionStore/useSessionStore.tsx';
 import type { GameSession } from 'types/gameSession';
 
 interface Props {

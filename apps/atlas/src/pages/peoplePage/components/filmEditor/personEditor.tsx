@@ -1,12 +1,12 @@
 import * as React from 'react';
 
-import { mergeReducer } from '@mono/shared/utils';
-import { addDocument, deleteDocument, updateDocument } from '@mono/firebase/firestore';
+import { mergeReducer } from '@mono/shared/utils.ts';
+import { addDocument, deleteDocument, updateDocument } from '@mono/firebase/firestore.ts';
 
-import { InputText } from 'components/inputText/inputText';
-import { Modal } from 'components/modal/modal';
-import { Button } from 'components/button/button';
-import { defaultPerson } from 'constants/defaults';
+import { InputText } from 'components/inputText/inputText.tsx';
+import { Modal } from 'components/modal/modal.tsx';
+import { Button } from 'components/button/button.tsx';
+import { defaultPerson } from 'constants/defaults.ts';
 import type { Person } from 'types/person';
 
 import styles from './styles.module.scss';

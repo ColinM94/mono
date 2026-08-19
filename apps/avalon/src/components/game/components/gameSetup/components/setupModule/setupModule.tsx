@@ -1,9 +1,9 @@
 import * as React from 'react';
+import { classes } from '@mono/shared/utils.ts';
 
-import { characters } from 'constants/characters';
-import { useAppStore } from 'stores/useAppStore/useAppStore';
-import { classes } from 'utils/classes';
-import { useSessionStore } from 'stores/useSessionStore/useSessionStore';
+import { characters } from 'constants/characters.ts';
+import { useAppStore } from 'stores/useAppStore/useAppStore.tsx';
+import { useSessionStore } from 'stores/useSessionStore/useSessionStore.tsx';
 
 import styles from './styles.module.scss';
 import type { Props } from './types';

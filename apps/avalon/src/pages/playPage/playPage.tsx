@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { useLocation, useParams } from 'wouter';
 
-import { LoadingOverlay } from 'components/loadingOverlay/loadingOverlay';
-import { useAppStore } from 'stores/useAppStore/useAppStore';
-import { useSessionStore } from 'stores/useSessionStore/useSessionStore';
-import { joinSession } from 'services/session/joinSession';
+import { LoadingOverlay } from 'components/loadingOverlay/loadingOverlay.tsx';
+import { useAppStore } from 'stores/useAppStore/useAppStore.tsx';
+import { useSessionStore } from 'stores/useSessionStore/useSessionStore.tsx';
+import { joinSession } from 'services/session/joinSession.ts';
 
-import { PlayProtected } from './playProtected/playProtected';
+import { PlayProtected } from './playProtected/playProtected.tsx';
 
 export const PlayPage = () => {
   const [, navigate] = useLocation();

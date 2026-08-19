@@ -3,7 +3,7 @@ import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
 
-import { configureFirebase } from './config';
+import { configureFirebase } from './config.ts';
 
 export const initialiseFirebase = (options: FirebaseOptions, name?: string) => {
   const app = initializeApp(options, name);

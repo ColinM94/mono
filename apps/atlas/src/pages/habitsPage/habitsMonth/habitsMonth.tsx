@@ -1,11 +1,11 @@
 import React from 'react';
-import { addDocument, deleteDocument, updateDocument } from '@mono/firebase/firestore';
+import { addDocument, deleteDocument, updateDocument } from '@mono/firebase/firestore.ts';
+import { classes, daysInMonth } from '@mono/shared/utils.ts';
 
-import { classes, daysInMonth } from '@mono/shared/utils';
 import type { Habit, HabitData } from 'types/habit';
-import { Button } from 'components/button/button';
+import { Button } from 'components/button/button.tsx';
 
-import { HabitsMonthHeader } from './components/habitsMonthHeader/habitsMonthHeader';
+import { HabitsMonthHeader } from './components/habitsMonthHeader/habitsMonthHeader.tsx';
 import styles from './styles.module.scss';
 
 interface Props {

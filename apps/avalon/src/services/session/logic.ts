@@ -1,17 +1,16 @@
-import { updateDocument } from '@mono/firebase/firestore';
-import type { ApiResponse } from '@mono/shared/types';
+import { updateDocument } from '@mono/firebase/firestore.ts';
+import type { ApiResponse } from '@mono/shared/types.ts';
 
 import type { GameSession, Player } from 'types/gameSession';
-import { useSessionStore } from 'stores/useSessionStore/useSessionStore';
-import { shuffleArray } from 'utils/shuffleArray';
-import { characters, maxCharacters, maxSpecialCharacters } from 'constants/characters';
-import { numPlayersByQuest } from 'constants/general';
+import { useSessionStore } from 'stores/useSessionStore/useSessionStore.tsx';
+import { characters, maxCharacters, maxSpecialCharacters } from 'constants/characters.ts';
+import { numPlayersByQuest } from 'constants/general.ts';
 import type { CharacterId } from 'types/general';
 
-import { updateActiveQuest } from './updateActiveQuest';
-import { updatePlayer } from './updatePlayer';
-import { updateSession } from './updateSession';
-import { goToStep } from './goToStep';
+import { updateActiveQuest } from './updateActiveQuest.ts';
+import { updatePlayer } from './updatePlayer.ts';
+import { updateSession } from './updateSession.ts';
+import { goToStep } from './goToStep.ts';
 
 // -------------
 // 1. Lobby

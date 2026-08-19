@@ -1,14 +1,13 @@
+import { MenuBar } from 'components/menuBar/menuBar.tsx';
 import * as React from 'react';
-import { MenuBar } from 'components/menuBar/menuBar';
-import { useSessionStore } from 'stores/useSessionStore/useSessionStore';
+import { useSessionStore } from 'stores/useSessionStore/useSessionStore.tsx';
 import {
   revealCanContinue,
   revealCanReady,
   revealContinue,
   revealReady,
-} from 'services/session/logic';
-
-import { RevealCard } from './components/revealCard/revealCard';
+} from 'services/session/logic.ts';
+import { RevealCard } from './components/revealCard/revealCard.tsx';
 
 export const GameReveal = () => {
   const { myPlayer, isMyPlayerHost } = useSessionStore();

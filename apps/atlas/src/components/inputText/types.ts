@@ -1,4 +1,4 @@
-import type { ClassName } from '@mono/shared/types';
+import type { ClassName } from '@mono/shared/types.ts';
 
 import type { Children, IconName } from 'types/general';
 import type { FormFieldProps } from '../formField/types';

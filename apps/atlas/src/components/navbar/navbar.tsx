@@ -1,8 +1,8 @@
 import { Link, useLocation } from 'wouter';
-import { classes, getCurrentRouteName } from '@mono/shared/utils';
+import { classes, getCurrentRouteName } from '@mono/shared/utils.ts';
 
-import { sections } from 'constants/sections';
-import { Icon } from 'components/icon/icon';
+import { sections } from 'constants/sections.ts';
+import { Icon } from 'components/icon/icon.tsx';
 
 import styles from './styles.module.scss';
 

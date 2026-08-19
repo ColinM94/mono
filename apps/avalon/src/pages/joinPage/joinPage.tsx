@@ -1,20 +1,20 @@
-import * as React from "react";
-import { useLocation, useParams } from "wouter";
+import * as React from 'react';
+import { useLocation, useParams } from 'wouter';
 
-import { LoadingOverlay } from "components/loadingOverlay/loadingOverlay";
-import { MainLayout } from "layouts/mainLayout/mainLayout";
-import { Button } from "components/button/button";
-import { Divider } from "components/divider/divider";
-import { InputText } from "components/inputText/inputText";
+import { LoadingOverlay } from 'components/loadingOverlay/loadingOverlay.tsx';
+import { MainLayout } from 'layouts/mainLayout/mainLayout.tsx';
+import { Button } from 'components/button/button.tsx';
+import { Divider } from 'components/divider/divider.tsx';
+import { InputText } from 'components/inputText/inputText.tsx';
 
-import { JoinScanner } from "./components/joinScanner/joinScanner";
-import styles from "./styles.module.scss";
+import { JoinScanner } from './components/joinScanner/joinScanner.tsx';
+import styles from './styles.module.scss';
 
 export const JoinPage = () => {
   const { sessionId } = useParams();
   const [, navigate] = useLocation();
 
-  const [code, setCode] = React.useState("");
+  const [code, setCode] = React.useState('');
   const [showScanner, setShowScanner] = React.useState(false);
 
   const handleJoin = (code: string) => {

@@ -1,6 +1,6 @@
-import { SettingsPage } from 'pages/settingsPage/settingsPage';
-import { ShoppingPage } from 'pages/shoppingPage/shoppingPage';
-import { TasksPage } from 'pages/tasksPage/tasksPage';
+import { SettingsPage } from 'pages/settingsPage/settingsPage.tsx';
+import { ShoppingPage } from 'pages/shoppingPage/shoppingPage.tsx';
+import { TasksPage } from 'pages/tasksPage/tasksPage.tsx';
 import type { Section } from 'types/section';
 
 export const sections: Record<string, Section> = {

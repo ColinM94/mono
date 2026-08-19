@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { signInWithEmailAndPassword } from '@mono/firebase/auth';
 
-import { InputText } from 'components/inputText/inputText';
-import { Button } from 'components/button/button';
+import { InputText } from 'components/inputText/inputText.tsx';
+import { Button } from 'components/button/button.tsx';
 
 import styles from './styles.module.scss';
 

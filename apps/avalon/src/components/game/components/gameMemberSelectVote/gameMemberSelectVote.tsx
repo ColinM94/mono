@@ -1,14 +1,15 @@
-import { Divider } from 'components/divider/divider';
-import { MenuBar } from 'components/menuBar/menuBar';
-import { Players } from 'components/players/players';
-import { useSessionStore } from 'stores/useSessionStore/useSessionStore';
-import { classes } from 'utils/classes';
-import { voteToApproveMember } from 'services/session/voteToApproveMember';
+import { classes } from '@mono/shared/utils.ts';
+
+import { Divider } from 'components/divider/divider.tsx';
+import { MenuBar } from 'components/menuBar/menuBar.tsx';
+import { Players } from 'components/players/players.tsx';
+import { useSessionStore } from 'stores/useSessionStore/useSessionStore.tsx';
+import { voteToApproveMember } from 'services/session/voteToApproveMember.ts';
 import {
   memberSelectVoteCanContinue,
   memberSelectVoteCanReady,
   memberSelectVoteContinue,
-} from 'services/session/logic';
+} from 'services/session/logic.ts';
 
 import type { Props } from './types';
 import styles from './styles.module.scss';

@@ -1,12 +1,12 @@
-import { MenuBar } from 'components/menuBar/menuBar';
-import { maxSpecialCharacters, characters } from 'constants/characters';
-import { useSessionStore } from 'stores/useSessionStore/useSessionStore';
-import { setupCanContinue, setupContinue } from 'services/session/logic';
+import { useSessionStore } from 'stores/useSessionStore/useSessionStore.tsx';
 import type { CharacterId } from 'types/general';
-import { useAppStore } from 'stores/useAppStore/useAppStore';
-import { updateSession } from 'services/session/updateSession';
+import { useAppStore } from 'stores/useAppStore/useAppStore.tsx';
+import { updateSession } from 'services/session/updateSession.ts';
+import { characters, maxSpecialCharacters } from 'constants/characters.ts';
+import { setupCanContinue, setupContinue } from 'services/session/logic.ts';
+import { MenuBar } from 'components/menuBar/menuBar.tsx';
+import { SetupModule } from 'components/game/components/gameSetup/components/setupModule/setupModule.tsx';
 
-import { SetupModule } from './components/setupModule/setupModule';
 import styles from './styles.module.scss';
 
 export const GameSetup = () => {

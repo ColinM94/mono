@@ -1,9 +1,9 @@
-import { classes } from "utils/classes";
-import { Button } from "components/button/button";
-import { useAppStore } from "stores/useAppStore/useAppStore";
+import { classes } from '@mono/shared/utils.ts';
+import { Button } from 'components/button/button.tsx';
+import { useAppStore } from 'stores/useAppStore/useAppStore.ts';
 
-import type { Props } from "./types";
-import styles from "./styles.module.scss";
+import type { Props } from './types';
+import styles from './styles.module.scss';
 
 export const ReadyButton = (props: Props) => {
   const { canReady, onReady, className } = props;
@@ -17,7 +17,7 @@ export const ReadyButton = (props: Props) => {
       onClickDisabled={() => {
         const response = canReady;
 
-        if (typeof response === "string") {
+        if (typeof response === 'string') {
           showToast(response);
         }
       }}

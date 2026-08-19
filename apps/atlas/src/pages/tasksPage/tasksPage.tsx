@@ -1,10 +1,7 @@
-// import { Modal } from 'components/modal/modal';
-import { List } from 'components/list/list';
-import { defaultTask } from 'constants/defaults';
+import { List } from 'components/list/list.tsx';
+import { defaultTask } from 'constants/defaults.ts';
 
 export const TasksPage = () => {
-  // const [show, setShow] = React.useState(false);
-
   return (
     <>
       {/* <Modal show={show} setShow={setShow}>

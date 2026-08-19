@@ -1,4 +1,4 @@
-import { classes } from 'utils/classes';
+import { classes } from '@mono/shared/utils.ts';
 
 import styles from './styles.module.scss';
 import type { Props } from './types';

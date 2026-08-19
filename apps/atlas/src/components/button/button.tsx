@@ -1,7 +1,7 @@
 import { Link } from 'wouter';
 
-import { classes } from '@mono/shared/utils';
-import { Icon } from 'components/icon/icon';
+import { classes } from '@mono/shared/utils.ts';
+import { Icon } from 'components/icon/icon.tsx';
 
 import type { ButtonProps } from './types';
 import styles from './styles.module.scss';

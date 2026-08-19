@@ -1,10 +1,14 @@
 import * as React from 'react';
+import { classes } from '@mono/shared/utils.ts';
 
-import { useSessionStore } from 'stores/useSessionStore/useSessionStore';
-import { Divider } from 'components/divider/divider';
-import { MenuBar } from 'components/menuBar/menuBar';
-import { classes } from 'utils/classes';
-import { questResultCanReady, questResultContinue, questResultReady } from 'services/session/logic';
+import { useSessionStore } from 'stores/useSessionStore/useSessionStore.tsx';
+import { Divider } from 'components/divider/divider.tsx';
+import { MenuBar } from 'components/menuBar/menuBar.tsx';
+import {
+  questResultCanReady,
+  questResultContinue,
+  questResultReady,
+} from 'services/session/logic.ts';
 
 import type { Props } from './types';
 import styles from './styles.module.scss';

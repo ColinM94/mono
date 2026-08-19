@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { formatDate, mergeReducer } from '@mono/shared/utils';
+import { formatDate, mergeReducer } from '@mono/shared/utils.ts';
 
-import { InputText } from 'components/inputText/inputText';
-import { MainLayout } from 'layouts/mainLayout/mainLayout';
+import { InputText } from 'components/inputText/inputText.tsx';
+import { MainLayout } from 'layouts/mainLayout/mainLayout.tsx';
 import type { Task } from 'types/task';
 
 import styles from './styles.module.scss';

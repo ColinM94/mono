@@ -1,10 +1,10 @@
-import { useSessionStore } from "stores/useSessionStore/useSessionStore";
-import { MenuBar } from "components/menuBar/menuBar";
-import { lobbyCanContinue, lobbyCanReady, lobbyContinue } from "services/session/logic";
+import { useSessionStore } from 'stores/useSessionStore/useSessionStore.ts';
+import { MenuBar } from 'components/menuBar/menuBar.tsx';
+import { lobbyCanContinue, lobbyCanReady, lobbyContinue } from 'services/session/logic.ts';
 
-import { GameLobbyProfile } from "./components/gameLobbyProfile/gameLobbyProfile";
-import { GameLobbyInfo } from "./components/gameLobbyInfo/gameLobbyInfo";
-import styles from "./styles.module.scss";
+import { GameLobbyProfile } from './components/gameLobbyProfile/gameLobbyProfile.tsx';
+import { GameLobbyInfo } from './components/gameLobbyInfo/gameLobbyInfo.tsx';
+import styles from './styles.module.scss';
 
 export const GameLobby = () => {
   const { myPlayer, isMyPlayerHost } = useSessionStore();

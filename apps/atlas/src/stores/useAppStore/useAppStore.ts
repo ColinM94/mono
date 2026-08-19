@@ -1,4 +1,4 @@
-import { createStore, createStoreSelector } from '@mono/zustand';
+import { createStore, createStoreSelector } from '@mono/zustand/utils.ts';
 
 type AppStoreState = {
   user: { name: string };

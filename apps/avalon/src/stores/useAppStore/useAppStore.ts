@@ -1,4 +1,4 @@
-import { userDefault } from 'constants/defaults';
+import { userDefault } from 'constants/defaults.ts';
 
 import { createStore } from '@mono/zustand';
 

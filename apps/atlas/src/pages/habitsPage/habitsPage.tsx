@@ -1,11 +1,11 @@
 import * as React from 'react';
 
-import { getDocumentsSnapshot } from '@mono/firebase/firestore';
+import { getDocumentsSnapshot } from '@mono/firebase/firestore.ts';
 
 import type { Habit } from 'types/habit';
-import { MainLayout } from 'layouts/mainLayout/mainLayout';
+import { MainLayout } from 'layouts/mainLayout/mainLayout.tsx';
 
-import { HabitsMonth } from './habitsMonth/habitsMonth';
+import { HabitsMonth } from './habitsMonth/habitsMonth.tsx';
 import styles from './styles.module.scss';
 
 export const HabitsPage = () => {

@@ -1,14 +1,6 @@
-import type {
-  QueryConstraint} from 'firebase/firestore';
-import {
-  query,
-  where,
-  collection,
-  orderBy,
-  onSnapshot,
-  limit,
-} from 'firebase/firestore';
-import { trackError } from '@mono/shared/utils';
+import type { QueryConstraint } from 'firebase/firestore';
+import { query, where, collection, orderBy, onSnapshot, limit } from 'firebase/firestore';
+import { trackError } from '@mono/shared/utils.ts';
 
 import type { FirestoreOrderByGeneric, FirestoreWhereGeneric } from '../types';
 import { getDb } from '../config';
