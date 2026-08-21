@@ -5,7 +5,7 @@ import { handleApiResponseError } from '@mono/shared/utils.ts';
 import type { ApiResponse } from '@mono/shared/types.ts';
 
 import type { FirestoreOrderByGeneric, FirestoreWhereGeneric } from '../types';
-import { getDb } from '../config';
+import { getDb } from '../config.ts';
 
 interface Params<T> {
   collection: string;

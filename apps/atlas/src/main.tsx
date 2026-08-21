@@ -5,7 +5,7 @@ import { onAuthStateChanged } from '@mono/firebase/auth.ts';
 import { initialiseFirebase } from '@mono/firebase/initialise.ts';
 
 import { NotFoundPage } from 'pages/notFoundPage/notFoundPage.tsx';
-import { sections as sectionsObject } from 'constants/sections.tsx';
+import { sections as sectionsObject } from 'constants/sections.ts';
 import { LoginPage } from 'pages/loginPage/loginPage.tsx';
 import { firebaseConfig } from 'constants/config.ts';
 

@@ -1,5 +1,5 @@
 import { doc, onSnapshot } from 'firebase/firestore';
-import { getDb } from '../config';
+import { getDb } from '../config.ts';
 
 interface Params<T> {
   collection: string;

@@ -3,7 +3,7 @@ import { getDownloadURL, ref } from 'firebase/storage';
 import { handleApiResponseError } from '@mono/shared/utils.ts';
 import type { ApiResponse } from '@mono/shared/types.ts';
 
-import { getStorage } from '../config';
+import { getStorage } from '../config.ts';
 
 /**
  * Gets URL for file located at certain path.

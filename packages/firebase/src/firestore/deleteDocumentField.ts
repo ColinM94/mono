@@ -3,7 +3,7 @@ import { deleteField, doc, updateDoc } from 'firebase/firestore';
 import type { ApiResponse, Paths } from '@mono/shared/types.ts';
 import { handleApiResponseError } from '@mono/shared/utils.ts';
 
-import { getDb } from '../config';
+import { getDb } from '../config.ts';
 
 interface Params<T> {
   collection: string;

@@ -3,10 +3,11 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "atlas": "pnpm --filter atlas",
-    "avalon": "pnpm --filter avalon",
+    "atlas:": "pnpm --filter atlas",
+    "avalon:": "pnpm --filter avalon",
+    "firebase:": "pnpm --filter firebase",
     "build": "pnpm -r build",
-    "lint": "oxlint --fix"
+    "lint": "pnpm atlas: lint && pnpm avalon: lint && pnpm firebase: lint"
   },
   "devDependencies": {
     "@rolldown/plugin-babel": "^0.2.3",

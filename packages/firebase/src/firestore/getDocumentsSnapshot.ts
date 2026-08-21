@@ -3,7 +3,7 @@ import { query, where, collection, orderBy, onSnapshot, limit } from 'firebase/f
 import { trackError } from '@mono/shared/utils.ts';
 
 import type { FirestoreOrderByGeneric, FirestoreWhereGeneric } from '../types';
-import { getDb } from '../config';
+import { getDb } from '../config.ts';
 
 interface Config<T> {
   collection: string;

@@ -1,5 +1,5 @@
 import { doc, collection } from 'firebase/firestore';
-import { getDb } from '../config';
+import { getDb } from '../config.ts';
 
 export const getDocumentRef = (collectionName: string) => {
   try {
