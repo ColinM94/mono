@@ -1,6 +1,8 @@
 import { Link } from 'wouter';
 
-import styles from './styles.module.scss';
+import { Button } from '@mono/ui/components.ts';
+
+import styles from './styles.module.css';
 
 export const NotFoundPage = () => {
   return (
@@ -10,6 +12,8 @@ export const NotFoundPage = () => {
       <Link to="/" className={styles.homeButton}>
         Go Back
       </Link>
+
+      <Button label="I am a button" onClick={() => alert('Hello')} variant="primary" />
     </div>
   );
 };

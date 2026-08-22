@@ -1,13 +1,3 @@
-declare module "*.png";
-declare module "*.webp" {
-  const src: string;
-  export default src;
-}
-declare module "*.scss" {
-  const content: Record<string, string>;
-  export default content;
-}
-
 interface ImportMetaEnv {
   readonly VITE_FIREBASE_API_KEY: string;
   readonly VITE_FIREBASE_AUTH_DOMAIN: string;

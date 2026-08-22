@@ -5,12 +5,16 @@
   "type": "module",
   "sideEffects": false,
   "exports": {
-    ".": "./src/initialise.ts"
+    "./components.ts": "./src/components/index.ts"
   },
   "dependencies": {
-    "firebase": "catalog:"
+    "firebase": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:"
   },
   "devDependencies": {
-    "@mono/shared": "workspace:*"
+    "@mono/shared": "workspace:*",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:"
   }
 }

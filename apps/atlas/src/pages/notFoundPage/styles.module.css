@@ -1,0 +1,19 @@
+.container {
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.container .code {
+  font-size: 50px;
+  color: var(--color-text-secondary);
+}
+
+.container .message {
+  font-size: 40px;
+}
+
+.container .homeButton {
+  margin-top: calc(var(--spacing-primary) * 2);
+  font-size: 25px;
+}

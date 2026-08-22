@@ -12,12 +12,13 @@
       "**/pnpm-lock.yaml": true,
     },
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "oxc.oxc-vscode",
     "workbench.editor.labelFormat": "short",
     "material-icon-theme.folders.associations": {
       "stores": "Server",
       "inits": "Azure-pipelines",
     },
+    "editor.gotoLocation.multipleDefinitions": "goto",
     "material-icon-theme.files.associations": {
       "tsconfig.tool.json": "tsconfig",
     },

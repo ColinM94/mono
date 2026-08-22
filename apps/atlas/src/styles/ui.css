@@ -1,0 +1,23 @@
+/* Button */
+/* .ui-button {
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.ui-button-primary {
+  background-color: dodgerblue;
+}
+
+.ui-button-secondary {
+  background-color: orangered;
+} */
+
+:root {
+  --spacing-small: 4px;
+  --spacing-medium: 8px;
+  --spacing-large: 12px;
+  --roundness: 4px;
+
+  --color-primary: dodgerblue;
+  --color-background: rgba(0, 0, 0, 0.25);
+}

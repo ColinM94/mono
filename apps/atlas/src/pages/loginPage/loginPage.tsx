@@ -1,44 +1,32 @@
 import * as React from 'react';
-import { signInWithEmailAndPassword } from '@mono/firebase/auth';
 
-import { InputText } from 'components/inputText/inputText.tsx';
-import { Button } from 'components/button/button.tsx';
+import { Button, InputText } from '@mono/ui/components.ts';
+import { sendSignInLinkToEmail } from '@mono/firebase/auth.ts';
 
-import styles from './styles.module.scss';
+import styles from './styles.module.css';
 
 export const LoginPage = () => {
   const [email, setEmail] = React.useState('');
-  const [password, setPassword] = React.useState('');
 
   const handleLogin = async (e: React.SubmitEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const result = await signInWithEmailAndPassword(email, password);
-    if (result.user) return;
-    alert('Login Failed');
+    try {
+      e.preventDefault();
+
+      const response = await sendSignInLinkToEmail(email);
+
+      if (!response.ok) throw new Error('Failed to send email');
+
+      alert(`Link sent to ${email}`);
+    } catch (error) {
+      alert((error as Error).message);
+    }
   };
 
   return (
     <div className={styles.container}>
       <form onSubmit={handleLogin} className={styles.loginForm}>
-        <InputText
-          value={email}
-          setValue={setEmail}
-          type="email"
-          placeholder="Email"
-          layer={2}
-          className={styles.input}
-        />
-
-        <InputText
-          value={password}
-          setValue={setPassword}
-          type="password"
-          layer={2}
-          placeholder="Password"
-          className={styles.input}
-        />
-
-        <Button type="secondary" label="Login" isFormSubmit layer={2} />
+        <InputText value={email} setValue={setEmail} />
+        <Button label="Login" type="submit" />
       </form>
     </div>
   );

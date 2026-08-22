@@ -1,19 +1,19 @@
 import type { ApiResponseError } from '../types';
-import { trackError } from './trackError';
+import { trackError } from './trackError.ts';
 
 interface Params {
   error: Error | unknown;
-  description: string;
+  description?: string;
 }
 
 export const handleApiResponseError = (params: Params): ApiResponseError => {
-  const { error, description } = params;
+  const { error, description = 'Something went wrong' } = params;
 
   const err = error instanceof Error ? error : new Error(String(error));
 
   trackError({
     error: err,
-    source: 'getDocumentsSnapshot',
+    source: 'unknown',
     description,
   });
 

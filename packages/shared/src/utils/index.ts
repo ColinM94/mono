@@ -9,4 +9,4 @@ export * from './sentencifyArray.ts';
 export * from './string.ts';
 export * from './swapArrayElements.ts';
 export * from './trackError.ts';
-export * from './shuffleArray.ts';
+export * from './array.ts';

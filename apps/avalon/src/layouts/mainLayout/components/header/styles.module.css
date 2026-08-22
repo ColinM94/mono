@@ -1,0 +1,37 @@
+.container {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: var(--spacing-primary);
+
+  .button {
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+    margin-bottom: 2px;
+  }
+
+  .backButton {
+    @extend .button;
+    left: var(--spacing-primary);
+  }
+
+  .closeButton {
+    @extend .button;
+    right: var(--spacing-primary);
+  }
+
+  .buttonIcon {
+    font-size: vars.$icon-size-medium;
+  }
+
+  .heading {
+    justify-content: center;
+    align-items: center;
+
+    .headingTitle {
+      font-size: vars.$font-size-h1;
+    }
+  }
+}

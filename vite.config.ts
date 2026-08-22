@@ -61,6 +61,7 @@ export const defineViteConfig = (overrides: UserConfig = {}) => {
         utils: resolve(appRoot, 'src/utils'),
       },
     },
+
     publicDir: 'public',
     plugins: [
       react(),
@@ -71,15 +72,6 @@ export const defineViteConfig = (overrides: UserConfig = {}) => {
         enabled: false,
       }),
     ],
-    css: {
-      preprocessorOptions: {
-        scss: {
-          additionalData: `
-            @use "styles/vars.scss";
-          `,
-        },
-      },
-    },
   });
 
   return mergeConfig(config, overrides);
