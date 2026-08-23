@@ -9,6 +9,7 @@
     "./global.css": "./src/global.css"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
     "firebase": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:"

@@ -1,10 +1,11 @@
 {
   "name": "root",
-  "type": "module",
   "version": "0.0.1",
+  "type": "module",
   "scripts": {
     "atlas:": "pnpm --filter atlas",
     "avalon:": "pnpm --filter avalon",
+    "ui:": "pnpm --filter @mono/ui",
     "firebase:": "pnpm --filter firebase",
     "build": "pnpm -r build",
     "lint": "pnpm atlas: lint && pnpm avalon: lint && pnpm firebase: lint"
