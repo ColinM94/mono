@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { classes } from '@mono/shared/utils.ts';
+import { classes } from '@mono/shared/utils';
 import { useAppStore } from 'stores/useAppStore/useAppStore.ts';
 
 import type { Props } from './types';
@@ -31,7 +31,7 @@ export const Toast = ({ className }: Props) => {
         className={classes(
           styles.toast,
           toast.type === 'error' && styles.error,
-          toast.type === 'info' && styles.info
+          toast.type === 'info' && styles.info,
         )}
       >
         {toast?.text}

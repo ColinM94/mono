@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { classes } from '@mono/shared/utils.ts';
+import { classes } from '@mono/shared/utils';
 
 import { characterNames } from 'constants/characters.ts';
 import { CharacterModal } from 'components/characterModal/characterModal.tsx';
@@ -53,7 +53,7 @@ export const CharacterCard = (props: Props) => {
     character.allegiance === 'evil' && styles.evil,
     orientation === 'portrait' && styles.portrait,
     orientation === 'landscape' && styles.landscape,
-    disableAnimation && styles.animationDisabled
+    disableAnimation && styles.animationDisabled,
   );
 
   return (

@@ -1,4 +1,4 @@
-import type { icons } from 'constants/icons';
+// import type { icons } from 'constants/icons';
 
 export type DatabaseCollection = 'notes';
 
@@ -34,4 +34,4 @@ export type KeyOf<T> = {
   [K in keyof T & (string | number)]: T[K] extends object ? `${K}` | `${K}.${KeyOf<T[K]>}` : `${K}`;
 }[keyof T & (string | number)];
 
-export type IconName = keyof typeof icons;
+// export type IconName = keyof typeof icons;

@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { classes } from '@mono/shared/utils.ts';
+import { classes } from '@mono/shared/utils';
 
 import { Heading } from 'components/heading/heading.tsx';
 

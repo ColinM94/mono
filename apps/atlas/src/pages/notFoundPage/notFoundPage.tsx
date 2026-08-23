@@ -1,6 +1,6 @@
 import { Link } from 'wouter';
 
-import { Button } from '@mono/ui/components.ts';
+import { Button } from '@mono/ui/components';
 
 import styles from './styles.module.css';
 

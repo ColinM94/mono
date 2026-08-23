@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { classes } from '@mono/shared/utils.ts';
+import { classes } from '@mono/shared/utils';
 
 import { Button } from 'components/button/button.tsx';
 import { LoadingOverlay } from 'components/loadingOverlay/loadingOverlay.tsx';

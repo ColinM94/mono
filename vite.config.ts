@@ -25,11 +25,11 @@ export const defineViteConfig = (overrides: UserConfig = {}) => {
                 test: /node_modules[\\/]@firebase/,
                 priority: 20,
               },
-              {
-                name: 'icons-vendor',
-                test: /node_modules[\\/]@material-symbols-svg/,
-                priority: 20,
-              },
+              // {
+              //   name: 'icons-vendor',
+              //   test: /node_modules[\\/]@material-symbols-svg/,
+              //   priority: 20,
+              // },
               {
                 name: 'vendor',
                 test: /node_modules/,

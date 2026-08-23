@@ -1,4 +1,4 @@
-import { classes } from '@mono/shared/utils.ts';
+import { classes } from '@mono/shared/utils';
 
 import { Button } from 'components/button/button.tsx';
 
@@ -14,7 +14,7 @@ export const Modal = (props: Props) => {
         onClick={() => setShow(false)}
         className={classes(
           styles.background,
-          show ? styles.backgroundShown : styles.backgroundHidden
+          show ? styles.backgroundShown : styles.backgroundHidden,
         )}
       >
         <Button icon="x" onClick={() => setShow(false)} className={styles.closeButton} />
@@ -24,7 +24,7 @@ export const Modal = (props: Props) => {
         className={classes(
           styles.container,
           show ? styles.containerShown : styles.containerHidden,
-          className
+          className,
         )}
       >
         {children}

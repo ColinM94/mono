@@ -11,14 +11,15 @@ export default defineConfig({
         fixStyle: 'inline-type-imports',
       },
     ],
-    'import/extensions': [
-      'error',
-      {
-        ts: 'always',
-        tsx: 'always',
-        checkTypeImports: false,
-      },
-    ],
+    // I don't want file extensions when importing from packages. So this is disabled for now.
+    // 'import/extensions': [
+    //   'error',
+    //   {
+    //     ts: 'always',
+    //     tsx: 'always',
+    //     checkTypeImports: false,
+    //   },
+    // ],
   },
   categories: {
     correctness: 'warn',

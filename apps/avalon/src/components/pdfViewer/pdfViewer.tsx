@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/Page/TextLayer.css';
 import 'react-pdf/dist/Page/AnnotationLayer.css';
-import { classes } from '@mono/shared/utils.ts';
+import { classes } from '@mono/shared/utils';
 import { Button } from 'components/button/button.ts';
 
 import styles from './styles.module.scss';

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { classes } from '@mono/shared/utils.ts';
+import { classes } from '@mono/shared/utils';
 
 import { Button } from 'components/button/button.tsx';
 import { Modal } from 'components/modal/modal.tsx';
@@ -59,7 +59,7 @@ export const Debug = () => {
       {
         [`players.${fakePlayer.id}`]: fakePlayer,
       },
-      sessionId
+      sessionId,
     );
   };
 
@@ -109,7 +109,7 @@ export const Debug = () => {
                             }
                             className={classes(
                               styles.yesButton,
-                              activeMemberSelectVotes[player.id] === true && styles.yesButtonActive
+                              activeMemberSelectVotes[player.id] === true && styles.yesButtonActive,
                             )}
                           />
 
@@ -123,7 +123,7 @@ export const Debug = () => {
                             }
                             className={classes(
                               styles.noButton,
-                              activeMemberSelectVotes[player.id] === false && styles.noButtonActive
+                              activeMemberSelectVotes[player.id] === false && styles.noButtonActive,
                             )}
                           />
                         </>
@@ -142,7 +142,7 @@ export const Debug = () => {
                             className={classes(
                               styles.yesButton,
                               activeQuest.votesToSucceed[player.id] === true &&
-                                styles.yesButtonActive
+                                styles.yesButtonActive,
                             )}
                           />
 
@@ -157,7 +157,7 @@ export const Debug = () => {
                             className={classes(
                               styles.noButton,
                               activeQuest.votesToSucceed[player.id] === false &&
-                                styles.noButtonActive
+                                styles.noButtonActive,
                             )}
                           />
                         </div>

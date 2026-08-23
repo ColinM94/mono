@@ -1,4 +1,4 @@
-import { classes } from '@mono/shared/utils.ts';
+import { classes } from '@mono/shared/utils';
 
 import { Debug } from 'components/debug/debug.tsx';
 import { MenuBarReadyButton } from 'components/menuBar/components/menuBarReadyButton/menuBarReadyButton.tsx';

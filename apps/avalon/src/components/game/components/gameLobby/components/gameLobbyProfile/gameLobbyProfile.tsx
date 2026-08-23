@@ -2,7 +2,7 @@ import * as React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { updateDocument } from '@mono/firebase/firestore.ts';
 import { uploadFile, getFileUrl } from '@mono/firebase/storage.ts';
-import { classes } from '@mono/shared/utils.ts';
+import { classes } from '@mono/shared/utils';
 
 import { InputText } from 'components/inputText/inputText.tsx';
 import { useSessionStore } from 'stores/useSessionStore/useSessionStore.tsx';

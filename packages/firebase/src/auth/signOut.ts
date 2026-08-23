@@ -1,6 +1,6 @@
 import { signOut as firebaseSignOut } from 'firebase/auth';
-import type { ApiResponse } from '@mono/shared/types.ts';
-import { handleApiResponseError } from '@mono/shared/utils.ts';
+import type { ApiResponse } from '@mono/shared/types';
+import { handleApiResponseError } from '@mono/shared/utils';
 
 import { getAuth } from '../config.ts';
 

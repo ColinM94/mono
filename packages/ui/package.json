@@ -5,18 +5,20 @@
   "type": "module",
   "sideEffects": false,
   "exports": {
-    "./components.ts": "./src/components/index.ts",
-    "./global.css": "./src/global.css"
+    "./components": "./src/components/index.ts",
+    "./styles.css": "./src/styles.css"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",
-    "firebase": "catalog:",
-    "react": "catalog:",
-    "react-dom": "catalog:"
+    "firebase": "catalog:"
   },
   "devDependencies": {
     "@mono/shared": "workspace:*",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:"
+  },
+  "peerDependencies": {
+    "react": "catalog:",
+    "react-dom": "catalog:"
   }
 }

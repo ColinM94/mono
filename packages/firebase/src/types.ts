@@ -1,4 +1,4 @@
-import type { Paths } from '@mono/shared/types.ts';
+import type { Paths } from '@mono/shared/types';
 import type { OrderByDirection, WhereFilterOp } from 'firebase/firestore';
 
 type NewType<T> = [Paths<T>, WhereFilterOp, string | number | string[] | boolean | null];

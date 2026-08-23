@@ -1,6 +1,6 @@
 import { getDocument, updateDocument } from '@mono/firebase/firestore.ts';
-import type { ApiResponse } from '@mono/shared/types.ts';
-import { handleApiResponseError } from '@mono/shared/utils.ts';
+import type { ApiResponse } from '@mono/shared/types';
+import { handleApiResponseError } from '@mono/shared/utils';
 
 import type { GameSession } from 'types/gameSession';
 import type { User } from 'types/user';
@@ -47,7 +47,7 @@ export const joinSession = async ({ sessionId, user }: Props): Promise<ApiRespon
             joinedAt: Date.now(),
           },
         },
-        sessionId
+        sessionId,
       );
 
       if (!joinedSession) throw new Error('Error joining session');

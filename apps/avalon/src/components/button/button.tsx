@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import { classes } from '@mono/shared/utils.ts';
+import { classes } from '@mono/shared/utils';
 
 import type { Props } from './types';
 import styles from './styles.module.scss';
@@ -33,7 +33,7 @@ export const Button = (props: Props) => {
         className,
         styles.container,
         icon && styles.iconContainer,
-        disabled && styles.disabled
+        disabled && styles.disabled,
       )}
     >
       <div className={classes(styles.label, labelClassName)}>{label}</div>

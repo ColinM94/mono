@@ -1,7 +1,7 @@
 import { getMetadata, getStorage, ref } from 'firebase/storage';
 
-import { handleApiResponseError } from '@mono/shared/utils.ts';
-import type { ApiResponse } from '@mono/shared/types.ts';
+import { handleApiResponseError } from '@mono/shared/utils';
+import type { ApiResponse } from '@mono/shared/types';
 
 /**
  * Gets metadata for a file in Firebase Storage.

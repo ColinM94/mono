@@ -2,7 +2,7 @@ import { Divider } from 'components/divider/divider.tsx';
 import { MenuBar } from 'components/menuBar/menuBar.tsx';
 import { PlayerCard } from 'components/playerCard/playerCard.tsx';
 import { useSessionStore } from 'stores/useSessionStore/useSessionStore.tsx';
-import { classes } from '@mono/shared/utils.ts';
+import { classes } from '@mono/shared/utils';
 import { questSucceedVote } from 'services/session/questSucceedVote.ts';
 import {
   questVoteCanContinue,

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { classes } from '@mono/shared/utils.ts';
+import { classes } from '@mono/shared/utils';
 import { faRotate } from '@fortawesome/free-solid-svg-icons';
 
 import { useSessionStore } from 'stores/useSessionStore/useSessionStore.tsx';

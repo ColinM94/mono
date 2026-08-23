@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { classes } from '@mono/shared/utils.ts';
+import { classes } from '@mono/shared/utils';
 import { useSessionStore } from 'stores/useSessionStore/useSessionStore.tsx';
 import { Modal } from 'components/modal/modal.tsx';
 
@@ -25,11 +25,11 @@ export const QuestsStatus = ({ className }: Props) => {
           className={classes(
             styles.memberVote,
             vote === true && styles.voteSuccess,
-            vote === false && styles.voteFailed
+            vote === false && styles.voteFailed,
           )}
         >
           {vote === true && '✔'} {vote === false && '✗'}
-        </div>
+        </div>,
       );
     });
 
@@ -49,7 +49,7 @@ export const QuestsStatus = ({ className }: Props) => {
             className={classes(
               styles.questVote,
               vote === true && styles.voteSuccess,
-              vote === false && styles.voteFailed
+              vote === false && styles.voteFailed,
             )}
           />
         ))}
@@ -71,7 +71,7 @@ export const QuestsStatus = ({ className }: Props) => {
             styles.quest,
             quest.index <= activeQuest.index && quest.status === 'success' && styles.questSucceeded,
             quest.index <= activeQuest.index && quest.status === 'fail' && styles.questFailed,
-            quest.index === activeQuest.index && styles.questActive
+            quest.index === activeQuest.index && styles.questActive,
           )}
         >
           <div className={styles.questHeading}>Quest {i + 1}</div>
@@ -81,7 +81,7 @@ export const QuestsStatus = ({ className }: Props) => {
           </div> */}
 
           {renderQuestVotes(i)}
-        </div>
+        </div>,
       );
     }
 

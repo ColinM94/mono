@@ -1,4 +1,4 @@
-import { classes } from '@mono/shared/utils.ts';
+import { classes } from '@mono/shared/utils';
 import { Heading } from 'components/heading/heading.tsx';
 import { CharacterCard } from 'components/characterCard/characterCard.tsx';
 import type { CharacterId } from 'types/general';
@@ -41,7 +41,7 @@ export const SetupCharacters = (props: Props) => {
 
   const filteredCharacters = characterIds.filter(
     (characterId) =>
-      characters[characterId].allegiance === allegiance && !characters[characterId].disabled
+      characters[characterId].allegiance === allegiance && !characters[characterId].disabled,
   );
 
   return (

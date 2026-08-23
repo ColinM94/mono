@@ -1,5 +1,5 @@
 import { updateDocument } from '@mono/firebase/firestore.ts';
-import type { ApiResponse } from '@mono/shared/types.ts';
+import type { ApiResponse } from '@mono/shared/types';
 
 import type { GameSession, Player } from 'types/gameSession';
 import { useSessionStore } from 'stores/useSessionStore/useSessionStore.tsx';
@@ -26,7 +26,7 @@ export const lobbyCanReady = (player: Player, newName: string) => {
 
   if (
     otherPlayers.some(
-      (otherPlayer) => otherPlayer.name.toLocaleLowerCase() === newName.toLocaleLowerCase()
+      (otherPlayer) => otherPlayer.name.toLocaleLowerCase() === newName.toLocaleLowerCase(),
     )
   ) {
     return 'This name is taken';
@@ -83,7 +83,7 @@ export const lobbyContinue = async () => {
 // ------------------------
 export const setupCanContinue = (
   numActiveGoodCharacters: number,
-  numActiveEvilCharacters: number
+  numActiveEvilCharacters: number,
 ) => {
   const { playersArray } = useSessionStore.getState();
 

@@ -1,4 +1,4 @@
-import { classes } from '@mono/shared/utils.ts';
+import { classes } from '@mono/shared/utils';
 
 import { Heading } from 'components/heading/heading.tsx';
 
@@ -34,7 +34,7 @@ export const SetupOptions = (props: Props) => {
               key={num}
               className={classes(
                 styles.numPlayersOption,
-                session.numPlayers === num && styles.numPlayersOptionActive
+                session.numPlayers === num && styles.numPlayersOptionActive,
               )}
             >
               {num}

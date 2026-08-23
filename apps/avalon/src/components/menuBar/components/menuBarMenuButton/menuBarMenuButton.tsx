@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { capitaliseFirstLetter, classes } from '@mono/shared/utils.ts';
+import { capitaliseFirstLetter, classes } from '@mono/shared/utils';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button } from 'components/button/button.tsx';

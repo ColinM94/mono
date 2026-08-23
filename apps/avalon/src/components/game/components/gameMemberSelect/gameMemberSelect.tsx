@@ -3,7 +3,7 @@ import { LoadingOverlay } from 'components/loadingOverlay/loadingOverlay.tsx';
 import { MenuBar } from 'components/menuBar/menuBar.tsx';
 import { PlayerCard } from 'components/playerCard/playerCard.tsx';
 import { useSessionStore } from 'stores/useSessionStore/useSessionStore.tsx';
-import { classes } from '@mono/shared/utils.ts';
+import { classes } from '@mono/shared/utils';
 import { selectQuestMember } from 'services/session/selectQuestMember.ts';
 import { memberSelectCanContinue, memberSelectContinue } from 'services/session/logic.ts';
 
@@ -48,7 +48,7 @@ export const GameMemberSelect = (props: Props) => {
                 key={player.id}
                 className={classes(
                   styles.player,
-                  isSelected ? styles.playerSelected : styles.playerDisabled
+                  isSelected ? styles.playerSelected : styles.playerDisabled,
                 )}
               />
             );

@@ -3,7 +3,7 @@ import { QRCode } from 'react-qrcode-logo';
 import { useSessionStore } from 'stores/useSessionStore/useSessionStore.tsx';
 import { useAppStore } from 'stores/useAppStore/useAppStore.tsx';
 import { baseUrl } from 'constants/general.ts';
-import { classes } from '@mono/shared/utils.ts';
+import { classes } from '@mono/shared/utils';
 
 import styles from './styles.module.scss';
 import type { Props } from './types';

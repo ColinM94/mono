@@ -1,7 +1,7 @@
 import { collection, doc, setDoc } from 'firebase/firestore';
 
-import { handleApiResponseError } from '@mono/shared/utils.ts';
-import type { ApiResponse } from '@mono/shared/types.ts';
+import { handleApiResponseError } from '@mono/shared/utils';
+import type { ApiResponse } from '@mono/shared/types';
 
 import { getDb } from '../config.ts';
 

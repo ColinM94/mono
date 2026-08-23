@@ -1,4 +1,4 @@
-import { classes } from '@mono/shared/utils.ts';
+import { classes } from '@mono/shared/utils';
 
 import { PlayerCard } from 'components/playerCard/playerCard.tsx';
 import { useSessionStore } from 'stores/useSessionStore/useSessionStore.ts';
@@ -33,7 +33,7 @@ export const Players = (props: Props) => {
             width={width}
             showIsReady={showIsReady}
             className={styles.player}
-          />
+          />,
         );
       });
 
@@ -52,7 +52,7 @@ export const Players = (props: Props) => {
             width={width}
             showIsReady={showIsReady}
             className={styles.player}
-          />
+          />,
         );
       });
 
@@ -70,7 +70,7 @@ export const Players = (props: Props) => {
             width={width}
             showIsReady={showIsReady}
             className={styles.player}
-          />
+          />,
         );
 
         continue;
@@ -87,7 +87,7 @@ export const Players = (props: Props) => {
           width={width}
           showIsReady={showIsReady}
           className={styles.player}
-        />
+        />,
       );
     }
 

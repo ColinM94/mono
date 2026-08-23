@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { classes } from '@mono/shared/utils.ts';
+import { classes } from '@mono/shared/utils';
 
 import { MenuBar } from 'components/menuBar/menuBar.tsx';
 import { useSessionStore } from 'stores/useSessionStore/useSessionStore.tsx';

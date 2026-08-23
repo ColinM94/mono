@@ -1,6 +1,6 @@
-import { Button } from '@mono/ui/components.ts';
-import { classes } from '@mono/shared/utils.ts';
-import { signOut } from '@mono/firebase/auth.ts';
+import { Button } from '@mono/ui/components';
+import { classes } from '@mono/shared/utils';
+import { signOut } from '@mono/firebase/auth';
 
 import styles from './styles.module.css';
 

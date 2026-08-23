@@ -1,7 +1,7 @@
 import { deleteField, doc, updateDoc } from 'firebase/firestore';
 
-import type { ApiResponse, Paths } from '@mono/shared/types.ts';
-import { handleApiResponseError } from '@mono/shared/utils.ts';
+import type { ApiResponse, Paths } from '@mono/shared/types';
+import { handleApiResponseError } from '@mono/shared/utils';
 
 import { getDb } from '../config.ts';
 

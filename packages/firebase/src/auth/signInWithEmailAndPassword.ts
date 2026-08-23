@@ -1,6 +1,6 @@
 import { signInWithEmailAndPassword as signIn, type UserCredential } from 'firebase/auth';
-import { handleApiResponseError } from '@mono/shared/utils.ts';
-import type { ApiResponse } from '@mono/shared/types.ts';
+import { handleApiResponseError } from '@mono/shared/utils';
+import type { ApiResponse } from '@mono/shared/types';
 
 import { getAuth } from '../config.ts';
 

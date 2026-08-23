@@ -1,8 +1,8 @@
 import * as React from 'react';
 
-import { Button, InputText } from '@mono/ui/components.ts';
-import { sendSignInLinkToEmail } from '@mono/firebase/auth.ts';
-import { isValidEmail } from '@mono/shared/utils.ts';
+import { Button, InputText } from '@mono/ui/components';
+import { sendSignInLinkToEmail } from '@mono/firebase/auth';
+import { isValidEmail } from '@mono/shared/utils';
 
 import styles from './styles.module.css';
 

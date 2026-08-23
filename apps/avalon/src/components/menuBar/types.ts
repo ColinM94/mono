@@ -1,4 +1,4 @@
-import type { ClassName } from '@mono/shared/types.ts';
+import type { ClassName } from '@mono/shared/types';
 
 export interface Props {
   showContinue: boolean;

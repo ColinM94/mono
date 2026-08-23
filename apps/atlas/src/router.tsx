@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Route, Switch, useLocation } from 'wouter';
-import { onAuthStateChanged, signInWithEmailLink } from '@mono/firebase/auth.ts';
+import { onAuthStateChanged, signInWithEmailLink } from '@mono/firebase/auth';
 
 import { LoginPage } from 'pages/loginPage/loginPage.tsx';
 import { NotFoundPage } from 'pages/notFoundPage/notFoundPage.tsx';

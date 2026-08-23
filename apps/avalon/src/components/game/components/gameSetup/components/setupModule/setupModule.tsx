@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { classes } from '@mono/shared/utils.ts';
+import { classes } from '@mono/shared/utils';
 
 import { characters } from 'constants/characters.ts';
 import { useAppStore } from 'stores/useAppStore/useAppStore.tsx';

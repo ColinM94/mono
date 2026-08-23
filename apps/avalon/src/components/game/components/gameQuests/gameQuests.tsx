@@ -1,4 +1,4 @@
-import { classes } from '@mono/shared/utils.ts';
+import { classes } from '@mono/shared/utils';
 
 import { LoadingOverlay } from 'components/loadingOverlay/loadingOverlay.tsx';
 import { useSessionStore } from 'stores/useSessionStore/useSessionStore.tsx';

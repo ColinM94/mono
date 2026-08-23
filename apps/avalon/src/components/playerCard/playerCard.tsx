@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { deleteDocumentField } from '@mono/firebase/firestore.ts';
 
 import { useSessionStore } from 'stores/useSessionStore/useSessionStore.tsx';
-import { classes } from '@mono/shared/utils.ts';
+import { classes } from '@mono/shared/utils';
 import type { GameSession } from 'types/gameSession';
 
 import type { Props } from './types';
@@ -57,7 +57,7 @@ export const PlayerCard = (props: Props) => {
       // isMyPlayer && styles.user,
       width === 1 && styles.width1,
       width === 2 && styles.width2,
-      width === 3 && styles.width3
+      width === 3 && styles.width3,
     );
   };
 

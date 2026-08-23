@@ -1,8 +1,6 @@
-import type { IconName } from './general';
-
 export interface Section {
   id: string;
-  icon: IconName;
+  icon: string;
   name: string;
   component: React.ComponentType;
 }

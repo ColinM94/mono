@@ -1,4 +1,4 @@
-import { createStore, createStoreSelector } from '@mono/zustand/utils.ts';
+import { createStore, createStoreSelector } from '@mono/zustand/utils';
 
 type AppStoreState = {
   user: { name: string };
@@ -23,7 +23,7 @@ export const useAppStore = createStore<AppStoreState>(
   {
     name: 'app',
     partialize: ({ darkMode }) => ({ darkMode }),
-  }
+  },
 );
 
 export const useAppStoreSlice = createStoreSelector(useAppStore);

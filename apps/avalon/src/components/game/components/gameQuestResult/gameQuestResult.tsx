@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { classes } from '@mono/shared/utils.ts';
+import { classes } from '@mono/shared/utils';
 
 import { useSessionStore } from 'stores/useSessionStore/useSessionStore.tsx';
 import { Divider } from 'components/divider/divider.tsx';
@@ -29,7 +29,7 @@ export const GameQuestResult = (props: Props) => {
       items.push(
         <div key={index} className={vote ? styles.yesVote : styles.noVote}>
           {vote ? 'Success' : 'Fail'}
-        </div>
+        </div>,
       );
     });
 

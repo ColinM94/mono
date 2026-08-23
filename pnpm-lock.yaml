@@ -6,9 +6,6 @@ settings:
 
 catalogs:
   default:
-    '@material-symbols-svg/react':
-      specifier: ^0.13.0
-      version: 0.13.0
     '@rolldown/plugin-babel':
       specifier: ^0.2.3
       version: 0.2.3
@@ -80,9 +77,6 @@ importers:
 
   apps/atlas:
     dependencies:
-      '@material-symbols-svg/react':
-        specifier: 'catalog:'
-        version: 0.13.0(react@19.2.8)
       '@mono/firebase':
         specifier: workspace:*
         version: link:../../packages/firebase
@@ -1052,12 +1046,6 @@ packages:
 
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
-
-  '@material-symbols-svg/react@0.13.0':
-    resolution: {integrity: sha512-V3JWSuOjP8/mhSSxDH4pVFWpBhsVPLj9I4FcqqSkb9NRgqifQzTIejJVXV62XrMlwgsEjmJ7kD3564KRhhTRsA==}
-    engines: {node: '>=16.0.0'}
-    peerDependencies:
-      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
   '@napi-rs/canvas-android-arm64@0.1.100':
     resolution: {integrity: sha512-hjhCKhntPv9+t4ckHymdx0phYNcVW+GKQR6Lzw2zE+pOVjOplSmtx9nNNknTjbEDLcuLZqA1y8ufKg1XfgftzQ==}
@@ -4459,10 +4447,6 @@ snapshots:
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
-
-  '@material-symbols-svg/react@0.13.0(react@19.2.8)':
-    dependencies:
-      react: 19.2.8
 
   '@napi-rs/canvas-android-arm64@0.1.100':
     optional: true

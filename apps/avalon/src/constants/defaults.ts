@@ -1,4 +1,4 @@
-import { generateUniqueId } from '@mono/shared/utils.ts';
+import { generateUniqueId } from '@mono/shared/utils';
 import type { GameSession, Player } from 'types/gameSession';
 import type { User } from 'types/user';
 

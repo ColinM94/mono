@@ -1,5 +1,5 @@
 import { Scanner } from '@yudiel/react-qr-scanner';
-import { classes } from '@mono/shared/utils.ts';
+import { classes } from '@mono/shared/utils';
 
 import { Modal } from 'components/modal/modal.tsx';
 import { useAppStore } from 'stores/useAppStore/useAppStore.ts';

@@ -1,8 +1,8 @@
 import { sendSignInLinkToEmail as send } from 'firebase/auth';
-import type { ApiResponse } from '@mono/shared/types.ts';
+import type { ApiResponse } from '@mono/shared/types';
 
 import { getAuth } from '../config.ts';
-import { handleApiResponseError } from '@mono/shared/utils.ts';
+import { handleApiResponseError } from '@mono/shared/utils';
 
 export const sendSignInLinkToEmail = async (email: string): Promise<ApiResponse<void>> => {
   try {

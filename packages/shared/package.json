@@ -2,12 +2,12 @@
   "name": "@mono/shared",
   "version": "0.0.1",
   "private": true,
+  "description": "Types, constants, and util functions which can be used across multiple apps.",
   "type": "module",
   "sideEffects": false,
-  "description": "Types, constants, and util functions which can be used across multiple apps.",
   "exports": {
-    "./constants.ts": "./src/constants/index.ts",
-    "./types.ts": "./src/types/index.ts",
-    "./utils.ts": "./src/utils/index.ts"
+    "./constants": "./src/constants/index.ts",
+    "./types": "./src/types/index.ts",
+    "./utils": "./src/utils/index.ts"
   }
 }

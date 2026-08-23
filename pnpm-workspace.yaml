@@ -14,7 +14,6 @@ catalog:
   '@types/react': 19.2.18
   '@types/react-dom': 19.2.4
   firebase: ^12.17.1
-  '@material-symbols-svg/react': ^0.13.0
   wouter: ^3.10.0
   zustand: ^5.0.14
   typescript: ^7.0.2

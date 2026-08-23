@@ -1,4 +1,4 @@
-import { classes } from '@mono/shared/utils.ts';
+import { classes } from '@mono/shared/utils';
 
 import { Divider } from 'components/divider/divider.tsx';
 import { MenuBar } from 'components/menuBar/menuBar.tsx';
@@ -42,7 +42,7 @@ export const GameMemberSelectVote = (props: Props) => {
             onClick={() => handleVoteClick(true)}
             className={classes(
               styles.yesVote,
-              activeMemberSelectVotes?.[myPlayer.id] !== true && styles.voteDisabled
+              activeMemberSelectVotes?.[myPlayer.id] !== true && styles.voteDisabled,
             )}
           >
             Yes
@@ -52,7 +52,7 @@ export const GameMemberSelectVote = (props: Props) => {
             onClick={() => handleVoteClick(false)}
             className={classes(
               styles.noVote,
-              activeMemberSelectVotes?.[myPlayer.id] !== false && styles.voteDisabled
+              activeMemberSelectVotes?.[myPlayer.id] !== false && styles.voteDisabled,
             )}
           >
             No

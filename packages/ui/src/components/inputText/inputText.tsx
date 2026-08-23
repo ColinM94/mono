@@ -1,5 +1,5 @@
-import { classes } from '@mono/shared/utils.ts';
-import type { Surface } from '@mono/shared/types.ts';
+import { classes } from '@mono/shared/utils';
+import type { Surface } from '@mono/shared/types';
 
 import styles from './styles.module.css';
 

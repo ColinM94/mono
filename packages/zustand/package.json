@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "exports": {
-    "./utils.ts": "./src/utils/index.ts"
+    "./utils": "./src/utils/index.ts"
   },
   "dependencies": {
     "zustand": "catalog:"
