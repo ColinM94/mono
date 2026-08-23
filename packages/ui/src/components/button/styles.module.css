@@ -15,3 +15,10 @@
 .disabled {
   filter: brightness(0.5);
 }
+
+.variant-primary {
+  background-color: var(--color-primary);
+}
+
+.variant-secondary {
+}

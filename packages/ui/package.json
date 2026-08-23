@@ -10,14 +10,11 @@
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",
-    "firebase": "catalog:"
+    "@mono/shared": "workspace:*"
   },
   "devDependencies": {
-    "@mono/shared": "workspace:*",
     "@types/react": "catalog:",
-    "@types/react-dom": "catalog:"
-  },
-  "peerDependencies": {
+    "@types/react-dom": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:"
   }

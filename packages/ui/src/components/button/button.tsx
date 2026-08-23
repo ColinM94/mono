@@ -31,7 +31,8 @@ export const Button = (props: Props) => {
       className={classes(
         'ui-button',
         `ui-button-${variant}`,
-        `surface-${surface}`,
+        variant === 'secondary' && `surface-${surface}`,
+        styles[`variant-${variant}`],
         disabled && styles.disabled,
         styles.container,
         className,

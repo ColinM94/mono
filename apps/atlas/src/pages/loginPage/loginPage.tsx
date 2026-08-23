@@ -32,9 +32,11 @@ export const LoginPage = () => {
         {!isEmailSent && (
           <form onSubmit={handleLogin} className={styles.loginForm}>
             <InputText value={email} setValue={setEmail} placeholder="Email" surface={2} />
+
             <Button
               label="Send Login Link"
               type="submit"
+              variant="primary"
               surface={2}
               disabled={!isValidEmail(email)}
               className={styles.button}
