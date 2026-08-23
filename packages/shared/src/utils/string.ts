@@ -22,3 +22,7 @@ export const generateUniqueId = () => {
   }
   return Date.now().toString(16) + id;
 };
+
+export const isValidEmail = (email: string) => {
+  return email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/);
+};

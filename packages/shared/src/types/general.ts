@@ -32,3 +32,5 @@ export type Paths<T> = T extends readonly unknown[]
     : never;
 
 export type ClassName = string | undefined;
+
+export type Surface = 0 | 1 | 2 | 3;

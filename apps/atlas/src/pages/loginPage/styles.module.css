@@ -1,16 +1,29 @@
 .container {
-  flex: 1;
+  display: flex;
+  height: 100%;
   justify-content: center;
   align-items: center;
 
-  .label {
-    font-size: 50px;
-  }
+  .card {
+    background-color: var(--color-surface-1);
+    padding: var(--spacing-large);
+    border-radius: var(--spacing-large);
 
-  .loginForm {
-    background-color: var(--color-surface);
-    gap: var(--spacing-primary);
-    padding: var(--spacing-primary);
-    width: min(100% - var(--spacing-primary), 300px);
+    .loginForm {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: var(--spacing-large);
+
+      .label {
+        font-size: 50px;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
   }
 }

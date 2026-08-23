@@ -1,9 +1,7 @@
 .container {
   padding-inline: var(--spacing-large);
   padding-block: var(--spacing-medium);
+  color: inherit;
   border-radius: var(--roundness);
-
-  .label {
-    font-size: var(--font-size-h1);
-  }
+  border: none;
 }

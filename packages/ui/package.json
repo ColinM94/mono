@@ -1,11 +1,12 @@
 {
   "name": "@mono/ui",
-  "private": true,
   "version": "0.0.1",
+  "private": true,
   "type": "module",
   "sideEffects": false,
   "exports": {
-    "./components.ts": "./src/components/index.ts"
+    "./components.ts": "./src/components/index.ts",
+    "./global.css": "./src/global.css"
   },
   "dependencies": {
     "firebase": "catalog:",

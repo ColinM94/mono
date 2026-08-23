@@ -2,8 +2,16 @@
   padding-inline: var(--spacing-large);
   padding-block: var(--spacing-medium);
   border-radius: var(--roundness);
+  border: none;
+  cursor: pointer;
+  border: 1px solid var(--color-surface-3);
 
   .label {
     font-size: var(--font-size-h1);
+    color: var(--color-text-secondary);
   }
+}
+
+.disabled {
+  filter: brightness(0.5);
 }

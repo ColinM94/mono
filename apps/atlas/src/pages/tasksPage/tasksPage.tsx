@@ -1,11 +1,12 @@
-import { signOut } from '@mono/firebase/auth.ts';
-import { Button } from '@mono/ui/components.ts';
+import { MainLayout } from 'layouts/mainLayout/mainLayout.tsx';
 
 export const TasksPage = () => {
   return (
-    <>
-      Tasks
-      <Button label="Sign Out" onClick={signOut} />
-    </>
+    <MainLayout>
+      <div>Tasks</div>
+      <div>Tasks</div>
+      <div>Tasks</div>
+      <div>Tasks</div>
+    </MainLayout>
   );
 };
