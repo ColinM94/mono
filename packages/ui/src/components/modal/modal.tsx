@@ -1,8 +1,8 @@
 import type { Children } from '@mono/shared/types';
 import { classes } from '@mono/shared/utils';
 
-import styles from './style.module.css';
 import { Button } from '../button/button.tsx';
+import styles from './style.module.css';
 
 interface Props {
   show: boolean;
@@ -18,19 +18,23 @@ export const Modal = (props: Props) => {
   if (!show) return null;
 
   return (
-    <div className={classes(styles.container, className)}>
-      <div className={styles.header}>
-        <div className={styles.heading}>{heading}</div>
-        <Button
-          icon="XIcon"
-          variant="secondary"
-          surface={1}
-          onClick={() => setShow(false)}
-          className={styles.closeButton}
-        />
-      </div>
+    <>
+      {show && <div className={styles.background} />}
 
-      {children}
-    </div>
+      <div className={classes(styles.container, className)}>
+        <div className={styles.header}>
+          <div className={styles.heading}>{heading}</div>
+          <Button
+            icon="XIcon"
+            variant="secondary"
+            surface={1}
+            onClick={() => setShow(false)}
+            className={styles.closeButton}
+          />
+        </div>
+
+        {children}
+      </div>
+    </>
   );
 };

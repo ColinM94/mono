@@ -1,9 +1,9 @@
 .container {
   position: fixed;
-  left: var(--spacing-large);
-  right: var(--spacing-large);
-  top: var(--spacing-large);
-  bottom: var(--spacing-large);
+  left: var(--spacing-xl);
+  right: var(--spacing-xl);
+  top: var(--spacing-xl);
+  bottom: var(--spacing-xl);
   background-color: var(--color-surface-1);
 
   .header {
@@ -17,4 +17,15 @@
       margin-left: auto;
     }
   }
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
