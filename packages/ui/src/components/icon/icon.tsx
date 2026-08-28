@@ -1,14 +1,11 @@
-import { SignOutIcon } from '@phosphor-icons/react';
-
 // TODO: Check if the bundler can tree shake icons not used in an app.
-const icons = {
-  SignOutIcon,
-};
 
-type IconName = keyof typeof icons;
+import { icons } from './icons.ts';
+import type { IconName } from './types.ts';
 
 interface Props {
   name: IconName;
+  onClick?: () => void;
   className?: string;
 }
 
