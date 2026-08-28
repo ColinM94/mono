@@ -7,6 +7,7 @@ import {
   GenderMaleIcon,
   SignOutIcon,
   WineIcon,
+  XIcon,
 } from '@phosphor-icons/react';
 
 export const icons = {
@@ -18,4 +19,5 @@ export const icons = {
   GearSixIcon,
   GenderMaleIcon,
   GenderFemaleIcon,
+  XIcon,
 };

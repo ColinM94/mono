@@ -1,0 +1,9 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  padding: var(--spacing-large);
+
+  .settingsButton {
+    margin-left: auto;
+  }
+}

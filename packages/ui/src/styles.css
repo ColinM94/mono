@@ -50,3 +50,15 @@
 .surface-3 {
   background-color: var(--color-surface-3);
 }
+
+.border-0 {
+  border: 2px solid var(--color-surface-1);
+}
+
+.border-1 {
+  border: 2px solid var(--color-surface-2);
+}
+
+.border-2 {
+  border: 2px solid var(--color-surface-3);
+}

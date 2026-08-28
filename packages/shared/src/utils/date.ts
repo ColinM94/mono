@@ -24,7 +24,7 @@ export const daysInMonth = (year: number, month: number) => new Date(year, month
 export const formatDate = (
   date: Date | number | string,
   mode: 'local' | 'utc' = 'local',
-  separator: '.' | '/' | '-' = '.'
+  separator: '.' | '/' | '-' = '.',
 ) => {
   if (typeof date === 'string') {
     date = new Date(date.replaceAll('.', '-'));
@@ -58,4 +58,47 @@ export const nameOfDay = (year: number, month: number, day: number) => {
     weekday: 'long',
     timeZone: 'UTC',
   }).format(new Date(Date.UTC(year, month - 1, day)));
+};
+
+/**
+ * Formats a date into a time string in the format HH:mm or HH:mm:ss, based on the provided options.
+ * The time is formatted according to either local or UTC time, and seconds can optionally be included.
+ *
+ * @param date - The date or timestamp to format.
+ * @param mode - Specifies whether to use 'local' or 'utc' time. Defaults to 'local'.
+ * @param showSeconds - A boolean indicating whether to include seconds in the formatted time. Defaults to `false`.
+ * @returns A string representing the formatted time in the format HH:mm or HH:mm:ss, depending on the `showSeconds` parameter.
+ */
+export const formatTime = (
+  date: Date | number,
+  mode: 'local' | 'utc' = 'local',
+  showSeconds?: boolean,
+) => {
+  if (date === undefined) return '-';
+
+  const value = typeof date === 'number' ? new Date(date) : date;
+
+  let hours;
+  let minutes;
+  let seconds;
+
+  if (mode === 'utc') {
+    hours = value.getUTCHours();
+    minutes = value.getUTCMinutes();
+    seconds = value.getUTCSeconds();
+  } else {
+    hours = value.getHours();
+    minutes = value.getMinutes();
+    seconds = value.getSeconds();
+  }
+
+  const hoursString = hours.toString().padStart(2, '0');
+  const minutesString = minutes.toString().padStart(2, '0');
+  const secondsString = seconds.toString().padStart(2, '0');
+
+  let string = hoursString + ':' + minutesString;
+
+  if (showSeconds) string += `:${secondsString}`;
+
+  return string;
 };

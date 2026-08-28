@@ -1,0 +1,20 @@
+.container {
+  position: fixed;
+  left: var(--spacing-large);
+  right: var(--spacing-large);
+  top: var(--spacing-large);
+  bottom: var(--spacing-large);
+  background-color: var(--color-surface-1);
+
+  .header {
+    display: flex;
+
+    .heading {
+      font-size: var(--font-size-h3);
+    }
+
+    .closeButton {
+      margin-left: auto;
+    }
+  }
+}

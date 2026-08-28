@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--spacing-large);
+
+  .stat {
+    background-color: var(--color-surface-1);
+    padding: var(--spacing-large);
+    border-radius: var(--roundness);
+    flex: 1;
+
+    .statLabel {
+      text-align: center;
+      color: var(--color-text-secondary);
+      font-size: var(--font-size-small);
+      white-space: nowrap;
+    }
+
+    .statValue {
+      text-align: center;
+      font-size: var(--font-size-h2);
+    }
+  }
+}

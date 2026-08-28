@@ -1,18 +1,3 @@
 {
-  "extends": "../../tsconfig.base.json",
-  "compilerOptions": {
-    "paths": {
-      "assets/*": ["./src/assets/*"],
-      "components/*": ["./src/components/*"],
-      "constants/*": ["./src/constants/*"],
-      "layouts/*": ["./src/layouts/*"],
-      "pages/*": ["./src/pages/*"],
-      "stores/*": ["./src/stores/*"],
-      "services/*": ["./src/services/*"],
-      "styles/*": ["./src/styles/*"],
-      "types/*": ["./src/types/*"],
-      "utils/*": ["./src/utils/*"]
-    }
-  },
-  "include": ["src"]
+  "extends": ["../../configs/tsconfig.app.json"]
 }

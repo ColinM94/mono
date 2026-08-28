@@ -34,3 +34,5 @@ export type Paths<T> = T extends readonly unknown[]
 export type ClassName = string | undefined;
 
 export type Surface = 0 | 1 | 2 | 3;
+
+export type Children = React.ReactNode | React.ReactNode[];

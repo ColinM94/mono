@@ -1,0 +1,20 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "types": ["vite/client"],
+    "jsx": "react-jsx",
+    "paths": {
+      "assets/*": ["${configDir}/src/assets/*"],
+      "components/*": ["${configDir}/src/components/*"],
+      "constants/*": ["${configDir}/src/constants/*"],
+      "layouts/*": ["${configDir}/src/layouts/*"],
+      "pages/*": ["${configDir}/src/pages/*"],
+      "stores/*": ["${configDir}/src/stores/*"],
+      "services/*": ["${configDir}/src/services/*"],
+      "styles/*": ["${configDir}/src/styles/*"],
+      "types/*": ["${configDir}/src/types/*"],
+      "utils/*": ["${configDir}/src/utils/*"]
+    }
+  },
+  "include": ["${configDir}/src"]
+}

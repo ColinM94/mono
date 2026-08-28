@@ -10,3 +10,4 @@ export * from './string.ts';
 export * from './swapArrayElements.ts';
 export * from './trackError.ts';
 export * from './array.ts';
+export * from './number.ts';
