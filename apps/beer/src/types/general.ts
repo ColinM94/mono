@@ -1,11 +1,14 @@
 import type { IconName } from '@mono/ui/components';
 
-export type Drink = {
+export interface Drink extends DrinkTemplate {
+  time: number;
+}
+
+export interface DrinkTemplate {
   id: string;
   name: string;
   ml: number;
-  time: number;
   abv: number;
   icon: IconName;
   gramsOfAlcohol: number;
-};
+}

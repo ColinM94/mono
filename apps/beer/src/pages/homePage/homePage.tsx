@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { InputText, ProgressBar } from '@mono/ui/components';
+import { ProgressBar } from '@mono/ui/components';
 import { classes, formatTime } from '@mono/shared/utils';
 
 import { calculateStats } from 'components/utils/stats.ts';
-import { CustomDrinks } from 'components/customDrinks/customDrinks.tsx';
 import { Stats } from 'components/stats/stats.tsx';
+import { DrinkTemplates } from 'components/drinkTemplates/drinkTemplates.tsx';
 import { MainLayout } from 'components/mainLayout/mainLayout.tsx';
 import { useAppStore } from 'stores/useAppStore/useAppStore.ts';
 
@@ -75,7 +75,7 @@ export const HomePage = () => {
         </div>
       ))}
 
-      <CustomDrinks />
+      <DrinkTemplates />
     </MainLayout>
   );
 };

@@ -16,6 +16,12 @@
       margin-left: auto;
     }
   }
+
+  .drinkButtons {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-large);
+  }
 }
 
 .modal {

@@ -34,7 +34,7 @@ export const Modal = (props: Props) => {
           />
         </div>
 
-        {children}
+        <div className={styles.content}>{children}</div>
       </div>
     </>
   );
