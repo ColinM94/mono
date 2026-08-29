@@ -1,26 +1,21 @@
 import { classes } from '@mono/shared/utils';
-import type { Surface } from '@mono/shared/types';
 
 import styles from './styles.module.css';
+import { FormField } from '../formField/formField.tsx';
+import type { InputTextProps } from './types.ts';
 
-interface Props {
-  value: string;
-  placeholder?: string;
-  surface?: Surface;
-  setValue: (value: string) => void;
-  className?: string;
-}
-
-export const InputText = (props: Props) => {
-  const { value, setValue, placeholder, surface = 1, className } = props;
+export const InputText = (props: InputTextProps) => {
+  const { value, setValue, label, placeholder, surface = 1, className } = props;
 
   return (
-    <input
-      type="text"
-      value={value}
-      placeholder={placeholder}
-      onChange={(event) => setValue(event.target.value)}
-      className={classes(className, `surface-${surface}`, styles.container)}
-    />
+    <FormField label={label}>
+      <input
+        type="text"
+        value={value}
+        placeholder={placeholder}
+        onChange={(event) => setValue(event.target.value)}
+        className={classes(className, `surface-${surface}`, styles.container)}
+      />
+    </FormField>
   );
 };

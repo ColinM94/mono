@@ -1,8 +1,14 @@
-.container {
+.input {
   flex: 1;
   padding-inline: var(--spacing-large);
   padding-block: var(--spacing-medium);
   color: inherit;
   border-radius: var(--roundness);
   border: none;
+}
+
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

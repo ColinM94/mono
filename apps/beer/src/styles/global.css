@@ -10,10 +10,10 @@
   --border-width: 1px;
 
   /* Surfaces */
-  --color-surface-0: rgb(62, 12, 82);
+  --color-surface-0: rgb(15, 15, 15);
   --color-surface-1: rgba(30, 30, 30);
-  --color-surface-2: rgba(50, 50, 50);
-  --color-surface-3: rgba(70, 70, 70);
+  --color-surface-2: rgba(45, 45, 45);
+  --color-surface-3: rgba(50, 50, 50);
 
   /* Typography */
   --font-size-h1: 28px;

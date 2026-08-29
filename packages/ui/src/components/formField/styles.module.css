@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+
+  .label {
+    font-size: var(--font-size-body);
+    color: var(--color-text-secondary);
+  }
+
+  .input {
+    display: flex;
+  }
+}
