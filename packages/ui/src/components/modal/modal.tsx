@@ -19,7 +19,7 @@ export const Modal = (props: Props) => {
 
   return (
     <>
-      {show && <div className={styles.background} />}
+      {show && <div onClick={() => setShow(false)} className={styles.background} />}
 
       <div className={classes(styles.container, className)}>
         <div className={styles.header}>
