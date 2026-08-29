@@ -5,6 +5,7 @@ import {
   GearSixIcon,
   GenderFemaleIcon,
   GenderMaleIcon,
+  PlusIcon,
   SignOutIcon,
   WineIcon,
   XIcon,
@@ -20,4 +21,5 @@ export const icons = {
   GenderMaleIcon,
   GenderFemaleIcon,
   XIcon,
+  PlusIcon,
 };

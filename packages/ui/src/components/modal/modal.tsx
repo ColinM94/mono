@@ -24,6 +24,7 @@ export const Modal = (props: Props) => {
       <div className={classes(styles.container, className)}>
         <div className={styles.header}>
           <div className={styles.heading}>{heading}</div>
+
           <Button
             icon="XIcon"
             variant="secondary"

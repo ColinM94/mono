@@ -35,6 +35,18 @@
   }
 }
 
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+h3 {
+  margin-block: var(--spacing-small);
+}
+
 .surface-0 {
   background-color: var(--color-surface-0);
 }

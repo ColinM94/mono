@@ -1,10 +1,12 @@
 .container {
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
   left: var(--spacing-xl);
   right: var(--spacing-xl);
-  top: var(--spacing-xl);
-  bottom: var(--spacing-xl);
   background-color: var(--color-surface-1);
+  padding: var(--spacing-large);
 
   .header {
     display: flex;

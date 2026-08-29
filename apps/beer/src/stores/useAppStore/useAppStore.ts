@@ -7,7 +7,7 @@ type AppStoreState = {
   bloodAlcoholPerMille: number;
   totalAlcoholGrams: number;
   totalAlcoholMl: number;
-
+  customDrinks: Drink[];
   weightKg: number;
   gender: 'male' | 'female';
 };
@@ -21,6 +21,7 @@ export const useAppStore = createStore<AppStoreState>(
     gender: 'male',
     totalAlcoholGrams: 0,
     totalAlcoholMl: 0,
+    customDrinks: [],
   }),
   {
     name: 'app',

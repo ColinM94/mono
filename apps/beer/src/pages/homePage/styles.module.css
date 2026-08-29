@@ -4,11 +4,15 @@
   padding: var(--spacing-large);
   gap: var(--spacing-large);
 
+  .section {
+    padding: 0;
+  }
+
   .drinkButtons {
     display: flex;
     flex-direction: row;
     gap: var(--spacing-large);
-    padding: var(--spacing-large);
+    /* padding: var(--spacing-large); */
     flex-wrap: wrap;
 
     .drinkButton {
