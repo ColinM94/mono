@@ -5,19 +5,17 @@
   gap: var(--spacing-medium);
   background-color: var(--color-surface-1);
   padding: var(--spacing-large);
-  left: 50%;
-  right: 50%;
-  top: 50%;
-  bottom: 50%;
-  transform: translate(-50%, -50%);
-  width: fit-content;
-  height: fit-content;
   justify-content: stretch;
   align-items: stretch;
   z-index: 9;
+  top: var(--spacing-xl);
+  right: var(--spacing-xl);
+  bottom: var(--spacing-xl);
+  left: var(--spacing-xl);
 
   .content {
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: stretch;
     gap: var(--spacing-medium);

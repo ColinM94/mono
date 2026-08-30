@@ -1,31 +1,28 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  padding: var(--spacing-large);
-  gap: var(--spacing-large);
-  align-items: stretch;
-  justify-content: stretch;
+  .content {
+    gap: var(--spacing-xl);
 
-  .item {
-    display: flex;
-    justify-content: stretch;
-    flex-direction: column;
-    gap: var(--spacing-small);
-  }
-
-  .genders {
-    display: flex;
-    gap: var(--spacing-large);
-
-    .gender {
-      background-color: var(--color-surface-3);
-      padding: var(--spacing-large);
-      border-radius: var(--roundness);
-      cursor: pointer;
+    .item {
+      display: flex;
+      justify-content: stretch;
+      flex-direction: column;
+      gap: var(--spacing-small);
     }
 
-    .genderSelected {
-      background-color: var(--color-primary);
+    .genders {
+      display: flex;
+      gap: var(--spacing-large);
+
+      .gender {
+        background-color: var(--color-surface-3);
+        padding: var(--spacing-large);
+        border-radius: var(--roundness);
+        cursor: pointer;
+      }
+
+      .genderSelected {
+        background-color: var(--color-primary);
+      }
     }
   }
 }

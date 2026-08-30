@@ -5,7 +5,6 @@
 
   .label {
     font-size: var(--font-size-body);
-    color: var(--color-text-secondary);
   }
 
   .input {

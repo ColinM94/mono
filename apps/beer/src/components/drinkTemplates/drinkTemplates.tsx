@@ -28,7 +28,7 @@ export const DrinkTemplates = (props: Props) => {
     <>
       <div className={classes(styles.container, className)}>
         <div className={styles.header}>
-          <h3>Drink Templates</h3>
+          <h3>Templates</h3>
 
           <Button
             icon="PlusIcon"

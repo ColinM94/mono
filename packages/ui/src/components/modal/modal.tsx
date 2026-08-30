@@ -10,10 +10,11 @@ interface Props {
   heading?: string;
   children: Children;
   className?: string;
+  contentClassName?: string;
 }
 
 export const Modal = (props: Props) => {
-  const { show, setShow, heading, children, className } = props;
+  const { show, setShow, heading, children, className, contentClassName } = props;
 
   if (!show) return null;
 
@@ -34,7 +35,7 @@ export const Modal = (props: Props) => {
           />
         </div>
 
-        <div className={styles.content}>{children}</div>
+        <div className={classes(styles.content, contentClassName)}>{children}</div>
       </div>
     </>
   );

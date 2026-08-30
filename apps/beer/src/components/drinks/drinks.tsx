@@ -22,17 +22,19 @@ export const Drinks = (props: Props) => {
     <>
       <div className={classes(styles.container, className)}>
         <h3>Drinks</h3>
-        {drinks.map((beer, index) => (
-          <div className={styles.row} key={index}>
-            <div className={styles.time}>{formatTime(beer.time)}</div>
-            <Icon name={beer.icon} />
-            <div className={styles.name}>{beer.name}</div>
-            <div>{beer.ml}ml</div>
-            <div className={styles.percentage}>{beer.abv}%</div>
+        {drinks
+          .sort((a, b) => b.time - a.time)
+          .map((beer, index) => (
+            <div className={styles.row} key={index}>
+              <div className={styles.time}>{formatTime(beer.time)}</div>
+              <Icon name={beer.icon} />
+              <div className={styles.name}>{beer.name}</div>
+              <div>{beer.ml}ml</div>
+              <div className={styles.percentage}>{beer.abv}%</div>
 
-            <Button variant="secondary" onClick={() => handleDelete(index)} icon="XIcon" />
-          </div>
-        ))}
+              <Button variant="secondary" onClick={() => handleDelete(index)} icon="XIcon" />
+            </div>
+          ))}
       </div>
     </>
   );

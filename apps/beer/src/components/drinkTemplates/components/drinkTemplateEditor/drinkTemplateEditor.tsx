@@ -4,10 +4,10 @@ import { mergeReducer } from '@mono/shared/utils';
 
 import { useAppStore } from 'stores/useAppStore/useAppStore.ts';
 import type { Drink } from 'types/general.ts';
+import { defaultDrink } from 'constants/defaults.ts';
 
 import type { Props } from './types.ts';
 import styles from './styles.module.css';
-import { defaultDrink } from 'constants/defaults.ts';
 
 export const DrinkTemplateEditor = (props: Props) => {
   const { show, setShow, existingDrink, className } = props;
@@ -39,39 +39,27 @@ export const DrinkTemplateEditor = (props: Props) => {
   };
 
   return (
-    <Modal heading="Custom Drink" show={show} setShow={setShow} className={styles.container}>
-      <div className={styles.inputContainer}>
-        <div className={styles.inputLabel}>Name</div>
+    <Modal heading="Custom Drink" show={show} setShow={setShow} contentClassName={styles.container}>
+      <InputText
+        label="Name"
+        value={drink.name}
+        setValue={(name) => updateDrink({ name })}
+        surface={2}
+      />
 
-        <InputText
-          value={drink.name}
-          setValue={(name) => updateDrink({ name })}
-          surface={2}
-          className={styles.input}
-        />
-      </div>
+      <InputText
+        label="ML"
+        value={String(drink.ml)}
+        setValue={(ml) => updateDrink({ ml: Number(ml) })}
+        surface={2}
+      />
 
-      <div className={styles.inputContainer}>
-        <div className={styles.inputLabel}>ML</div>
-
-        <InputText
-          value={String(drink.ml)}
-          setValue={(ml) => updateDrink({ ml: Number(ml) })}
-          surface={2}
-          className={styles.input}
-        />
-      </div>
-
-      <div className={styles.inputContainer}>
-        <div className={styles.inputLabel}>Abv</div>
-
-        <InputText
-          value={String(drink.abv)}
-          setValue={(abv) => updateDrink({ abv: Number(abv) })}
-          surface={2}
-          className={styles.input}
-        />
-      </div>
+      <InputText
+        label="Abv"
+        value={String(drink.abv)}
+        setValue={(abv) => updateDrink({ abv: Number(abv) })}
+        surface={2}
+      />
 
       <Button label="Add Custom Drink" onClick={saveDrink} className={styles.addButton} />
     </Modal>

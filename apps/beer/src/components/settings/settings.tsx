@@ -5,6 +5,7 @@ import { useAppStore } from 'stores/useAppStore/useAppStore.ts';
 
 import type { Props } from './types.ts';
 import styles from './styles.module.css';
+import { FormField } from '../../../../../packages/ui/src/components/formField/formField.tsx';
 
 export const Settings = (props: Props) => {
   const { show, setShow, className } = props;
@@ -16,6 +17,7 @@ export const Settings = (props: Props) => {
       heading="Settings"
       show={show}
       setShow={setShow}
+      contentClassName={styles.content}
       className={classes(className, styles.container)}
     >
       <InputText
@@ -25,8 +27,7 @@ export const Settings = (props: Props) => {
         surface={2}
       />
 
-      <div className={styles.item}>
-        <div>Gender</div>
+      <FormField label="Gender">
         <div className={styles.genders}>
           <div
             title="Male"
@@ -44,10 +45,10 @@ export const Settings = (props: Props) => {
             <Icon name="GenderFemaleIcon" />
           </div>
         </div>
-      </div>
+      </FormField>
 
       <InputNumber
-        label="Max Blood Alcohol per Mille (0.5 > 2.0)"
+        label="Max Blood Alcohol per Mille (0.2 > 2.0)"
         value={maxBloodAlcoholPerMille}
         setValue={(maxBloodAlcoholPerMille) => useAppStore.setState({ maxBloodAlcoholPerMille })}
         surface={2}
