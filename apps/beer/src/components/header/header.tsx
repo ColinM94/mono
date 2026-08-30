@@ -1,6 +1,5 @@
 import * as React from 'react';
-import { useLocation } from 'wouter';
-import { Icon } from '@mono/ui/components';
+import { Button } from '@mono/ui/components';
 import { classes } from '@mono/shared/utils';
 
 import { Settings } from 'components/settings/settings.tsx';
@@ -11,15 +10,17 @@ import styles from './styles.module.css';
 export const Header = (props: HeaderProps) => {
   const { className } = props;
 
-  const [, navigate] = useLocation();
-
   const [showSettings, setShowSettings] = React.useState(false);
 
   return (
     <>
       <div className={classes(styles.container, className)}>
-        <Icon
-          name="GearSixIcon"
+        <h2>Beer Tracker</h2>
+
+        <Button
+          icon="GearSixIcon"
+          variant="secondary"
+          surface={2}
           onClick={() => setShowSettings(true)}
           className={styles.settingsButton}
         />

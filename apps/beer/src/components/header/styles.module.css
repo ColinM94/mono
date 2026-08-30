@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: row;
   padding: var(--spacing-large);
+  padding-inline: var(--spacing-xl);
+  background-color: var(--color-surface-1);
+  align-items: center;
 
   .settingsButton {
     margin-left: auto;
