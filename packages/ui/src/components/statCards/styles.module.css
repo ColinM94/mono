@@ -1,14 +1,13 @@
 .container {
-  display: flex;
+  display: grid;
   flex-direction: row;
-  flex-wrap: wrap;
   gap: var(--spacing-large);
+  grid-template-columns: repeat(3, 1fr);
 
   .stat {
     background-color: var(--color-surface-1);
     padding: var(--spacing-large);
     border-radius: var(--roundness);
-    flex: 1;
 
     .statLabel {
       text-align: center;

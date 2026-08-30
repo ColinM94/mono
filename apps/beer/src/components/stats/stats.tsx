@@ -18,11 +18,11 @@ export const Stats = () => {
           value: `${roundNumber(totalAlcoholGrams, 2)}g`,
         },
         {
-          label: 'Blood Alcohol',
-          value: `${roundNumber(bloodAlcoholPerMille, 2)}%`,
+          label: 'Blood Alcohol per Mille',
+          value: `${roundNumber(bloodAlcoholPerMille, 2)}`,
         },
         {
-          label: 'Blood Alcohol',
+          label: 'Blood Alcohol Percent',
           value: `${roundNumber(bloodAlcoholPerMille / 10, 2)}%`,
         },
         {
