@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { ProgressBar } from '@mono/ui/components';
-import { classes, formatTime } from '@mono/shared/utils';
+import { classes } from '@mono/shared/utils';
 
-import { calculateStats } from 'components/utils/stats.ts';
 import { Stats } from 'components/stats/stats.tsx';
 import { DrinkTemplates } from 'components/drinkTemplates/drinkTemplates.tsx';
 import { MainLayout } from 'components/mainLayout/mainLayout.tsx';
+import { Drinks } from 'components/drinks/drinks.tsx';
 import { useAppStore } from 'stores/useAppStore/useAppStore.ts';
 
 import styles from './styles.module.css';
@@ -46,12 +46,6 @@ export const HomePage = () => {
     return () => clearInterval(interval);
   }, [drinks, totals.grams, weightKg, gender]);
 
-  const handleDelete = (index: number) => {
-    const updatedDrinks = drinks.toSpliced(index, 1);
-    useAppStore.setState({ drinks: updatedDrinks });
-    calculateStats();
-  };
-
   const percentage = () => {
     let value = Math.max(100 - (bloodAlcoholPerMille / maxBloodAlcoholPerMille) * 100, 0);
     return value;
@@ -68,17 +62,7 @@ export const HomePage = () => {
 
       <Stats />
 
-      {drinks.map((beer, index) => (
-        <div key={index}>
-          <span>{formatTime(beer.time)}: </span>
-          <span>
-            {beer.name} - {beer.ml}ml - {beer.abv}%
-          </span>
-          <span onClick={() => handleDelete(index)} className={styles.delete}>
-            X
-          </span>
-        </div>
-      ))}
+      <Drinks />
 
       <DrinkTemplates />
     </MainLayout>

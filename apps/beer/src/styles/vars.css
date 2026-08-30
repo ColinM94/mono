@@ -8,6 +8,7 @@
   --spacing-xxl: 24px;
   --roundness: 4px;
   --border-width: 1px;
+  --breakpoint-large: 800px;
 
   /* Surfaces */
   --color-surface-0: rgb(15, 15, 15);

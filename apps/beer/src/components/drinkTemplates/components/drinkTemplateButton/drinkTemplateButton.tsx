@@ -12,7 +12,14 @@ export const DrinkTemplateButton = (props: Props) => {
       <div className={styles.ml}>{drink.ml}ml</div>
       <Icon name={drink?.icon || 'BeerSteinIcon'} className={styles.icon} />
       <div className={styles.abv}>{drink.abv}%</div>
-      <Icon name="PencilIcon" onClick={() => onEditClick?.(drink)} className={styles.edit} />
+      <Icon
+        name="PencilIcon"
+        onClick={(e) => {
+          e.stopPropagation();
+          onEditClick?.(drink);
+        }}
+        className={styles.edit}
+      />
     </div>
   );
 };

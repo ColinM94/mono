@@ -5,7 +5,7 @@ import type { IconName } from './types.ts';
 
 interface Props {
   name: IconName;
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<SVGSVGElement, MouseEvent>) => void;
   className?: string;
 }
 

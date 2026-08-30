@@ -1,5 +1,7 @@
 .container {
   .content {
+    max-width: var(--breakpoint-large);
+    margin-inline: auto;
     padding: var(--spacing-large);
   }
 }
