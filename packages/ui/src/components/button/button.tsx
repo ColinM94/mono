@@ -36,6 +36,7 @@ export const Button = (props: Props) => {
         `ui-button-${variant}`,
         variant === 'secondary' && `surface-${surface}`,
         styles[`variant-${variant}`],
+        !label && icon && styles.square,
         disabled && styles.disabled,
         styles.container,
         className,

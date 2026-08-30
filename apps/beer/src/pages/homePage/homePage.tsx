@@ -52,10 +52,15 @@ export const HomePage = () => {
     calculateStats();
   };
 
+  const percentage = () => {
+    let value = Math.max(100 - (bloodAlcoholPerMille / maxBloodAlcoholPerMille) * 100, 0);
+    return value;
+  };
+
   return (
     <MainLayout className={styles.container}>
       <ProgressBar
-        progressPercentage={(100 / maxBloodAlcoholPerMille) * bloodAlcoholPerMille}
+        progressPercentage={percentage()}
         barClassName={classes(
           bloodAlcoholPerMille >= maxBloodAlcoholPerMille * 0.75 && styles.progressBarDanger,
         )}

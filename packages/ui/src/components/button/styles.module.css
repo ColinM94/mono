@@ -26,3 +26,7 @@
 
 .variant-secondary {
 }
+
+.square {
+  aspect-ratio: 1;
+}

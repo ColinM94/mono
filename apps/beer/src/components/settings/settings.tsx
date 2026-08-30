@@ -1,4 +1,4 @@
-import { Icon, InputText, Modal } from '@mono/ui/components';
+import { Icon, InputNumber, InputText, Modal } from '@mono/ui/components';
 
 import { classes } from '@mono/shared/utils';
 import { useAppStore } from 'stores/useAppStore/useAppStore.ts';
@@ -18,14 +18,12 @@ export const Settings = (props: Props) => {
       setShow={setShow}
       className={classes(className, styles.container)}
     >
-      <div className={styles.item}>
-        <div>Weight (kg)</div>
-        <InputText
-          value={String(weightKg)}
-          setValue={(weightKg) => useAppStore.setState({ weightKg: Number(weightKg) })}
-          surface={2}
-        />
-      </div>
+      <InputText
+        label="Weight (kg)"
+        value={String(weightKg)}
+        setValue={(weightKg) => useAppStore.setState({ weightKg: Number(weightKg) })}
+        surface={2}
+      />
 
       <div className={styles.item}>
         <div>Gender</div>
@@ -48,16 +46,14 @@ export const Settings = (props: Props) => {
         </div>
       </div>
 
-      <div className={styles.item}>
-        <div>Max Blood Alcohol per Mille {'(0.5 > 2.0)'}</div>
-        <InputText
-          value={String(maxBloodAlcoholPerMille)}
-          setValue={(maxBloodAlcoholPerMille) =>
-            useAppStore.setState({ maxBloodAlcoholPerMille: Number(maxBloodAlcoholPerMille) })
-          }
-          surface={2}
-        />
-      </div>
+      <InputNumber
+        label="Max Blood Alcohol per Mille (0.5 > 2.0)"
+        value={maxBloodAlcoholPerMille}
+        setValue={(maxBloodAlcoholPerMille) => useAppStore.setState({ maxBloodAlcoholPerMille })}
+        surface={2}
+        max={2}
+        min={0.2}
+      />
     </Modal>
   );
 };
