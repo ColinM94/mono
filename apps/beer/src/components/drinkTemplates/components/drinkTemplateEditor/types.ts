@@ -5,5 +5,4 @@ export interface Props {
   setShow: (show: boolean) => void;
   existingTemplate: DrinkTemplate | undefined;
   setExistingTemplate: (template: DrinkTemplate | undefined) => void;
-  className?: string;
 }

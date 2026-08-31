@@ -17,7 +17,7 @@ import type { Props } from './types.ts';
 import styles from './styles.module.css';
 
 export const DrinkTemplateEditor = (props: Props) => {
-  const { show, setShow, existingTemplate, setExistingTemplate, className } = props;
+  const { show, setShow, existingTemplate, setExistingTemplate } = props;
 
   const { drinkTemplates } = useAppStore();
 
