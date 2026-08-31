@@ -11,7 +11,7 @@ interface Props {
   onClick?: () => void;
   /** Default: primary */
   surface?: Surface;
-  variant?: 'primary' | 'secondary';
+  variant?: 'primary' | 'secondary' | 'danger';
   icon?: IconName;
   disabled?: boolean;
   className?: string;
@@ -35,6 +35,7 @@ export const Button = (props: Props) => {
         'ui-button',
         `ui-button-${variant}`,
         variant === 'secondary' && `surface-${surface}`,
+        variant === 'secondary' && `surface-${surface + 1}-hover`,
         styles[`variant-${variant}`],
         !label && icon && styles.square,
         disabled && styles.disabled,

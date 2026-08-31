@@ -1,5 +1,5 @@
 import { createStore, createStoreSelector } from '@mono/zustand/utils';
-import type { Drink } from 'types/general.ts';
+import type { Drink, DrinkTemplate } from 'types/general.ts';
 
 type AppStoreState = {
   drinks: Drink[];
@@ -7,7 +7,7 @@ type AppStoreState = {
   bloodAlcoholPerMille: number;
   totalAlcoholGrams: number;
   totalAlcoholMl: number;
-  drinkTemplates: Drink[];
+  drinkTemplates: DrinkTemplate[];
   weightKg: number;
   gender: 'male' | 'female';
 };

@@ -1,8 +1,9 @@
-import type { Drink } from 'types/general.ts';
+import type { DrinkTemplate } from 'types/general.ts';
 
 export interface Props {
   show: boolean;
   setShow: (show: boolean) => void;
-  existingDrink: Drink | undefined;
+  existingTemplate: DrinkTemplate | undefined;
+  setExistingTemplate: (template: DrinkTemplate | undefined) => void;
   className?: string;
 }

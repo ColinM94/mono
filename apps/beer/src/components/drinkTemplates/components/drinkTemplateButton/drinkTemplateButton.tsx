@@ -5,18 +5,18 @@ import type { Props } from './types.ts';
 import styles from './styles.module.css';
 
 export const DrinkTemplateButton = (props: Props) => {
-  const { drink, onEditClick, onClick, className } = props;
+  const { drinkTemplate, onEditClick, onClick, className } = props;
 
   return (
-    <div onClick={() => onClick(drink)} className={classes(styles.container, className)}>
-      <div className={styles.ml}>{drink.ml}ml</div>
-      <Icon name={drink?.icon || 'BeerSteinIcon'} className={styles.icon} />
-      <div className={styles.abv}>{drink.abv}%</div>
+    <div onClick={() => onClick(drinkTemplate)} className={classes(styles.container, className)}>
+      <div className={styles.ml}>{drinkTemplate.ml}ml</div>
+      <Icon name={drinkTemplate?.icon || 'BeerSteinIcon'} className={styles.icon} />
+      <div className={styles.abv}>{drinkTemplate.abv}%</div>
       <Icon
         name="PencilIcon"
         onClick={(e) => {
           e.stopPropagation();
-          onEditClick?.(drink);
+          onEditClick?.(drinkTemplate);
         }}
         className={styles.edit}
       />

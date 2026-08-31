@@ -9,7 +9,7 @@
   flex-direction: column;
   gap: var(--spacing-medium);
   background-color: var(--color-surface-1);
-  padding: var(--spacing-large);
+  padding: var(--spacing-xl);
   z-index: 9;
 
   .content {
@@ -34,7 +34,7 @@
 }
 
 .background {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;

@@ -1,10 +1,15 @@
 .container {
-  display: flex;
-  flex-direction: row;
-  padding: var(--spacing-large);
-  padding-inline: var(--spacing-xl);
   background-color: var(--color-surface-1);
-  align-items: center;
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    max-width: var(--breakpoint-large);
+    padding-inline: var(--spacing-xl);
+    padding-block: var(--spacing-large);
+    margin-inline: auto;
+    align-items: center;
+  }
 
   .settingsButton {
     margin-left: auto;

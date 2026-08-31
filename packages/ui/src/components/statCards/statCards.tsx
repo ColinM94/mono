@@ -5,7 +5,7 @@ export const StatCards = (props: StatCardsProps) => {
   const { stats } = props;
 
   const statCard = (stat: StatCardsStat) => (
-    <div className={styles.stat}>
+    <div key={stat.label} className={styles.stat}>
       <div className={styles.statLabel}>{stat.label}</div>
       <div className={styles.statValue}>{stat.value}</div>
     </div>

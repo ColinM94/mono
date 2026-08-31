@@ -3,7 +3,7 @@ import { classes } from '@mono/shared/utils';
 import { Button } from '@mono/ui/components';
 
 import { useAppStore } from 'stores/useAppStore/useAppStore.ts';
-import type { Drink, DrinkTemplate } from 'types/general.ts';
+import type { DrinkTemplate } from 'types/general.ts';
 
 import { DrinkTemplateEditor } from './components/drinkTemplateEditor/drinkTemplateEditor.tsx';
 import { DrinkTemplateButton } from './components/drinkTemplateButton/drinkTemplateButton.tsx';
@@ -16,7 +16,7 @@ export const DrinkTemplates = (props: Props) => {
   const { drinks, drinkTemplates } = useAppStore();
 
   const [showEditor, setShowEditor] = React.useState(false);
-  const [selectedDrink, setSelectedDrink] = React.useState<Drink>();
+  const [selectedTemplate, setSelectedTemplate] = React.useState<DrinkTemplate>();
 
   const handleAddDrink = (drink: DrinkTemplate) => {
     useAppStore.setState({
@@ -39,15 +39,15 @@ export const DrinkTemplates = (props: Props) => {
         </div>
 
         <div className={styles.drinkButtons}>
-          {drinkTemplates.map((drink) => (
+          {drinkTemplates.map((drinkTemplate) => (
             <DrinkTemplateButton
-              drink={drink}
-              onClick={(drink) => handleAddDrink(drink)}
-              onEditClick={(drink) => {
-                setSelectedDrink(drink);
+              drinkTemplate={drinkTemplate}
+              onClick={() => handleAddDrink(drinkTemplate)}
+              onEditClick={() => {
+                setSelectedTemplate(drinkTemplate);
                 setShowEditor(true);
               }}
-              key={drink.id}
+              key={drinkTemplate.id}
               className={styles.drinkButton}
             />
           ))}
@@ -57,7 +57,8 @@ export const DrinkTemplates = (props: Props) => {
       <DrinkTemplateEditor
         show={showEditor}
         setShow={setShowEditor}
-        existingDrink={selectedDrink}
+        existingTemplate={selectedTemplate}
+        setExistingTemplate={setSelectedTemplate}
       />
     </>
   );

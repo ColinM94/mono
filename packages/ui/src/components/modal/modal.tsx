@@ -7,6 +7,7 @@ import styles from './style.module.css';
 interface Props {
   show: boolean;
   setShow: (show: boolean) => void;
+  onClose?: () => void;
   heading?: string;
   children: Children;
   className?: string;
@@ -14,13 +15,18 @@ interface Props {
 }
 
 export const Modal = (props: Props) => {
-  const { show, setShow, heading, children, className, contentClassName } = props;
+  const { show, setShow, onClose, heading, children, className, contentClassName } = props;
 
   if (!show) return null;
 
+  const handleClose = () => {
+    onClose?.();
+    setShow(false);
+  };
+
   return (
     <>
-      {show && <div onClick={() => setShow(false)} className={styles.background} />}
+      {show && <div onClick={handleClose} className={styles.background} />}
 
       <div className={classes(styles.container, className)}>
         <div className={styles.header}>
@@ -29,8 +35,8 @@ export const Modal = (props: Props) => {
           <Button
             icon="XIcon"
             variant="secondary"
-            surface={1}
-            onClick={() => setShow(false)}
+            surface={2}
+            onClick={handleClose}
             className={styles.closeButton}
           />
         </div>

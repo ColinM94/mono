@@ -1,52 +1,84 @@
 import * as React from 'react';
-import { Button, Icon, InputText, Modal, type IconName } from '@mono/ui/components';
+import {
+  Button,
+  FormField,
+  InputNumber,
+  InputText,
+  Modal,
+  type IconName,
+} from '@mono/ui/components';
 import { classes, mergeReducer } from '@mono/shared/utils';
 
 import { useAppStore } from 'stores/useAppStore/useAppStore.ts';
-import type { Drink } from 'types/general.ts';
-import { defaultDrink } from 'constants/defaults.ts';
+import type { DrinkTemplate } from 'types/general.ts';
+import { defaultDrink, defaultDrinkTemplate } from 'constants/defaults.ts';
 
 import type { Props } from './types.ts';
 import styles from './styles.module.css';
-import { FormField } from '../../../../../../../packages/ui/src/components/formField/formField.tsx';
 
 export const DrinkTemplateEditor = (props: Props) => {
-  const { show, setShow, existingDrink, className } = props;
+  const { show, setShow, existingTemplate, setExistingTemplate, className } = props;
 
-  const { drinks } = useAppStore();
+  const { drinkTemplates } = useAppStore();
 
-  const [drink, updateDrink] = React.useReducer(mergeReducer<Drink>, defaultDrink());
+  const [state, updateState] = React.useReducer(
+    mergeReducer<DrinkTemplate>,
+    defaultDrinkTemplate(),
+  );
 
   const icons: IconName[] = ['BeerBottleIcon', 'BeerSteinIcon', 'ChampagneIcon', 'WineIcon'];
 
   React.useEffect(() => {
-    updateDrink(existingDrink || defaultDrink());
+    updateState(existingTemplate || defaultDrink());
   }, [show]);
 
-  const saveDrink = () => {
-    const gramsOfAlcohol = drink.ml * (drink.abv / 100) * 0.789;
+  const handleSave = () => {
+    const gramsOfAlcohol = state.ml * (state.abv / 100) * 0.789;
 
-    const updatedDrinks: Drink[] = [
-      ...drinks,
-      {
-        ...drink,
-        gramsOfAlcohol,
-      },
-    ];
+    const template = { ...state, gramsOfAlcohol };
+
+    let updatedTemplates: DrinkTemplate[] = [];
+
+    if (existingTemplate) {
+      updatedTemplates = [...drinkTemplates];
+      const index = updatedTemplates.findIndex((template) => template.id === existingTemplate.id);
+      updatedTemplates[index] = template;
+    } else {
+      updatedTemplates = [...drinkTemplates, template];
+    }
 
     useAppStore.setState({
-      drinkTemplates: updatedDrinks,
+      drinkTemplates: updatedTemplates,
     });
 
+    updateState(defaultDrinkTemplate());
     setShow(false);
   };
 
+  const handleDelete = () => {
+    if (!existingTemplate) return;
+
+    let updatedTemplates: DrinkTemplate[] = [...drinkTemplates];
+
+    const index = drinkTemplates.findIndex((template) => template.id === existingTemplate.id);
+
+    useAppStore.setState({
+      drinkTemplates: updatedTemplates.toSpliced(index, 1),
+    });
+  };
+
   return (
-    <Modal heading="Custom Drink" show={show} setShow={setShow} contentClassName={styles.container}>
+    <Modal
+      heading="Custom Drink"
+      show={show}
+      setShow={setShow}
+      onClose={() => setExistingTemplate(undefined)}
+      contentClassName={styles.container}
+    >
       <InputText
         label="Name"
-        value={drink.name}
-        setValue={(name) => updateDrink({ name })}
+        value={state.name}
+        setValue={(name) => updateState({ name })}
         surface={2}
       />
 
@@ -56,8 +88,8 @@ export const DrinkTemplateEditor = (props: Props) => {
             key={icon}
             icon={icon}
             variant="secondary"
-            surface={drink.icon === icon ? 2 : 1}
-            onClick={() => updateDrink({ icon })}
+            surface={state.icon === icon ? 2 : 1}
+            onClick={() => updateState({ icon })}
             className={classes(styles.icon)}
           />
         ))}
@@ -65,23 +97,34 @@ export const DrinkTemplateEditor = (props: Props) => {
 
       <InputText
         label="ML"
-        value={String(drink.ml)}
-        setValue={(ml) => updateDrink({ ml: Number(ml) })}
+        value={String(state.ml)}
+        setValue={(ml) => updateState({ ml: Number(ml) })}
         surface={2}
       />
 
-      <InputText
+      <InputNumber
         label="Abv"
-        value={String(drink.abv)}
-        setValue={(abv) => updateDrink({ abv: Number(abv) })}
+        value={state.abv}
+        setValue={(abv) => updateState({ abv })}
         surface={2}
       />
 
-      <Button
-        label={existingDrink ? 'Update Template' : 'Create Template'}
-        onClick={saveDrink}
-        className={styles.saveButton}
-      />
+      <div className={styles.buttons}>
+        {existingTemplate && (
+          <Button
+            label="Delete Template"
+            variant="danger"
+            onClick={handleDelete}
+            className={styles.deleteButton}
+          />
+        )}
+
+        <Button
+          label={existingTemplate ? 'Update Template' : 'Create Template'}
+          onClick={handleSave}
+          className={styles.saveButton}
+        />
+      </div>
     </Modal>
   );
 };

@@ -8,11 +8,22 @@
 
   .icon {
     padding: var(--spacing-xl);
-    font-size: 50px;
+    font-size: 40px;
     border: 1px solid var(--color-surface-2);
   }
 
-  .saveButton {
-    margin-top: auto;
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    margin-top: var(--spacing-xl);
+    gap: var(--spacing-xl);
+
+    .deleteButton {
+      flex: 1;
+    }
+
+    .saveButton {
+      flex: 2;
+    }
   }
 }

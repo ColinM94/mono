@@ -1,8 +1,8 @@
-import type { Drink } from 'types/general.ts';
+import type { DrinkTemplate } from 'types/general.ts';
 
 export interface Props {
-  drink: Drink;
-  onEditClick?: (drink: Drink) => void;
-  onClick: (drink: Drink) => void;
+  drinkTemplate: DrinkTemplate;
+  onEditClick?: (drink: DrinkTemplate) => void;
+  onClick: (drink: DrinkTemplate) => void;
   className?: string;
 }

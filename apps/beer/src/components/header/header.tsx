@@ -15,15 +15,17 @@ export const Header = (props: HeaderProps) => {
   return (
     <>
       <div className={classes(styles.container, className)}>
-        <h2>Beer Tracker</h2>
+        <div className={styles.content}>
+          <h2>Beer Tracker</h2>
 
-        <Button
-          icon="GearSixIcon"
-          variant="secondary"
-          surface={2}
-          onClick={() => setShowSettings(true)}
-          className={styles.settingsButton}
-        />
+          <Button
+            icon="GearSixIcon"
+            variant="secondary"
+            surface={2}
+            onClick={() => setShowSettings(true)}
+            className={styles.settingsButton}
+          />
+        </div>
       </div>
 
       <Settings show={showSettings} setShow={setShowSettings} />

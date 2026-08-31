@@ -1,5 +1,5 @@
 .container {
-  padding-inline: var(--spacing-large);
+  padding-inline: var(--spacing-medium);
   padding-block: var(--spacing-medium);
   border-radius: var(--roundness);
   border: none;
@@ -7,7 +7,7 @@
   color: var(--color-text-primary);
 
   .label {
-    font-size: var(--font-size-h1);
+    font-size: var(--font-size-body);
     color: var(--color-text-secondary);
     white-space: nowrap;
   }
@@ -25,6 +25,10 @@
 }
 
 .variant-secondary {
+}
+
+.variant-danger {
+  background-color: var(--color-danger);
 }
 
 .square {
