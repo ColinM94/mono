@@ -35,6 +35,10 @@ export const Drinks = (props: Props) => {
               <Button variant="secondary" onClick={() => handleDelete(index)} icon="XIcon" />
             </div>
           ))}
+
+        {drinks.length === 0 && (
+          <div className={styles.noDrinksMessage}>You haven't added a drink yet</div>
+        )}
       </div>
     </>
   );

@@ -52,6 +52,10 @@ export const DrinkTemplates = (props: Props) => {
             />
           ))}
         </div>
+
+        {drinkTemplates.length === 0 && (
+          <div className={styles.noDrinksMessage}>You haven't added a template yet</div>
+        )}
       </div>
 
       <DrinkTemplateEditor

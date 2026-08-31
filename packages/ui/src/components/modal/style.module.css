@@ -3,7 +3,7 @@
   display: flex;
   inset: var(--spacing-xl);
   margin: auto;
-  width: var(--breakpoint-medium);
+  max-width: var(--breakpoint-medium);
   height: fit-content;
 
   flex-direction: column;

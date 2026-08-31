@@ -3,8 +3,7 @@ import { StatCards } from '@mono/ui/components';
 import { useAppStore } from 'stores/useAppStore/useAppStore.ts';
 
 export const Stats = () => {
-  const { bloodAlcoholPerMille, totalAlcoholGrams, totalAlcoholMl, maxBloodAlcoholPerMille } =
-    useAppStore();
+  const { bloodAlcoholPerMille, totalAlcoholGrams, totalAlcoholMl } = useAppStore();
 
   return (
     <StatCards
@@ -25,10 +24,10 @@ export const Stats = () => {
           label: 'Blood Alcohol Percent',
           value: `${roundNumber(bloodAlcoholPerMille / 10, 2)}%`,
         },
-        {
-          label: 'Max Blood Alcohol',
-          value: `${maxBloodAlcoholPerMille}ml`,
-        },
+        // {
+        //   label: 'Max Blood Alcohol',
+        //   value: `${maxBloodAlcoholPerMille}ml`,
+        // },
       ]}
     />
   );
