@@ -2,25 +2,31 @@
   color: var(--color-text-secondary);
 }
 
-.row {
+.content {
   display: flex;
-  background-color: var(--color-surface-1);
-  border-radius: var(--roundness);
-  display: flex;
-  align-items: center;
-  padding-inline: var(--spacing-xl);
-  padding: var(--spacing-large);
   gap: var(--spacing-large);
+  flex-direction: column;
 
-  .name {
-    flex: 1;
-  }
+  .row {
+    display: flex;
+    background-color: var(--color-surface-2);
+    border-radius: var(--roundness);
+    display: flex;
+    align-items: center;
+    padding-inline: var(--spacing-xl);
+    padding: var(--spacing-large);
+    gap: var(--spacing-large);
 
-  .percentage {
-  }
+    .name {
+      flex: 1;
+    }
 
-  .delete {
-    color: var(--color-danger);
-    cursor: pointer;
+    .percentage {
+    }
+
+    .delete {
+      color: var(--color-danger);
+      cursor: pointer;
+    }
   }
 }

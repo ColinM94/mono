@@ -4,6 +4,10 @@
   cursor: pointer;
   color: var(--color-text-primary);
 
+  :disabled {
+    filter: brightness(0.5);
+  }
+
   .label {
     font-size: var(--font-size-body);
     color: var(--color-text-secondary);
@@ -12,10 +16,6 @@
 
   .icon {
   }
-}
-
-.disabled {
-  filter: brightness(0.5);
 }
 
 .variant-primary {

@@ -16,12 +16,12 @@ export const Header = (props: HeaderProps) => {
     <>
       <div className={classes(styles.container, className)}>
         <div className={styles.content}>
-          <h2>Beer Tracker</h2>
+          <h3>Beer Tracker</h3>
 
           <Button
             icon="GearSixIcon"
             variant="secondary"
-            surface={2}
+            surface={1}
             onClick={() => setShowSettings(true)}
             className={styles.settingsButton}
           />

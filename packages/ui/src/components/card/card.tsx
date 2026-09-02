@@ -13,11 +13,12 @@ interface CardProps {
     buttons?: ButtonProps[];
   };
   children: Children;
+  contentClassName?: string;
   className?: string;
 }
 
 export const Card = (props: CardProps) => {
-  const { header, surface = 1, children, className } = props;
+  const { header, surface = 1, children, contentClassName, className } = props;
 
   return (
     <div className={classes(styles.container, `surface-${surface}`, className)}>
@@ -35,7 +36,7 @@ export const Card = (props: CardProps) => {
         </div>
       )}
 
-      <div className={styles.content}>{children}</div>
+      <div className={classes(styles.content, contentClassName)}>{children}</div>
     </div>
   );
 };

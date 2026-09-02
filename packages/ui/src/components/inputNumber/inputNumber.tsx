@@ -19,7 +19,7 @@ export const InputNumber = (props: InputNumberProps) => {
         }}
         max={max}
         min={min}
-        className={classes(className, `surface-${surface}`, styles.input)}
+        className={classes(`surface-${surface}`, styles.input, className)}
       />
     </FormField>
   );

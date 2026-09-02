@@ -4,18 +4,21 @@ import styles from './styles.module.css';
 import { Icon } from '../icon/icon.tsx';
 import type { ButtonProps } from './types.ts';
 
-/**
- * Classes
- * .ui-button
- * .ui-button-primary
- * .ui-button-secondary
- **/
 export const Button = (props: ButtonProps) => {
-  const { label, variant = 'primary', surface = 1, icon, disabled, onClick, className } = props;
+  const {
+    type = 'button',
+    label,
+    variant = 'primary',
+    surface = 1,
+    icon,
+    disabled,
+    onClick,
+    className,
+  } = props;
 
   return (
     <button
-      type="submit"
+      type={type}
       onClick={onClick}
       disabled={disabled}
       className={classes(
@@ -25,12 +28,11 @@ export const Button = (props: ButtonProps) => {
         variant === 'secondary' && `surface-${surface + 1}-hover`,
         styles[`variant-${variant}`],
         !label && icon && styles.square,
-        disabled && styles.disabled,
         styles.container,
         className,
       )}
     >
-      {label && <div className={styles.label}>{label}</div>}
+      {label && <span className={styles.label}>{label}</span>}
       {icon && <Icon name={icon} className={styles.icon} />}
     </button>
   );

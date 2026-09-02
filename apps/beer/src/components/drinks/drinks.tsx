@@ -24,6 +24,7 @@ export const Drinks = (props: Props) => {
         heading: 'Drinks',
       }}
       surface={1}
+      contentClassName={styles.content}
       className={className}
     >
       {drinks
@@ -36,7 +37,12 @@ export const Drinks = (props: Props) => {
             <div>{beer.ml}ml</div>
             <div className={styles.percentage}>{beer.abv}%</div>
 
-            <Button variant="secondary" onClick={() => handleDelete(index)} icon="XIcon" />
+            <Button
+              variant="secondary"
+              onClick={() => handleDelete(index)}
+              icon="XIcon"
+              surface={2}
+            />
           </div>
         ))}
 
