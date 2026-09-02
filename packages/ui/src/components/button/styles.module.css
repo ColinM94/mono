@@ -1,6 +1,4 @@
 .container {
-  padding-inline: var(--spacing-medium);
-  padding-block: var(--spacing-medium);
   border-radius: var(--roundness);
   border: none;
   cursor: pointer;
@@ -33,4 +31,7 @@
 
 .square {
   aspect-ratio: 1;
+}
+
+.variant-icon {
 }

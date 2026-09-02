@@ -1,32 +1,26 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-medium);
+.noDrinksMessage {
+  color: var(--color-text-secondary);
+}
 
-  .noDrinksMessage {
-    color: var(--color-text-secondary);
+.row {
+  display: flex;
+  background-color: var(--color-surface-1);
+  border-radius: var(--roundness);
+  display: flex;
+  align-items: center;
+  padding-inline: var(--spacing-xl);
+  padding: var(--spacing-large);
+  gap: var(--spacing-large);
+
+  .name {
+    flex: 1;
   }
 
-  .row {
-    display: flex;
-    background-color: var(--color-surface-1);
-    border-radius: var(--roundness);
-    display: flex;
-    align-items: center;
-    padding-inline: var(--spacing-xl);
-    padding: var(--spacing-large);
-    gap: var(--spacing-large);
+  .percentage {
+  }
 
-    .name {
-      flex: 1;
-    }
-
-    .percentage {
-    }
-
-    .delete {
-      color: var(--color-danger);
-      cursor: pointer;
-    }
+  .delete {
+    color: var(--color-danger);
+    cursor: pointer;
   }
 }

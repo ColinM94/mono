@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { classes } from '@mono/shared/utils';
-import { Button } from '@mono/ui/components';
+import { Button, Card } from '@mono/ui/components';
 
 import { useAppStore } from 'stores/useAppStore/useAppStore.ts';
 import type { DrinkTemplate } from 'types/general.ts';
@@ -26,18 +26,19 @@ export const DrinkTemplates = (props: Props) => {
 
   return (
     <>
-      <div className={classes(styles.container, className)}>
-        <div className={styles.header}>
-          <h3>Templates</h3>
-
-          <Button
-            icon="PlusIcon"
-            variant="secondary"
-            onClick={() => setShowEditor(true)}
-            className={styles.addButton}
-          />
-        </div>
-
+      <Card
+        header={{
+          heading: 'Drink Templates',
+          buttons: [
+            {
+              icon: 'PlusIcon',
+              variant: 'secondary',
+              onClick: () => setShowEditor(true),
+            },
+          ],
+        }}
+        className={className}
+      >
         <div className={styles.drinkButtons}>
           {drinkTemplates.map((drinkTemplate) => (
             <DrinkTemplateButton
@@ -56,7 +57,7 @@ export const DrinkTemplates = (props: Props) => {
         {drinkTemplates.length === 0 && (
           <div className={styles.noDrinksMessage}>You haven't added a template yet</div>
         )}
-      </div>
+      </Card>
 
       <DrinkTemplateEditor
         show={showEditor}

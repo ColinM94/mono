@@ -1,0 +1,14 @@
+.container {
+  padding: var(--spacing-large);
+  border-radius: var(--roundness);
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    height: var(--input-height);
+
+    .heading {
+      flex: 1;
+    }
+  }
+}

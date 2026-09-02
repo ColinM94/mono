@@ -3,7 +3,7 @@
   flex-direction: column;
   padding: var(--spacing-large);
   gap: var(--spacing-small);
-  background-color: var(--color-surface-1);
+  background-color: var(--color-surface-2);
   border-radius: var(--roundness);
   cursor: pointer;
   text-align: center;
@@ -23,7 +23,7 @@
   }
 
   .edit {
-    background-color: var(--color-surface-2);
+    background-color: var(--color-surface-3);
     border-radius: var(--roundness);
     padding: var(--spacing-small);
     font-size: 24px;
