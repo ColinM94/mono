@@ -37,14 +37,21 @@
 
 h1 {
   margin: 0;
+  font-weight: bold;
+  font-size: var(--font-size-h1);
 }
 
 h2 {
   margin: 0;
+  font-weight: bold;
+  font-size: var(--font-size-h2);
 }
 
 h3 {
-  margin-block: var(--spacing-small);
+  /* margin-block: var(--spacing-small); */
+  margin: 0;
+  font-weight: bold;
+  font-size: var(--font-size-h3);
 }
 
 .surface-0 {

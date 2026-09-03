@@ -4,7 +4,7 @@ import type { IconName } from '../icon/types.ts';
 export interface ButtonProps {
   label?: string;
   type?: HTMLButtonElement['type'];
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   /** Default: primary */
   surface?: Surface;
   variant?: 'primary' | 'secondary' | 'danger' | 'icon';

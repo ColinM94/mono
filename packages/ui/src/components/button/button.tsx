@@ -19,7 +19,7 @@ export const Button = (props: ButtonProps) => {
   return (
     <button
       type={type}
-      onClick={onClick}
+      onClick={(e) => onClick?.(e)}
       disabled={disabled}
       className={classes(
         'ui-button',

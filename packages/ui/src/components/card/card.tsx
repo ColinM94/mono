@@ -24,7 +24,7 @@ export const Card = (props: CardProps) => {
     <div className={classes(styles.container, `surface-${surface}`, className)}>
       {header && (
         <div className={styles.header}>
-          <div className={styles.heading}>{header.heading}</div>
+          <h3 className={styles.heading}>{header.heading}</h3>
 
           {header.buttons && (
             <div className={styles.headerButtons}>

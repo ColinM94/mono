@@ -1,9 +1,0 @@
-.drinkButtons {
-  display: flex;
-  flex-direction: row;
-  gap: var(--spacing-large);
-}
-
-.noDrinksMessage {
-  color: var(--color-text-secondary);
-}
