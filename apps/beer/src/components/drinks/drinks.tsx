@@ -28,6 +28,7 @@ export const Drinks = (props: Props) => {
     useAppStore.setState({
       drinks: [...drinks, { ...drink, time: Date.now() }],
     });
+    calculateStats();
   };
 
   const items = () => {

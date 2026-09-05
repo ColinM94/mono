@@ -20,10 +20,10 @@ export const Settings = (props: Props) => {
       contentClassName={styles.content}
       className={classes(className, styles.container)}
     >
-      <InputText
+      <InputNumber
         label="Weight (kg)"
-        value={String(weightKg)}
-        setValue={(weightKg) => useAppStore.setState({ weightKg: Number(weightKg) })}
+        value={weightKg}
+        setValue={(weightKg) => useAppStore.setState({ weightKg })}
         surface={2}
       />
 

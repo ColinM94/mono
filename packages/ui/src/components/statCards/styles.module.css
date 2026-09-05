@@ -2,10 +2,10 @@
   display: grid;
   flex-direction: row;
   gap: var(--spacing-large);
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
   .stat {
-    background-color: var(--color-surface-1);
+    background-color: var(--color-surface-2);
     padding: var(--spacing-large);
     border-radius: var(--roundness);
 

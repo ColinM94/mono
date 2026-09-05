@@ -53,15 +53,15 @@ export const HomePage = () => {
   return (
     <MainLayout className={styles.container}>
       <ProgressBar
+        label={bloodAlcoholPerMille}
         progressPercentage={percentage()}
         barClassName={classes(
           bloodAlcoholPerMille >= maxBloodAlcoholPerMille * 0.75 && styles.progressBarDanger,
         )}
       />
 
-      <Stats />
-
       <Drinks type="drinkTemplates" />
+
       <Drinks type="drinks" />
     </MainLayout>
   );

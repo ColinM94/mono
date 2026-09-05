@@ -5,13 +5,14 @@ import styles from './styles.module.css';
 
 interface Props {
   progressPercentage: number;
+  label?: number | string;
   surface?: Surface;
   barClassName?: string;
   className?: string;
 }
 
 export const ProgressBar = (props: Props) => {
-  const { progressPercentage, surface = 1, barClassName, className } = props;
+  const { progressPercentage, label, surface = 1, barClassName, className } = props;
 
   return (
     <div className={classes(styles.container, `border-${surface + 1}`, `surface-${surface}`)}>
@@ -19,6 +20,7 @@ export const ProgressBar = (props: Props) => {
         style={{ width: `${progressPercentage}%` }}
         className={classes(styles.progress, `surface-${surface + 1}`, barClassName, className)}
       />
+      {label !== undefined && <div className={styles.label}>0.67</div>}
     </div>
   );
 };

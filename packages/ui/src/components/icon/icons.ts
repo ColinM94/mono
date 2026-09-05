@@ -2,6 +2,7 @@ import {
   BeerBottleIcon,
   BeerSteinIcon,
   ChampagneIcon,
+  ChartBarIcon,
   GearSixIcon,
   GenderFemaleIcon,
   GenderMaleIcon,
@@ -24,4 +25,5 @@ export const icons = {
   XIcon,
   PlusIcon,
   PencilIcon,
+  ChartBarIcon,
 };
