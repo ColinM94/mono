@@ -1,4 +1,4 @@
-import { Icon, InputNumber, InputText, Modal } from '@mono/ui/components';
+import { Icon, InputNumber, Modal } from '@mono/ui/components';
 
 import { classes } from '@mono/shared/utils';
 import { useAppStore } from 'stores/useAppStore/useAppStore.ts';

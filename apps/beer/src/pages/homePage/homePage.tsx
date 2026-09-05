@@ -2,7 +2,6 @@ import * as React from 'react';
 import { ProgressBar } from '@mono/ui/components';
 import { classes } from '@mono/shared/utils';
 
-import { Stats } from 'components/stats/stats.tsx';
 import { MainLayout } from 'components/mainLayout/mainLayout.tsx';
 import { Drinks } from 'components/drinks/drinks.tsx';
 import { useAppStore } from 'stores/useAppStore/useAppStore.ts';
