@@ -10,7 +10,7 @@ interface CardProps {
   surface?: Surface;
   header?: {
     heading: string;
-    buttons?: ButtonProps[];
+    buttons?: (ButtonProps & { hidden?: boolean })[];
   };
   children: Children;
   contentClassName?: string;
@@ -26,11 +26,12 @@ export const Card = (props: CardProps) => {
         <div className={styles.header}>
           <h3 className={styles.heading}>{header.heading}</h3>
 
-          {header.buttons && (
+          {header.buttons && !header.buttons.every((button) => button.hidden) && (
             <div className={styles.headerButtons}>
-              {header.buttons.map((button, index) => (
-                <Button key={index} {...button} />
-              ))}
+              {header.buttons.map((button, index) => {
+                if (button.hidden) return null;
+                return <Button key={index} {...button} />;
+              })}
             </div>
           )}
         </div>
