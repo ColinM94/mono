@@ -1,11 +1,10 @@
-import { Button, Icon, InputNumber, Modal } from '@mono/ui/components';
-
+import { Button, FormField, InputNumber, Modal } from '@mono/ui/components';
 import { classes } from '@mono/shared/utils';
+
 import { useAppStore } from 'stores/useAppStore/useAppStore.ts';
 
 import type { Props } from './types.ts';
 import styles from './styles.module.css';
-import { FormField } from '../../../../../packages/ui/src/components/formField/formField.tsx';
 
 export const Settings = (props: Props) => {
   const { show, setShow, className } = props;

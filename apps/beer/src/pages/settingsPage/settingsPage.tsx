@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Button, Card, InputNumber, InputText, ProgressBar, Row } from '@mono/ui/components';
+import { Button, Card, InputNumber, InputText, Row } from '@mono/ui/components';
 
 import styles from './styles.module.css';
 
@@ -45,7 +45,9 @@ export const SettingsPage = () => {
 
           <Card surface={2}>Nested Card</Card>
           <Card header={{ heading: 'Nested Card' }} surface={2}>
-            <Card header={{ heading: 'Nested Card' }} surface={3} />
+            <Card header={{ heading: 'Nested Card' }} surface={3}>
+              Nested Card
+            </Card>
           </Card>
           <Card surface={2}>Nested Card</Card>
 
