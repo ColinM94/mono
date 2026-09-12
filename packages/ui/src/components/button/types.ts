@@ -1,4 +1,3 @@
-import type { Surface } from '@mono/shared/types';
 import type { IconName } from '../icon/types.ts';
 
 export interface ButtonProps {
@@ -6,7 +5,7 @@ export interface ButtonProps {
   type?: HTMLButtonElement['type'];
   onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
   /** Default: primary */
-  surface?: Surface;
+  surface?: number;
   variant?: 'primary' | 'secondary' | 'danger' | 'icon';
   size?: 'small' | 'medium' | 'large';
   icon?: IconName;

@@ -1,9 +1,9 @@
 import type { Children } from '@mono/shared/types';
 import { classes } from '@mono/shared/utils';
 
-import { Button } from '../button/button.tsx';
-import styles from './style.module.css';
 import { Card } from '../card/card.tsx';
+
+import styles from './style.module.css';
 
 interface Props {
   show: boolean;

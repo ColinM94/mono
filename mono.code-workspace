@@ -6,12 +6,19 @@
     },
   ],
   "settings": {
-    "files.exclude": {
-      "**/.git": true,
-      "**/.svn": true,
-      "**/.hg": true,
-      "**/.DS_Store": true,
-      "**/Thumbs.db": true,
+    // "files.exclude": {
+    //   "**/.git": true,
+    //   "**/.svn": true,
+    //   "**/.hg": true,
+    //   "**/.DS_Store": true,
+    //   "**/Thumbs.db": true,
+    //   "apps/atlas": true,
+    //   "apps/avalon": true,
+    // },
+    "search.exclude": {
+      "**/node_modules": true,
+      "**/bower_components": true,
+      "**/*.code-search": true,
       "apps/atlas": true,
       "apps/avalon": true,
     },

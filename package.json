@@ -5,7 +5,7 @@
   "scripts": {
     "atlas:": "pnpm --filter atlas",
     "avalon:": "pnpm --filter avalon",
-    "beer:": "pnpm --filter beer",
+    "drunk:": "pnpm --filter drunk",
     "ui:": "pnpm --filter @mono/ui",
     "firebase:": "pnpm --filter firebase",
     "build": "pnpm -r build",
