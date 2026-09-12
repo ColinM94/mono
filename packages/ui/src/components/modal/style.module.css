@@ -1,23 +1,21 @@
 .container {
   position: fixed;
   display: flex;
-  inset: var(--spacing-xl);
+  inset: var(--space-large);
   margin: auto;
   max-width: var(--breakpoint-medium);
   height: fit-content;
+  z-index: 9;
 
   flex-direction: column;
-  gap: var(--spacing-medium);
   background-color: var(--color-surface-1);
-  padding: var(--spacing-xl);
-  z-index: 9;
 
   .content {
     display: flex;
     flex: 1;
     flex-direction: column;
     justify-content: stretch;
-    gap: var(--spacing-medium);
+    /* gap: var(--space-large); */
   }
 
   .header {

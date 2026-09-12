@@ -1,46 +1,49 @@
 :root {
   /* Layout & Spacing */
-  --spacing-xs: 2px;
-  --spacing-small: 4px;
-  --spacing-medium: 8px;
-  --spacing-large: 12px;
-  --spacing-xl: 16px;
-  --spacing-xxl: 24px;
   --roundness: 4px;
   --border-width: 1px;
-  --input-height: 32px;
+
+  --icon-size-small: 12px;
+  --icon-size-medium: 16px;
+  --icon-size-large: 24px;
+
+  --element-small: 28px;
+  --element-medium: 32px;
+  --element-large: 36px;
+
+  --space-small: 4px;
+  --space-medium: 8px;
+  --space-large: 12px;
 
   --breakpoint-medium: 600px;
   --breakpoint-large: 800px;
 
-  /* Surfaces */
-  --color-surface-0: rgb(15, 15, 15);
-  --color-surface-1: rgba(30, 30, 30);
-  --color-surface-2: rgba(45, 45, 45);
-  --color-surface-3: rgba(50, 50, 50);
-  --color-surface-4: rgba(65, 65, 65);
+  /** Surface Colours **/
+  --color-surface-0: #101112;
+  --color-surface-1: #1c1e20;
+  --color-surface-2: #292c2f;
+  --color-surface-3: #373a3e;
+  --color-surface-4: #464a4f;
 
-  /* Typography */
-  --font-size-h1: 24px;
-  --font-size-h2: 20px;
-  --font-size-h3: 16px;
-  --font-size-body: 16px;
-  --font-size-small: 14px;
-
-  --font-weight-regular: 400;
-  --font-weight-bold: 700;
-  --line-height-base: 1.5;
-
-  /* Text Colors */
+  /** Text Colours **/
   --color-text-primary: rgba(255, 255, 255, 0.87);
   --color-text-secondary: rgba(255, 255, 255, 0.7);
   --color-text-tertiary: rgba(255, 255, 255, 0.5);
 
-  /* Brand & Status Colors */
+  /** Brand Colours **/
   --color-primary: dodgerblue;
   --color-secondary: rgb(108, 117, 125);
   --color-success: rgb(37, 107, 37);
   --color-warning: rgb(218, 165, 32);
   --color-danger: rgb(184, 16, 16);
   --color-info: rgb(23, 162, 184);
+
+  /* Typography */
+  --font-size-title: 18px;
+  --font-size-body: 16px;
+  --font-size-small: 14px;
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --line-height-base: 1.5;
 }

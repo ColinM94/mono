@@ -9,7 +9,8 @@ export const Button = (props: ButtonProps) => {
     type = 'button',
     label,
     variant = 'primary',
-    surface = 1,
+    surface = 2,
+    size = 'medium',
     icon,
     disabled,
     onClick,
@@ -28,12 +29,13 @@ export const Button = (props: ButtonProps) => {
         variant === 'secondary' && `surface-${surface + 1}-hover`,
         styles[`variant-${variant}`],
         !label && icon && styles.square,
+        styles[`size-${size}`],
         styles.container,
         className,
       )}
     >
-      {label && <span className={styles.label}>{label}</span>}
       {icon && <Icon name={icon} className={styles.icon} />}
+      {label && <span className={styles.label}>{label}</span>}
     </button>
   );
 };

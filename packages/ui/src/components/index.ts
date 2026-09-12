@@ -7,4 +7,5 @@ export * from './icon/icon.tsx';
 export * from './icon/types.ts';
 export * from './modal/modal.tsx';
 export * from './progressBar/progressBar.tsx';
+export * from './row/row.tsx';
 export * from './statCards/statCards.tsx';

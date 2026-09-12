@@ -1,7 +1,7 @@
 .input {
   flex: 1;
-  padding-inline: var(--spacing-large);
-  padding-block: var(--spacing-medium);
+  height: var(--element-large);
+  padding-inline: var(--space-large);
   color: inherit;
   border-radius: var(--roundness);
   border: none;

@@ -1,4 +1,4 @@
-import { Icon, InputNumber, Modal } from '@mono/ui/components';
+import { Button, Icon, InputNumber, Modal } from '@mono/ui/components';
 
 import { classes } from '@mono/shared/utils';
 import { useAppStore } from 'stores/useAppStore/useAppStore.ts';
@@ -29,21 +29,18 @@ export const Settings = (props: Props) => {
 
       <FormField label="Gender">
         <div className={styles.genders}>
-          <div
-            title="Male"
+          <Button
+            icon="GenderMaleIcon"
             onClick={() => useAppStore.setState({ gender: 'male' })}
-            className={classes(styles.gender, gender === 'male' && styles.genderSelected)}
-          >
-            <Icon name="GenderMaleIcon" />
-          </div>
-
-          <div
-            title="Female"
+            variant={gender === 'male' ? 'primary' : 'secondary'}
+            size="large"
+          />
+          <Button
+            icon="GenderFemaleIcon"
             onClick={() => useAppStore.setState({ gender: 'female' })}
-            className={classes(styles.gender, gender === 'female' && styles.genderSelected)}
-          >
-            <Icon name="GenderFemaleIcon" />
-          </div>
+            variant={gender === 'female' ? 'primary' : 'secondary'}
+            size="large"
+          />
         </div>
       </FormField>
 

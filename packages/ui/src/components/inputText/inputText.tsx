@@ -5,7 +5,7 @@ import { FormField } from '../formField/formField.tsx';
 import type { InputTextProps } from './types.ts';
 
 export const InputText = (props: InputTextProps) => {
-  const { value, setValue, label, placeholder, surface = 1, className } = props;
+  const { value, setValue, label, placeholder, surface = 2, className } = props;
 
   return (
     <FormField label={label}>
@@ -14,7 +14,7 @@ export const InputText = (props: InputTextProps) => {
         value={value}
         placeholder={placeholder}
         onChange={(event) => setValue(event.target.value)}
-        className={classes(className, `surface-${surface}`, styles.container)}
+        className={classes(className, `surface-${surface}`, styles.input)}
       />
     </FormField>
   );

@@ -1,22 +1,22 @@
 .container {
   display: flex;
-  gap: 50px;
 
   .iconInput {
-    gap: var(--spacing-large);
+    gap: var(--space-small);
   }
 
-  .icon {
-    padding: var(--spacing-xl);
-    font-size: 40px;
+  .iconButton {
+    padding: var(--space-large);
+    font-size: 48px;
     border: 1px solid var(--color-surface-2);
+    height: 48px;
   }
 
   .buttons {
     display: flex;
     flex-direction: row;
-    margin-top: var(--spacing-xl);
-    gap: var(--spacing-xl);
+    margin-top: var(--space-large);
+    gap: var(--space-large);
 
     .deleteButton {
       flex: 1;

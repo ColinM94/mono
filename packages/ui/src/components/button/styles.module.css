@@ -6,6 +6,7 @@
   border: none;
   cursor: pointer;
   color: var(--color-text-primary);
+  gap: var(--space-medium);
 
   :disabled {
     filter: brightness(0.5);
@@ -37,4 +38,16 @@
 }
 
 .variant-icon {
+}
+
+.size-small {
+  height: var(--element-small);
+}
+
+.size-medium {
+  height: var(--element-medium);
+}
+
+.size-large {
+  height: var(--element-large);
 }

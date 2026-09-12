@@ -8,7 +8,7 @@
     "preview": "vite preview",
     "build": "tsc -b && vite build",
     "lint": "oxlint --fix",
-    "deploy-hosting": "pnpm run build && firebase deploy"
+    "deploy-hosting": "firebase deploy"
   },
   "dependencies": {
     "@mono/firebase": "workspace:*",

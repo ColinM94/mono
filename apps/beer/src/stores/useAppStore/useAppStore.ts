@@ -16,7 +16,7 @@ export const useAppStore = createStore<AppStoreState>(
   () => ({
     drinks: [],
     weightKg: 70,
-    maxBloodAlcoholPerMille: 2,
+    maxBloodAlcoholPerMille: 1.5,
     bloodAlcoholPerMille: 0,
     gender: 'male',
     totalAlcoholGrams: 0,

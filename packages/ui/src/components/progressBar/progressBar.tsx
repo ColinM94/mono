@@ -20,7 +20,7 @@ export const ProgressBar = (props: Props) => {
         style={{ width: `${progressPercentage}%` }}
         className={classes(styles.progress, `surface-${surface + 1}`, barClassName, className)}
       />
-      {label !== undefined && <div className={styles.label}>0.67</div>}
+      {label !== undefined && <div className={styles.label}>{label}</div>}
     </div>
   );
 };

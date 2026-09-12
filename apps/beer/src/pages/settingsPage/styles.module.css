@@ -1,6 +1,29 @@
+.header {
+  flex-direction: row;
+  align-items: center;
+  padding: var(--space-medium);
+  gap: var(--space-medium);
+
+  .appName {
+    flex: 1;
+    margin-left: 8px;
+  }
+
+  .settingsButton {
+  }
+
+  .profileButton {
+  }
+}
+
 .container {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  padding: var(--spacing-large);
-  gap: var(--spacing-large);
+  gap: var(--space-medium);
+  padding: var(--space-medium);
+  text-align: justify;
+}
+
+.text {
 }

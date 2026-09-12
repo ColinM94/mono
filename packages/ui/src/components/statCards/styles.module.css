@@ -1,12 +1,16 @@
 .container {
   display: grid;
   flex-direction: row;
-  gap: var(--spacing-large);
-  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-large);
+  grid-template-columns: repeat(2, 1fr);
+
+  @media (min-width: 700px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 
   .stat {
     background-color: var(--color-surface-2);
-    padding: var(--spacing-large);
+    padding: var(--space-large);
     border-radius: var(--roundness);
 
     .statLabel {

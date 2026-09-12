@@ -44,11 +44,11 @@ h1 {
 h2 {
   margin: 0;
   font-weight: bold;
-  font-size: var(--font-size-h2);
+  font-size: var(--font-size-title);
 }
 
 h3 {
-  /* margin-block: var(--spacing-small); */
+  /* margin-block: var(--spacesmall); */
   margin: 0;
   font-weight: bold;
   font-size: var(--font-size-h3);
@@ -68,6 +68,10 @@ h3 {
 
 .surface-3 {
   background-color: var(--color-surface-3);
+}
+
+.surface-4 {
+  background-color: var(--color-surface-4);
 }
 
 .surface-0-hover {

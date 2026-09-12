@@ -9,7 +9,10 @@ export const FormField = (props: FormFieldProps) => {
   return (
     <label className={classes(styles.container, className)}>
       {label && <div className={styles.label}>{label}</div>}
-      <div className={classes(styles.input, inputClassName)}>{children}</div>
+      <div className={classes(styles.input, inputClassName)}>
+        {children}
+        {/* <Button icon="PencilIcon" variant="secondary" surface={3} className={styles.button} /> */}
+      </div>
     </label>
   );
 };

@@ -1,14 +1,17 @@
 import {
+  ArrowCounterClockwiseIcon,
   BeerBottleIcon,
   BeerSteinIcon,
   ChampagneIcon,
   ChartBarIcon,
+  FloppyDiskIcon,
   GearSixIcon,
   GenderFemaleIcon,
   GenderMaleIcon,
   PencilIcon,
   PlusIcon,
   SignOutIcon,
+  UserCircleIcon,
   WineIcon,
   XIcon,
 } from '@phosphor-icons/react';
@@ -26,4 +29,7 @@ export const icons = {
   PlusIcon,
   PencilIcon,
   ChartBarIcon,
+  ArrowCounterClockwiseIcon,
+  FloppyDiskIcon,
+  UserCircleIcon,
 };

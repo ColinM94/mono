@@ -90,7 +90,7 @@ export const DrinkTemplateEditor = (props: Props) => {
             variant="secondary"
             surface={state.icon === icon ? 2 : 1}
             onClick={() => updateState({ icon })}
-            className={classes(styles.icon)}
+            className={classes(styles.iconButton)}
           />
         ))}
       </FormField>
@@ -122,6 +122,7 @@ export const DrinkTemplateEditor = (props: Props) => {
         <Button
           label={existingTemplate ? 'Update Template' : 'Create Template'}
           onClick={handleSave}
+          size="large"
           className={styles.saveButton}
         />
       </div>

@@ -3,6 +3,7 @@ import { classes } from '@mono/shared/utils';
 
 import { Button } from '../button/button.tsx';
 import styles from './style.module.css';
+import { Card } from '../card/card.tsx';
 
 interface Props {
   show: boolean;
@@ -28,21 +29,24 @@ export const Modal = (props: Props) => {
     <>
       {show && <div onClick={handleClose} className={styles.background} />}
 
-      <div className={classes(styles.container, className)}>
-        <div className={styles.header}>
-          <div className={styles.heading}>{heading}</div>
-
-          <Button
-            icon="XIcon"
-            variant="secondary"
-            surface={2}
-            onClick={handleClose}
-            className={styles.closeButton}
-          />
-        </div>
-
-        <div className={classes(styles.content, contentClassName)}>{children}</div>
-      </div>
+      <Card
+        header={{
+          heading,
+          buttons: [
+            {
+              icon: 'XIcon',
+              variant: 'secondary',
+              surface: 2,
+              onClick: handleClose,
+              className: styles.closeButton,
+            },
+          ],
+        }}
+        contentClassName={classes(styles.content, contentClassName)}
+        className={classes(styles.container, className)}
+      >
+        {children}
+      </Card>
     </>
   );
 };

@@ -3,10 +3,10 @@ import { Button, Modal } from '@mono/ui/components';
 import { classes } from '@mono/shared/utils';
 
 import { Settings } from 'components/settings/settings.tsx';
+import { Stats } from 'components/stats/stats.tsx';
 
 import type { HeaderProps } from './types.ts';
 import styles from './styles.module.css';
-import { Stats } from 'components/stats/stats.tsx';
 
 export const Header = (props: HeaderProps) => {
   const { className } = props;
@@ -18,12 +18,12 @@ export const Header = (props: HeaderProps) => {
     <>
       <div className={classes(styles.container, className)}>
         <div className={styles.content}>
-          <h3>Alcohol Tracker</h3>
+          <div className={styles.heading}>Alcohol Tracker</div>
 
           <Button
             icon="ChartBarIcon"
             variant="secondary"
-            surface={1}
+            surface={2}
             onClick={() => setShowStats(true)}
             className={styles.statsButton}
           />
@@ -31,7 +31,7 @@ export const Header = (props: HeaderProps) => {
           <Button
             icon="GearSixIcon"
             variant="secondary"
-            surface={1}
+            surface={2}
             onClick={() => setShowSettings(true)}
             className={styles.settingsButton}
           />

@@ -5,8 +5,8 @@
   .content {
     display: flex;
     flex-direction: column;
-    padding: var(--spacing-large);
-    gap: var(--spacing-large);
+    padding: var(--space-1);
+    gap: var(--space-1);
 
     div {
       background-color: var(--color-surface-1);

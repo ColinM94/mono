@@ -5,7 +5,7 @@ import { FormField } from '../formField/formField.tsx';
 import type { InputNumberProps } from './types.ts';
 
 export const InputNumber = (props: InputNumberProps) => {
-  const { value, setValue, label, placeholder, surface = 1, min, max, className } = props;
+  const { value, setValue, label, placeholder, surface = 2, min, max, className } = props;
 
   return (
     <FormField label={label}>

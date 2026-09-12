@@ -1,14 +1,33 @@
-.container {
-  padding: var(--spacing-large);
-  border-radius: var(--roundness);
-
-  .header {
+@layer {
+  .container {
     display: flex;
-    flex-direction: row;
-    height: var(--input-height);
+    flex-direction: column;
+    border-radius: var(--roundness);
 
-    .heading {
-      flex: 1;
+    .header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding-top: var(--space-large);
+      padding-inline: var(--space-large);
+
+      .heading {
+        flex: 1;
+        font-weight: bold;
+      }
+
+      .headerButtons {
+        display: flex;
+        flex-direction: row;
+        gap: var(--space-medium);
+      }
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-large);
+      padding: var(--space-large);
     }
   }
 }

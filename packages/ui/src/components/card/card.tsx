@@ -9,7 +9,7 @@ import styles from './styles.module.css';
 interface CardProps {
   surface?: Surface;
   header?: {
-    heading: string;
+    heading?: string | undefined;
     buttons?: (ButtonProps & { hidden?: boolean })[];
   };
   children: Children;
@@ -24,13 +24,13 @@ export const Card = (props: CardProps) => {
     <div className={classes(styles.container, `surface-${surface}`, className)}>
       {header && (
         <div className={styles.header}>
-          <h3 className={styles.heading}>{header.heading}</h3>
+          <div className={styles.heading}>{header.heading}</div>
 
           {header.buttons && !header.buttons.every((button) => button.hidden) && (
             <div className={styles.headerButtons}>
               {header.buttons.map((button, index) => {
                 if (button.hidden) return null;
-                return <Button key={index} {...button} />;
+                return <Button key={index} surface={surface + 1} size="small" {...button} />;
               })}
             </div>
           )}

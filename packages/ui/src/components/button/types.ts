@@ -8,6 +8,7 @@ export interface ButtonProps {
   /** Default: primary */
   surface?: Surface;
   variant?: 'primary' | 'secondary' | 'danger' | 'icon';
+  size?: 'small' | 'medium' | 'large';
   icon?: IconName;
   disabled?: boolean;
   className?: string;

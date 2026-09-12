@@ -3,19 +3,15 @@
 }
 
 .content {
-  display: flex;
-  gap: var(--spacing-large);
-  flex-direction: column;
-
   .row {
     display: flex;
     background-color: var(--color-surface-2);
     border-radius: var(--roundness);
     display: flex;
     align-items: center;
-    padding-inline: var(--spacing-xl);
-    padding: var(--spacing-large);
-    gap: var(--spacing-large);
+    padding-inline: var(--space-large);
+    padding: var(--space-small);
+    gap: var(--space-small);
 
     .name {
       flex: 1;

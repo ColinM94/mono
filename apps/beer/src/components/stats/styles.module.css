@@ -2,11 +2,11 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: var(--spacing-large);
+  gap: var(--space-small);
 
   .stat {
     background-color: var(--color-surface-1);
-    padding: var(--spacing-large);
+    padding: var(--space-small);
     border-radius: var(--roundness);
     flex: 1;
 

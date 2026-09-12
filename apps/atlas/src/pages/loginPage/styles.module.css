@@ -6,8 +6,8 @@
 
   .card {
     background-color: var(--color-surface-1);
-    padding: var(--spacing-large);
-    border-radius: var(--spacing-large);
+    padding: var(--space-1);
+    border-radius: var(--space-1);
 
     .loginForm {
       display: flex;
@@ -15,7 +15,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: var(--spacing-large);
+      gap: var(--space-1);
 
       .label {
         font-size: 50px;

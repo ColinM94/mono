@@ -1,7 +1,7 @@
-.container {
+.input {
+  height: var(--element-large);
   flex: 1;
-  padding-inline: var(--spacing-large);
-  padding-block: var(--spacing-medium);
+  padding-inline: var(--space-medium);
   color: inherit;
   border-radius: var(--roundness);
   border: none;
