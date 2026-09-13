@@ -36,10 +36,10 @@
   --color-success: rgb(37, 107, 37);
   --color-warning: rgb(218, 165, 32);
   --color-danger: rgb(184, 16, 16);
-  --color-info: rgb(23, 87, 184);
+  --color-info: rgb(22, 94, 203);
 
   /* Typography */
-  --font-size-title: 18px;
+  --font-size-title: 20px;
   --font-size-body: 16px;
   --font-size-small: 14px;
 

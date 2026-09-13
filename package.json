@@ -6,6 +6,7 @@
     "atlas:": "pnpm --filter atlas",
     "avalon:": "pnpm --filter avalon",
     "drunk:": "pnpm --filter drunk",
+    "my-website:": "pnpm --filter my-website",
     "ui:": "pnpm --filter @mono/ui",
     "firebase:": "pnpm --filter firebase",
     "build": "pnpm -r build",
