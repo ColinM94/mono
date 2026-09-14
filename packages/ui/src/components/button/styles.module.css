@@ -22,6 +22,14 @@
   }
 }
 
+.square {
+  aspect-ratio: 1;
+}
+
+.iconAndLabel {
+  padding-right: var(--space-medium);
+}
+
 .variant-primary {
   background-color: var(--color-primary);
 }
@@ -31,10 +39,6 @@
 
 .variant-danger {
   background-color: var(--color-danger);
-}
-
-.square {
-  aspect-ratio: 1;
 }
 
 .variant-icon {
