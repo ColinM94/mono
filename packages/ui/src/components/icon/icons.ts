@@ -8,6 +8,7 @@ import {
   GearSixIcon,
   GenderFemaleIcon,
   GenderMaleIcon,
+  GithubLogoIcon,
   PencilIcon,
   PlusIcon,
   SignOutIcon,
@@ -32,4 +33,5 @@ export const icons = {
   ArrowCounterClockwiseIcon,
   FloppyDiskIcon,
   UserCircleIcon,
+  GithubLogoIcon,
 };
