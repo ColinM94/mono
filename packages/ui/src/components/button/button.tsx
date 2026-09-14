@@ -12,31 +12,44 @@ export const Button = (props: ButtonProps) => {
     surface = 2,
     size = 'medium',
     icon,
+    to,
+    target,
     disabled,
     onClick,
     className,
   } = props;
 
-  return (
-    <button
-      type={type}
-      onClick={(e) => onClick?.(e)}
-      disabled={disabled}
-      className={classes(
-        'ui-button',
-        `ui-button-${variant}`,
-        variant === 'secondary' && `surface-${surface}`,
-        variant === 'secondary' && `surface-${surface + 1}-hover`,
-        label && icon && styles.iconAndLabel,
-        styles[`variant-${variant}`],
-        !label && icon && styles.square,
-        styles[`size-${size}`],
-        styles.container,
-        className,
-      )}
-    >
+  const classNames = classes(
+    'ui-button',
+    `ui-button-${variant}`,
+    variant === 'secondary' && `surface-${surface}`,
+    variant === 'secondary' && `surface-${surface + 1}-hover`,
+    label && icon && styles.iconAndLabel,
+    styles[`variant-${variant}`],
+    !label && icon && styles.square,
+    styles[`size-${size}`],
+    styles.container,
+    className,
+  );
+
+  const content = (
+    <>
       {icon && <Icon name={icon} className={styles.icon} />}
       {label && <span className={styles.label}>{label}</span>}
+    </>
+  );
+
+  if (to) {
+    return (
+      <a target={target} href={to} onClick={(e) => onClick?.(e)} className={classNames}>
+        {content}
+      </a>
+    );
+  }
+
+  return (
+    <button type={type} onClick={(e) => onClick?.(e)} disabled={disabled} className={classNames}>
+      {content}
     </button>
   );
 };

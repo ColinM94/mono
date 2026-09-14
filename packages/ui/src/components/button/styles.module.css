@@ -7,6 +7,7 @@
   cursor: pointer;
   color: var(--color-text-primary);
   gap: var(--space-medium);
+  text-decoration: none;
 
   :disabled {
     filter: brightness(0.5);
@@ -27,7 +28,7 @@
 }
 
 .iconAndLabel {
-  padding-right: var(--space-medium);
+  padding-inline: var(--space-medium);
 }
 
 .variant-primary {
